@@ -1,0 +1,25 @@
+# Local IDE settings
+.idea/
+
+# Do not publish project design/implementation notes
+Project designing and implementation/
+
+# Python cache/build outputs
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local configuration/secrets
+.env
+.env.*
+
+# Logs and OS files
+*.log
+.DS_Store
