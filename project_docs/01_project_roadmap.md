@@ -19,7 +19,7 @@
 
 ```text
 生成 exposure 级建模表
-模拟第一版 claim_flag 和 paid_loss
+模拟第一版 synthetic returns + insurance claims layer
 计算 baseline pure premium 和 commercial premium
 ```
 
@@ -65,7 +65,9 @@ final README polish
 
 ## Current Priority
 
-当前只做 Phase 1。不要提前做 XGBoost、SHAP、Dashboard 或 PDF 报告。
+Phase 1 已完成。Phase 2 第一版 GLM Pricing 已完成。
+
+暂时不要提前做 XGBoost、SHAP、Dashboard 或 PDF 报告。
 
 当前进度：
 
@@ -74,7 +76,10 @@ data understanding: done
 field dictionary: done
 data audit: done
 exposure table build: done
-exposure-level EDA: next
-synthetic claims: not started
-baseline pricing: not started
+exposure-level EDA: done
+synthetic claims: done
+baseline pricing: done
+GLM pricing design: done
+GLM pricing build: done
+seller credibility: next
 ```

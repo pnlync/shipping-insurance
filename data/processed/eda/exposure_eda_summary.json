@@ -1,0 +1,401 @@
+{
+  "rows": 112650,
+  "unique_orders": 98666,
+  "delivered_rows": 110197,
+  "delivered_share": 0.9782245894363072,
+  "non_delivered_rows": 2453,
+  "cross_state_share": 0.6382068353306702,
+  "same_state_freight_value": {
+    "median": 11.99,
+    "mean": 13.457902885464717,
+    "p95": 26.6825,
+    "p99": 51.18,
+    "max": 174.45
+  },
+  "cross_state_freight_value": {
+    "median": 18.25,
+    "mean": 23.693482766294824,
+    "p95": 52.74349999999991,
+    "p99": 97.04,
+    "max": 409.68
+  },
+  "freight_value": {
+    "median": 16.26,
+    "mean": 19.990319928983578,
+    "p95": 45.12,
+    "p99": 84.52,
+    "max": 409.68
+  },
+  "freight_to_price_ratio": {
+    "median": 0.2313562382646001,
+    "mean": 0.3208635490797801,
+    "p95": 0.874702380952381,
+    "p99": 1.5494505494505493,
+    "max": 26.23529411764706
+  },
+  "price": {
+    "median": 74.99,
+    "mean": 120.65373901464713,
+    "p95": 349.9,
+    "p99": 890.0,
+    "max": 6735.0
+  },
+  "product_weight_g": {
+    "median": 700.0,
+    "mean": 2093.672047020385,
+    "p95": 9750.0,
+    "p99": 18250.0,
+    "max": 40425.0
+  },
+  "product_volume_cm3": {
+    "median": 6480.0,
+    "mean": 15243.70956744087,
+    "p95": 57731.849999999904,
+    "p99": 112284.12000000011,
+    "max": 296208.0
+  },
+  "missing_fields": [
+    {
+      "field": "product_height_cm",
+      "missing_count": 18,
+      "missing_rate": 0.00015978695073235686
+    },
+    {
+      "field": "product_length_cm",
+      "missing_count": 18,
+      "missing_rate": 0.00015978695073235686
+    },
+    {
+      "field": "product_volume_cm3",
+      "missing_count": 18,
+      "missing_rate": 0.00015978695073235686
+    },
+    {
+      "field": "product_weight_g",
+      "missing_count": 18,
+      "missing_rate": 0.00015978695073235686
+    },
+    {
+      "field": "product_width_cm",
+      "missing_count": 18,
+      "missing_rate": 0.00015978695073235686
+    }
+  ],
+  "order_status": [
+    {
+      "order_status": "delivered",
+      "exposures": 110197,
+      "unique_orders": 96478,
+      "freight_median": 16.26,
+      "freight_mean": 19.948597874715283,
+      "freight_to_price_ratio_median": 0.2318318318318318,
+      "estimated_delivery_days_median": 23.245925925925928,
+      "exposure_share": 0.9782245894363072
+    },
+    {
+      "order_status": "shipped",
+      "exposures": 1185,
+      "unique_orders": 1106,
+      "freight_median": 17.63,
+      "freight_mean": 22.280084388185657,
+      "freight_to_price_ratio_median": 0.236235294117647,
+      "estimated_delivery_days_median": 24.500949074074075,
+      "exposure_share": 0.01051930758988016
+    },
+    {
+      "order_status": "canceled",
+      "exposures": 542,
+      "unique_orders": 461,
+      "freight_median": 15.105,
+      "freight_mean": 19.650276752767528,
+      "freight_to_price_ratio_median": 0.1909444629660499,
+      "estimated_delivery_days_median": 20.58934027777778,
+      "exposure_share": 0.004811362627607634
+    },
+    {
+      "order_status": "invoiced",
+      "exposures": 359,
+      "unique_orders": 312,
+      "freight_median": 15.15,
+      "freight_mean": 20.78657381615599,
+      "freight_to_price_ratio_median": 0.1779779779779779,
+      "estimated_delivery_days_median": 23.10071759259259,
+      "exposure_share": 0.0031868619618286727
+    },
+    {
+      "order_status": "processing",
+      "exposures": 357,
+      "unique_orders": 301,
+      "freight_median": 16.55,
+      "freight_mean": 25.083725490196077,
+      "freight_to_price_ratio_median": 0.1883064516129032,
+      "estimated_delivery_days_median": 26.547291666666663,
+      "exposure_share": 0.0031691078561917442
+    },
+    {
+      "order_status": "unavailable",
+      "exposures": 7,
+      "unique_orders": 6,
+      "freight_median": 20.85,
+      "freight_mean": 18.97142857142857,
+      "freight_to_price_ratio_median": 0.0921212121212121,
+      "estimated_delivery_days_median": 54.276747685185185,
+      "exposure_share": 6.213936972924988e-05
+    },
+    {
+      "order_status": "approved",
+      "exposures": 3,
+      "unique_orders": 2,
+      "freight_median": 10.96,
+      "freight_mean": 10.493333333333334,
+      "freight_to_price_ratio_median": 0.5521410579345088,
+      "estimated_delivery_days_median": 22.153969907407408,
+      "exposure_share": 2.663115845539281e-05
+    }
+  ],
+  "numeric_quantiles": [
+    {
+      "field": "price",
+      "count": 112650,
+      "missing": 0,
+      "mean": 120.65373901464713,
+      "std": 183.633928050254,
+      "min": 0.85,
+      "p1": 9.99,
+      "p5": 17.0,
+      "p25": 39.9,
+      "p50": 74.99,
+      "p75": 134.9,
+      "p95": 349.9,
+      "p99": 890.0,
+      "p99.5": 1218.082650000056,
+      "max": 6735.0
+    },
+    {
+      "field": "freight_value",
+      "count": 112650,
+      "missing": 0,
+      "mean": 19.990319928983578,
+      "std": 15.806405412296852,
+      "min": 0.0,
+      "p1": 4.4198,
+      "p5": 7.78,
+      "p25": 13.08,
+      "p50": 16.26,
+      "p75": 21.15,
+      "p95": 45.12,
+      "p99": 84.52,
+      "p99.5": 106.2251000000001,
+      "max": 409.68
+    },
+    {
+      "field": "freight_to_price_ratio",
+      "count": 112650,
+      "missing": 0,
+      "mean": 0.3208635490797801,
+      "std": 0.3498936787366252,
+      "min": 0.0,
+      "p1": 0.023360624766847762,
+      "p5": 0.0535405872193436,
+      "p25": 0.13403366121952504,
+      "p50": 0.2313562382646001,
+      "p75": 0.3930362116991643,
+      "p95": 0.874702380952381,
+      "p99": 1.5494505494505493,
+      "p99.5": 1.9710740384615475,
+      "max": 26.23529411764706
+    },
+    {
+      "field": "product_weight_g",
+      "count": 112632,
+      "missing": 18,
+      "mean": 2093.672047020385,
+      "std": 3751.596883513898,
+      "min": 0.0,
+      "p1": 75.0,
+      "p5": 125.0,
+      "p25": 300.0,
+      "p50": 700.0,
+      "p75": 1800.0,
+      "p95": 9750.0,
+      "p99": 18250.0,
+      "p99.5": 22900.0,
+      "max": 40425.0
+    },
+    {
+      "field": "product_volume_cm3",
+      "count": 112632,
+      "missing": 18,
+      "mean": 15243.70956744087,
+      "std": 23418.52468585695,
+      "min": 168.0,
+      "p1": 352.0,
+      "p5": 816.0,
+      "p25": 2851.5,
+      "p50": 6480.0,
+      "p75": 18375.0,
+      "p95": 57731.849999999904,
+      "p99": 112284.12000000011,
+      "p99.5": 139277.0,
+      "max": 296208.0
+    },
+    {
+      "field": "estimated_delivery_days",
+      "count": 112650,
+      "missing": 0,
+      "mean": 23.835035496703984,
+      "std": 8.887305532984824,
+      "min": 2.0080092592592593,
+      "p1": 6.098047916666667,
+      "p5": 10.500451388888887,
+      "p25": 18.370034722222226,
+      "p50": 23.25587962962963,
+      "p75": 28.471458333333334,
+      "p95": 38.595633680555544,
+      "p99": 51.06112372685184,
+      "p99.5": 55.51367239583342,
+      "max": 155.13546296296298
+    }
+  ],
+  "cap_diagnostics": [
+    {
+      "field": "freight_value",
+      "cap_quantile": "p95",
+      "cap_value": 45.12,
+      "rows_above_cap": 5630,
+      "share_above_cap": 0.04997780736795384,
+      "total_value_above_cap": 147790.09
+    },
+    {
+      "field": "freight_value",
+      "cap_quantile": "p99",
+      "cap_value": 84.52,
+      "rows_above_cap": 1124,
+      "share_above_cap": 0.00997780736795384,
+      "total_value_above_cap": 42901.850000000006
+    },
+    {
+      "field": "freight_value",
+      "cap_quantile": "p99.5",
+      "cap_value": 106.2251000000001,
+      "rows_above_cap": 564,
+      "share_above_cap": 0.0050066577896138486,
+      "total_value_above_cap": 25603.193599999944
+    },
+    {
+      "field": "freight_to_price_ratio",
+      "cap_quantile": "p95",
+      "cap_value": 0.874702380952381,
+      "rows_above_cap": 5632,
+      "share_above_cap": 0.049995561473590765,
+      "total_value_above_cap": 2718.902583715132
+    },
+    {
+      "field": "freight_to_price_ratio",
+      "cap_quantile": "p99",
+      "cap_value": 1.5494505494505493,
+      "rows_above_cap": 1125,
+      "share_above_cap": 0.009986684420772303,
+      "total_value_above_cap": 882.0135708239156
+    },
+    {
+      "field": "freight_to_price_ratio",
+      "cap_quantile": "p99.5",
+      "cap_value": 1.9710740384615475,
+      "rows_above_cap": 564,
+      "share_above_cap": 0.0050066577896138486,
+      "total_value_above_cap": 539.3700715212756
+    },
+    {
+      "field": "product_weight_g",
+      "cap_quantile": "p95",
+      "cap_value": 9750.0,
+      "rows_above_cap": 5583,
+      "share_above_cap": 0.04956058588548602,
+      "total_value_above_cap": 31013834.0
+    },
+    {
+      "field": "product_weight_g",
+      "cap_quantile": "p99",
+      "cap_value": 18250.0,
+      "rows_above_cap": 1117,
+      "share_above_cap": 0.00991566799822459,
+      "total_value_above_cap": 6773846.0
+    },
+    {
+      "field": "product_weight_g",
+      "cap_quantile": "p99.5",
+      "cap_value": 22900.0,
+      "rows_above_cap": 561,
+      "share_above_cap": 0.004980026631158456,
+      "total_value_above_cap": 2851516.0
+    },
+    {
+      "field": "product_volume_cm3",
+      "cap_quantile": "p95",
+      "cap_value": 57731.849999999904,
+      "rows_above_cap": 5632,
+      "share_above_cap": 0.049995561473590765,
+      "total_value_above_cap": 200676543.80000052
+    },
+    {
+      "field": "product_volume_cm3",
+      "cap_quantile": "p99",
+      "cap_value": 112284.12000000011,
+      "rows_above_cap": 1127,
+      "share_above_cap": 0.010004438526409231,
+      "total_value_above_cap": 52625823.75999987
+    },
+    {
+      "field": "product_volume_cm3",
+      "cap_quantile": "p99.5",
+      "cap_value": 139277.0,
+      "rows_above_cap": 560,
+      "share_above_cap": 0.004971149578339991,
+      "total_value_above_cap": 30539960.0
+    }
+  ],
+  "anomaly_diagnostics": [
+    {
+      "check": "freight_value_eq_0",
+      "rows": 383,
+      "row_share": 0.0033999112294718155
+    },
+    {
+      "check": "freight_to_price_ratio_gt_1",
+      "rows": 4124,
+      "row_share": 0.03660896582334665
+    },
+    {
+      "check": "freight_to_price_ratio_gt_2",
+      "rows": 531,
+      "row_share": 0.004713715046604527
+    },
+    {
+      "check": "product_weight_g_eq_0",
+      "rows": 8,
+      "row_share": 7.101642254771416e-05
+    },
+    {
+      "check": "product_weight_g_gt_30000",
+      "rows": 3,
+      "row_share": 2.663115845539281e-05
+    },
+    {
+      "check": "product_volume_cm3_gt_200000",
+      "rows": 237,
+      "row_share": 0.002103861517976032
+    },
+    {
+      "check": "estimated_delivery_days_gt_60",
+      "rows": 316,
+      "row_share": 0.002805148690634709
+    }
+  ],
+  "recommendations": {
+    "first_claim_simulation_population": "Use delivered exposures only for the first version.",
+    "freight_value_treatment": "Keep raw value for diagnostics; use p99 cap or log1p transform in modeling.",
+    "freight_to_price_ratio_treatment": "Cap at p99 or bin before modeling because the right tail is dominated by low-price items.",
+    "size_missing_handling": "Missing product size fields are rare; use category median imputation or drop for Phase 1."
+  }
+}

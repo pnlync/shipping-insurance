@@ -187,5 +187,5 @@ SP_to_PR: 3,667
 ```text
 exposure_table 已成功生成。
 行数和唯一键符合预期。
-下一步可以做 exposure-level EDA，然后再模拟 claim_flag 和 paid_loss。
+下一步可以做 exposure-level EDA，然后再设计 synthetic returns + claims layer。
 ```

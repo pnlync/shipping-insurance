@@ -83,13 +83,16 @@ olist_sellers_dataset:
 
 ## Important Limitation
 
-Olist 没有真实退货险理赔字段，所以以下字段需要后续模拟：
+Olist 没有真实退货险理赔字段，所以后续需要模拟 returns layer 和 claims layer：
 
 ```text
-claim_flag
+return_requested
+return_approved
+covered_claim_flag
 claim_type
 gross_loss
 recovery_from_carrier
 paid_loss
+net_loss
 commercial_premium
 ```

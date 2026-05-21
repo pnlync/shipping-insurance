@@ -1,0 +1,8 @@
+check,rows,row_share
+freight_value_eq_0,383,0.0033999112294718155
+freight_to_price_ratio_gt_1,4124,0.03660896582334665
+freight_to_price_ratio_gt_2,531,0.004713715046604527
+product_weight_g_eq_0,8,7.101642254771416e-05
+product_weight_g_gt_30000,3,2.663115845539281e-05
+product_volume_cm3_gt_200000,237,0.002103861517976032
+estimated_delivery_days_gt_60,316,0.002805148690634709

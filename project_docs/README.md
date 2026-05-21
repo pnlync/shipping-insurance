@@ -19,5 +19,14 @@
 05_phase1_field_dictionary.md
 06_phase1_data_audit.md
 07_daily_log_2026_05_21.md
+08_exposure_level_eda.md
+09_synthetic_claims_design.md
+10_synthetic_claims_build.md
+11_recent_work_explanation.md
+12_baseline_pricing_design.md
+13_baseline_pricing_build.md
+14_glm_pricing_design.md
+15_glm_pricing_build.md
+16_glm_pricing_explanation.md
 decision_log.md
 ```

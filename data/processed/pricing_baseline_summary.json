@@ -1,0 +1,285 @@
+{
+  "parameters": {
+    "target_loss_ratio": 0.6,
+    "category_min_exposure": 500,
+    "route_min_exposure": 500,
+    "seller_min_exposure": 100
+  },
+  "portfolio": {
+    "target_loss_ratio": 0.6,
+    "rows": 112650,
+    "eligible_exposures": 110197,
+    "ineligible_exposures": 2453,
+    "covered_claim_count": 8485,
+    "claim_frequency": 0.07699846638293238,
+    "total_gross_loss": 164735.9989543191,
+    "total_recovery_from_carrier": 1623.316656697086,
+    "total_paid_loss": 163112.682297622,
+    "total_net_loss": 163112.682297622,
+    "average_severity": 19.22365141987295,
+    "portfolio_pure_premium": 1.480191677610298,
+    "portfolio_commercial_premium": 2.4669861293504964,
+    "total_commercial_premium": 271854.47049603664,
+    "expected_loss_ratio": 0.6000000000000001
+  },
+  "credible_group_counts": {
+    "category": 28,
+    "route": 30,
+    "seller": 236
+  },
+  "top_categories_by_pure_premium": [
+    {
+      "product_category_name_english": "office_furniture",
+      "eligible_exposures": 1668,
+      "covered_claim_count": 89,
+      "claim_frequency": 0.053357314148681056,
+      "average_severity": 39.58431896254241,
+      "pure_premium": 2.1121129422459677,
+      "relativity": 1.426918536426227,
+      "commercial_premium": 3.520188237076613
+    },
+    {
+      "product_category_name_english": "musical_instruments",
+      "eligible_exposures": 651,
+      "covered_claim_count": 55,
+      "claim_frequency": 0.08448540706605223,
+      "average_severity": 22.34385558762678,
+      "pure_premium": 1.8877297347457342,
+      "relativity": 1.2753278938801953,
+      "commercial_premium": 3.1462162245762237
+    },
+    {
+      "product_category_name_english": "small_appliances",
+      "eligible_exposures": 658,
+      "covered_claim_count": 53,
+      "claim_frequency": 0.08054711246200608,
+      "average_severity": 22.956978186718327,
+      "pure_premium": 1.8491183037934216,
+      "relativity": 1.2492424675557823,
+      "commercial_premium": 3.0818638396557025
+    },
+    {
+      "product_category_name_english": "luggage_accessories",
+      "eligible_exposures": 1077,
+      "covered_claim_count": 82,
+      "claim_frequency": 0.07613741875580315,
+      "average_severity": 24.096531454323824,
+      "pure_premium": 1.8346477059002355,
+      "relativity": 1.2394663026765498,
+      "commercial_premium": 3.057746176500393
+    },
+    {
+      "product_category_name_english": "home_construction",
+      "eligible_exposures": 596,
+      "covered_claim_count": 47,
+      "claim_frequency": 0.07885906040268456,
+      "average_severity": 23.015382687773986,
+      "pure_premium": 1.8149714535660695,
+      "relativity": 1.2261732591932002,
+      "commercial_premium": 3.024952422610116
+    },
+    {
+      "product_category_name_english": "electronics",
+      "eligible_exposures": 2729,
+      "covered_claim_count": 294,
+      "claim_frequency": 0.10773176987907658,
+      "average_severity": 16.65332792498138,
+      "pure_premium": 1.794092491734894,
+      "relativity": 1.2120676793909384,
+      "commercial_premium": 2.99015415289149
+    },
+    {
+      "product_category_name_english": "health_beauty",
+      "eligible_exposures": 9465,
+      "covered_claim_count": 858,
+      "claim_frequency": 0.09064976228209191,
+      "average_severity": 18.8832636878014,
+      "pure_premium": 1.7117633644092554,
+      "relativity": 1.156447094185004,
+      "commercial_premium": 2.852938940682092
+    },
+    {
+      "product_category_name_english": "baby",
+      "eligible_exposures": 2982,
+      "covered_claim_count": 247,
+      "claim_frequency": 0.08283031522468143,
+      "average_severity": 20.36559335221911,
+      "pure_premium": 1.6868885171019854,
+      "relativity": 1.139641941390584,
+      "commercial_premium": 2.8114808618366425
+    },
+    {
+      "product_category_name_english": "fashion_bags_accessories",
+      "eligible_exposures": 1985,
+      "covered_claim_count": 216,
+      "claim_frequency": 0.10881612090680101,
+      "average_severity": 15.308998643941557,
+      "pure_premium": 1.6658658474011971,
+      "relativity": 1.1254392742503874,
+      "commercial_premium": 2.776443079001995
+    },
+    {
+      "product_category_name_english": "pet_shop",
+      "eligible_exposures": 1924,
+      "covered_claim_count": 165,
+      "claim_frequency": 0.08575883575883576,
+      "average_severity": 19.111303323232935,
+      "pure_premium": 1.6389631228344252,
+      "relativity": 1.1072641115510504,
+      "commercial_premium": 2.7316052047240422
+    }
+  ],
+  "top_routes_by_pure_premium": [
+    {
+      "route_state": "SP_to_MA",
+      "eligible_exposures": 549,
+      "covered_claim_count": 62,
+      "claim_frequency": 0.11293260473588343,
+      "average_severity": 36.884806487418125,
+      "pure_premium": 4.16549727180314,
+      "relativity": 2.8141607163527267,
+      "commercial_premium": 6.942495453005234
+    },
+    {
+      "route_state": "SP_to_PA",
+      "eligible_exposures": 765,
+      "covered_claim_count": 74,
+      "claim_frequency": 0.09673202614379085,
+      "average_severity": 31.620291225126646,
+      "pure_premium": 3.0586948374632312,
+      "relativity": 2.066418075259925,
+      "commercial_premium": 5.097824729105386
+    },
+    {
+      "route_state": "SP_to_PE",
+      "eligible_exposures": 1246,
+      "covered_claim_count": 123,
+      "claim_frequency": 0.09871589085072231,
+      "average_severity": 27.822226357148104,
+      "pure_premium": 2.7464958602963216,
+      "relativity": 1.85550013680013,
+      "commercial_premium": 4.57749310049387
+    },
+    {
+      "route_state": "SP_to_BA",
+      "eligible_exposures": 2626,
+      "covered_claim_count": 277,
+      "claim_frequency": 0.10548362528560548,
+      "average_severity": 23.35505056949398,
+      "pure_premium": 2.46357540279887,
+      "relativity": 1.6643624201266962,
+      "commercial_premium": 4.105959004664784
+    },
+    {
+      "route_state": "SC_to_RJ",
+      "eligible_exposures": 531,
+      "covered_claim_count": 52,
+      "claim_frequency": 0.09792843691148775,
+      "average_severity": 24.79303236906374,
+      "pure_premium": 2.4279429061983326,
+      "relativity": 1.6402895266362638,
+      "commercial_premium": 4.046571510330555
+    },
+    {
+      "route_state": "SP_to_MT",
+      "eligible_exposures": 761,
+      "covered_claim_count": 78,
+      "claim_frequency": 0.10249671484888305,
+      "average_severity": 23.635697258142198,
+      "pure_premium": 2.4225813221223276,
+      "relativity": 1.6366673038139727,
+      "commercial_premium": 4.037635536870546
+    },
+    {
+      "route_state": "SP_to_CE",
+      "eligible_exposures": 1091,
+      "covered_claim_count": 96,
+      "claim_frequency": 0.08799266727772685,
+      "average_severity": 26.538777003024517,
+      "pure_premium": 2.335217774784925,
+      "relativity": 1.577645523960132,
+      "commercial_premium": 3.892029624641542
+    },
+    {
+      "route_state": "MG_to_RJ",
+      "eligible_exposures": 1275,
+      "covered_claim_count": 129,
+      "claim_frequency": 0.1011764705882353,
+      "average_severity": 22.119912199852603,
+      "pure_premium": 2.2380146461027337,
+      "relativity": 1.5119762392637597,
+      "commercial_premium": 3.730024410171223
+    },
+    {
+      "route_state": "RS_to_SP",
+      "eligible_exposures": 749,
+      "covered_claim_count": 64,
+      "claim_frequency": 0.08544726301735647,
+      "average_severity": 24.34712335909661,
+      "pure_premium": 2.0803950533807516,
+      "relativity": 1.4054903056470731,
+      "commercial_premium": 3.4673250889679195
+    },
+    {
+      "route_state": "PR_to_MG",
+      "eligible_exposures": 925,
+      "covered_claim_count": 77,
+      "claim_frequency": 0.08324324324324324,
+      "average_severity": 21.838983845023662,
+      "pure_premium": 1.8179478443965642,
+      "relativity": 1.2281840736542704,
+      "commercial_premium": 3.029913073994274
+    }
+  ],
+  "cross_state_pricing": [
+    {
+      "cross_state_flag": 1,
+      "eligible_exposures": 70331,
+      "covered_claim_count": 5916,
+      "total_gross_loss": 132430.13644414503,
+      "total_recovery_from_carrier": 1306.301124518385,
+      "total_paid_loss": 131123.83531962664,
+      "total_net_loss": 131123.83531962664,
+      "average_freight_value": 23.632559610982355,
+      "average_freight_value_capped": 23.065005331930443,
+      "unique_orders": 61898,
+      "unique_sellers": 2717,
+      "unique_products": 24059,
+      "claim_frequency": 0.08411653467176636,
+      "average_severity": 22.164272366400716,
+      "pure_premium": 1.864381784982819,
+      "relativity": 1.2595542950172363,
+      "commercial_premium": 3.107302974971365,
+      "credibility_flag": "credible_for_baseline"
+    },
+    {
+      "cross_state_flag": 0,
+      "eligible_exposures": 39866,
+      "covered_claim_count": 2569,
+      "total_gross_loss": 32305.862510174076,
+      "total_recovery_from_carrier": 317.0155321787009,
+      "total_paid_loss": 31988.846977995374,
+      "total_net_loss": 31988.846977995374,
+      "average_freight_value": 13.449407766016153,
+      "average_freight_value_capped": 13.4244085185371,
+      "unique_orders": 34827,
+      "unique_sellers": 2188,
+      "unique_products": 16182,
+      "claim_frequency": 0.06444087693774143,
+      "average_severity": 12.45186725496122,
+      "pure_premium": 0.8024092454220482,
+      "relativity": 0.5420982009015896,
+      "commercial_premium": 1.3373487423700803,
+      "credibility_flag": "credible_for_baseline"
+    }
+  ],
+  "validation": {
+    "rows_match_claims": 112650,
+    "ineligible_baseline_pure_premium_nonzero": 0,
+    "ineligible_baseline_commercial_premium_nonzero": 0,
+    "total_expected_loss": 163112.68229762197,
+    "total_commercial_premium": 271854.47049603664,
+    "expected_loss_ratio": 0.6,
+    "portfolio_pure_premium_matches": true
+  }
+}

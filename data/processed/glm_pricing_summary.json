@@ -1,0 +1,141 @@
+{
+  "parameters": {
+    "target_loss_ratio": 0.6,
+    "random_seed": 20260521,
+    "test_size": 0.2,
+    "category_min_exposure": 500,
+    "route_min_exposure": 500,
+    "frequency_model": "Binomial GLM with logit link",
+    "severity_model": "Gamma GLM with log link",
+    "severity_target": "net_loss",
+    "pricing_unit": "order_id + order_item_id + seller_id + product_id"
+  },
+  "input": {
+    "rows": 112650,
+    "unique_exposure_keys": 112650,
+    "eligible_exposures": 110197,
+    "covered_claims": 8485,
+    "actual_total_net_loss": 163112.682297622
+  },
+  "feature_controls": {
+    "allowed_features": [
+      "product_category_name_english",
+      "route_state",
+      "cross_state_flag",
+      "purchase_month",
+      "purchase_weekday",
+      "price",
+      "freight_value_capped",
+      "freight_to_price_ratio_capped",
+      "product_weight_g_filled",
+      "product_volume_cm3_filled",
+      "estimated_delivery_days"
+    ],
+    "excluded_outcome_fields": [
+      "return_requested",
+      "return_approved",
+      "refund_without_return",
+      "partial_refund",
+      "request_days_after_delivery",
+      "return_reason",
+      "covered_claim_flag",
+      "claim_type",
+      "gross_loss",
+      "recovery_from_carrier",
+      "paid_loss",
+      "net_loss",
+      "claim_status"
+    ],
+    "excluded_synthetic_generation_fields": [
+      "return_probability",
+      "covered_claim_probability",
+      "return_factor_category",
+      "return_factor_route",
+      "return_factor_freight_ratio",
+      "return_factor_size",
+      "return_factor_month"
+    ]
+  },
+  "selected_level_counts": {
+    "category_levels_plus_other": 29,
+    "route_levels_plus_other": 31
+  },
+  "validation": {
+    "frequency": {
+      "train": {
+        "exposures": 88201,
+        "actual_claims": 6770,
+        "actual_frequency": 0.0767564993594177,
+        "predicted_frequency": 0.07675649935941967,
+        "auc": 0.5702741509621824,
+        "brier_score": 0.07054686055576266
+      },
+      "test": {
+        "exposures": 21996,
+        "actual_claims": 1715,
+        "actual_frequency": 0.07796872158574286,
+        "predicted_frequency": 0.07664636248453549,
+        "auc": 0.5597956006735109,
+        "brier_score": 0.0716811579470361
+      }
+    },
+    "severity": {
+      "train": {
+        "claims": 6770,
+        "actual_severity": 19.1952591587353,
+        "predicted_severity": 19.29900981428007,
+        "mae": 2.367927331140759,
+        "rmse": 3.6507885281128787
+      },
+      "test": {
+        "claims": 1715,
+        "actual_severity": 19.33573049153588,
+        "predicted_severity": 19.4277049259193,
+        "mae": 2.4518255053894684,
+        "rmse": 3.875977254031874
+      }
+    },
+    "pure_premium": {
+      "train": {
+        "actual_total_loss": 129951.90450463799,
+        "predicted_total_loss": 131300.84653781567,
+        "actual_to_expected": 0.9897263264575437,
+        "actual_pure_premium": 1.4733608973213228,
+        "predicted_pure_premium": 1.4886548512807753
+      },
+      "test": {
+        "actual_total_loss": 33160.77779298404,
+        "predicted_total_loss": 33062.5804822357,
+        "actual_to_expected": 1.002970043756902,
+        "actual_pure_premium": 1.5075821873515203,
+        "predicted_pure_premium": 1.5031178615309921
+      }
+    }
+  },
+  "final_model_fit": {
+    "frequency_aic": 59491.231042263826,
+    "severity_aic": 43543.86694562611,
+    "frequency_nobs": 110197,
+    "severity_nobs": 8485
+  },
+  "portfolio_pricing": {
+    "actual_total_net_loss": 163112.682297622,
+    "glm_expected_total_loss": 164831.0987919977,
+    "glm_actual_to_expected": 0.9895746827693954,
+    "baseline_expected_total_loss": 163112.68229762197,
+    "baseline_actual_to_expected": 1.0000000000000002,
+    "glm_mean_expected_loss": 1.495785718231873,
+    "baseline_mean_expected_loss": 1.4801916776102977,
+    "glm_total_commercial_premium": 274718.4979866629,
+    "glm_expected_loss_ratio": 0.5999999999999999
+  },
+  "output": {
+    "pricing_glm": "data/processed/pricing_glm.csv",
+    "glm_pricing_summary": "data/processed/glm_pricing_summary.json",
+    "glm_frequency_coefficients": "data/processed/glm_frequency_coefficients.csv",
+    "glm_severity_coefficients": "data/processed/glm_severity_coefficients.csv",
+    "glm_frequency_calibration": "data/processed/glm_frequency_calibration.csv",
+    "glm_severity_calibration": "data/processed/glm_severity_calibration.csv",
+    "glm_pure_premium_calibration": "data/processed/glm_pure_premium_calibration.csv"
+  }
+}

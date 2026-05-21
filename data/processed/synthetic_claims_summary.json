@@ -1,0 +1,53 @@
+{
+  "random_seed": 20260521,
+  "parameters": {
+    "base_return_rate": 0.08,
+    "min_return_probability": 0.01,
+    "max_return_probability": 0.25,
+    "freight_value_cap": 84.52,
+    "freight_to_price_ratio_cap": 1.5494505494505493,
+    "recovery_probability": 0.05
+  },
+  "rows": 112650,
+  "eligible_exposures": 110197,
+  "ineligible_exposures": 2453,
+  "return_requested_count": 9338,
+  "return_requested_rate_all": 0.08289391921881935,
+  "return_requested_rate_eligible": 0.08473914897864733,
+  "return_approved_count": 8709,
+  "refund_without_return_count": 203,
+  "partial_refund_count": 379,
+  "covered_claim_count": 8485,
+  "covered_claim_frequency_all": 0.07532179316466933,
+  "covered_claim_frequency_eligible": 0.07699846638293238,
+  "total_gross_loss": 164735.9989543191,
+  "total_recovery_from_carrier": 1623.316656697086,
+  "total_paid_loss": 163112.68229762203,
+  "total_net_loss": 163112.68229762203,
+  "average_paid_loss_among_claims": 19.223651419872954,
+  "pure_premium_per_all_exposure": 1.4479598961173727,
+  "pure_premium_per_eligible_exposure": 1.480191677610298,
+  "imputation": {
+    "product_weight_g_imputed_rows": 26,
+    "product_volume_cm3_imputed_rows": 18
+  },
+  "claim_status": {
+    "no_return": 100859,
+    "paid": 8485,
+    "not_eligible": 2453,
+    "declined_not_approved": 629,
+    "closed_refund_without_return": 203,
+    "closed_no_covered_loss": 21
+  },
+  "claim_type": {
+    "none": 104165,
+    "return_shipping": 8485
+  },
+  "return_reason": {
+    "none": 103312,
+    "buyer_remorse": 4216,
+    "wrong_size_or_fit": 2294,
+    "damaged_or_defective": 1920,
+    "late_delivery": 908
+  }
+}
