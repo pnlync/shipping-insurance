@@ -1,0 +1,54 @@
+{
+  "rows": 112650,
+  "columns": 29,
+  "unique_exposure_key": 112650,
+  "unique_order_id": 98666,
+  "unique_seller_id": 3095,
+  "unique_product_id": 32951,
+  "orders_with_multiple_exposures": 9803,
+  "orders_with_multiple_sellers": 1278,
+  "max_exposures_per_order": 21,
+  "missing_rates": {
+    "product_weight_g": 0.00015978695073235686,
+    "product_length_cm": 0.00015978695073235686,
+    "product_height_cm": 0.00015978695073235686,
+    "product_width_cm": 0.00015978695073235686,
+    "product_volume_cm3": 0.00015978695073235686
+  },
+  "top_categories": {
+    "bed_bath_table": 11115,
+    "health_beauty": 9670,
+    "sports_leisure": 8641,
+    "furniture_decor": 8334,
+    "computers_accessories": 7827,
+    "housewares": 6964,
+    "watches_gifts": 5991,
+    "telephony": 4545,
+    "garden_tools": 4347,
+    "auto": 4235
+  },
+  "top_routes": {
+    "SP_to_SP": 36192,
+    "SP_to_RJ": 9688,
+    "SP_to_MG": 8703,
+    "SP_to_RS": 4194,
+    "SP_to_PR": 3667,
+    "PR_to_SP": 3410,
+    "MG_to_SP": 2964,
+    "SP_to_SC": 2749,
+    "SP_to_BA": 2708,
+    "MG_to_MG": 1709
+  },
+  "freight_value": {
+    "min": 0.0,
+    "median": 16.26,
+    "mean": 19.990319928983578,
+    "max": 409.68
+  },
+  "freight_to_price_ratio": {
+    "min": 0.0,
+    "median": 0.23135623826460017,
+    "mean": 0.3208635490797802,
+    "max": 26.23529411764706
+  }
+}

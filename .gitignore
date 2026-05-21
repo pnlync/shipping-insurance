@@ -11,6 +11,11 @@ __pycache__/
 build/
 dist/
 
+# Kaggle/raw data and generated large outputs
+data/raw/
+data/processed/*.csv
+!data/processed/*_summary.json
+
 # Virtual environments
 .venv/
 venv/
