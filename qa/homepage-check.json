@@ -1,0 +1,16 @@
+{
+  "desktop": {
+    "scrollWidth": 1217,
+    "viewportWidth": 1217,
+    "overflowX": false,
+    "stepFontSize": "22px",
+    "stepFontWeight": "400",
+    "stepAfterContent": "none"
+  },
+  "mobile492": {
+    "scrollWidth": 492,
+    "viewportWidth": 492,
+    "overflowX": false
+  },
+  "errors": []
+}

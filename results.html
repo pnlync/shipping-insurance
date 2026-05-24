@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Data & Results · Return-Shipping Insurance Pricing Engine</title>
+    <meta
+      name="description"
+      content="Evidence page for exposure data, actuarial pricing results, seller credibility, loss-ratio monitoring, stress testing, and XGBoost challenger diagnostics."
+    />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles/shared.css" />
+    <link rel="stylesheet" href="./styles/results.css" />
+  </head>
+  <body>
+    <div class="site-shell results-page">
+      <header class="topbar" aria-label="Project navigation">
+        <a class="brand-mark" href="./index.html" aria-label="Homepage">
+          <span class="brand-dot" aria-hidden="true"></span>
+          <span>Shipping Insurance Pricing</span>
+        </a>
+        <nav class="topnav" aria-label="Data and results navigation">
+          <a href="./index.html">Back to homepage</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="data-hero" aria-labelledby="results-page-title">
+          <div class="data-hero-copy">
+            <p class="eyebrow">Data & Results</p>
+            <h1 id="results-page-title">
+              <span>Evidence behind</span>
+              <span>GLM + credibility</span>
+              <span>pricing basis.</span>
+            </h1>
+            <p class="hero-lede">
+              This page brings the portfolio data, synthetic claims, GLM calibration, seller
+              credibility, monitoring, stress testing, and XGBoost challenger diagnostics into one
+              reviewable evidence record.
+            </p>
+            <p class="hero-caveat">
+              Claim outcomes are synthetic and the numerical rates demonstrate the pricing
+              framework. They are not production TikTok Shop insurance rates.
+            </p>
+          </div>
+
+          <div class="result-signal" aria-label="Champion pricing basis summary">
+            <div class="signal-ring" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <dl>
+              <div>
+                <dt>Champion basis</dt>
+                <dd>GLM + credibility</dd>
+              </div>
+              <div>
+                <dt>Portfolio credibility loss ratio</dt>
+                <dd>59.37%</dd>
+              </div>
+              <div>
+                <dt>XGBoost role</dt>
+                <dd>Challenger score</dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+
+        <section class="evidence-section" aria-labelledby="data-title">
+          <div class="results-header">
+            <div class="section-heading">
+              <p class="section-kicker">Portfolio data foundation</p>
+              <h2 id="data-title">The pricing row is a seller-order-item-product exposure</h2>
+            </div>
+            <p>
+              The Olist order-item data is reshaped into an insurance exposure table, then limited
+              to delivered rows for first-version covered return-shipping claim modelling.
+            </p>
+          </div>
+
+          <dl class="metric-strip data-strip" aria-label="Portfolio data KPIs">
+            <div>
+              <dt>Exposure rows</dt>
+              <dd>112,650</dd>
+            </div>
+            <div>
+              <dt>Eligible delivered exposures</dt>
+              <dd>110,197</dd>
+            </div>
+            <div>
+              <dt>Covered claims</dt>
+              <dd>8,485</dd>
+            </div>
+            <div>
+              <dt>Claim frequency</dt>
+              <dd>7.70%</dd>
+            </div>
+          </dl>
+
+          <div class="definition-band" aria-label="Exposure definition">
+            <span>Exposure key</span>
+            <code>order_id + order_item_id + seller_id + product_id</code>
+            <p>
+              Freight value and seller attribution live at order-item level. Pricing at order_id
+              alone would blur multi-item and multi-seller orders.
+            </p>
+          </div>
+
+          <div class="data-profile" aria-label="Exposure profile">
+            <div>
+              <span>Unique sellers</span>
+              <strong>3,095</strong>
+              <p>Seller attribution supports credibility, monitoring, and watchlist review.</p>
+            </div>
+            <div>
+              <span>Unique products</span>
+              <strong>32,951</strong>
+              <p>Category, size, value, and freight variables feed quote-time pricing.</p>
+            </div>
+            <div>
+              <span>Cross-state share</span>
+              <strong>63.82%</strong>
+              <p>Route and cross-state movement are material logistics-risk controls.</p>
+            </div>
+            <div>
+              <span>Delivered rows</span>
+              <strong>97.82%</strong>
+              <p>Non-delivered statuses are excluded from first-version claim simulation.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="evidence-section surface-band" aria-labelledby="claims-title">
+          <div class="results-header">
+            <div class="section-heading">
+              <p class="section-kicker">Synthetic claims and baseline premium</p>
+              <h2 id="claims-title">The project separates return behavior from covered claims.</h2>
+            </div>
+            <p>
+              Olist has logistics data but no insurance claim table. The synthetic layer creates
+              return fields and covered-claim fields so the pricing workflow can estimate
+              frequency, severity, pure premium, and commercial premium.
+            </p>
+          </div>
+
+          <div class="claims-layout">
+            <div class="layer-stack" aria-label="Return and claim layer fields">
+              <div>
+                <span>Returns layer</span>
+                <p>return_requested, return_approved, refund_without_return, return_reason</p>
+              </div>
+              <div>
+                <span>Claims layer</span>
+                <p>covered_claim_flag, claim_type, gross_loss, recovery, paid_loss, net_loss</p>
+              </div>
+              <div class="formula-line">
+                <span>Rate conversion</span>
+                <p><code>commercial premium = expected loss / 60%</code></p>
+              </div>
+            </div>
+
+            <dl class="result-facts compact-facts" aria-label="Baseline premium facts">
+              <div>
+                <dt>Total net loss</dt>
+                <dd>163,112.68</dd>
+              </div>
+              <div>
+                <dt>Average severity</dt>
+                <dd>19.22</dd>
+              </div>
+              <div>
+                <dt>Pure premium</dt>
+                <dd>1.4802</dd>
+              </div>
+              <div>
+                <dt>Commercial premium</dt>
+                <dd>2.4670</dd>
+              </div>
+              <div>
+                <dt>Total baseline premium</dt>
+                <dd>271,854.47</dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+
+        <section class="evidence-section" aria-labelledby="pricing-title">
+          <div class="results-header">
+            <div class="section-heading">
+              <p class="section-kicker">GLM champion pricing</p>
+              <h2 id="pricing-title">GLM is selected for calibrated expected loss, not maximum AUC.</h2>
+            </div>
+            <p>
+              The champion model uses a binomial frequency GLM and gamma severity GLM. Expected
+              loss is frequency times severity, and the holdout pure premium result is close to
+              actual synthetic loss.
+            </p>
+          </div>
+
+          <div class="pricing-layout">
+            <div class="calibration-panel" aria-label="GLM pure premium calibration">
+              <div class="calibration-axis">
+                <span>Holdout pure premium</span>
+                <span>A/E 1.0030</span>
+              </div>
+              <div class="calibration-bar actual" style="--bar-width: 100%">
+                <span>Test actual pure premium</span>
+                <strong>1.508</strong>
+              </div>
+              <div class="calibration-bar expected" style="--bar-width: 99.7%">
+                <span>Test GLM predicted pure premium</span>
+                <strong>1.503</strong>
+              </div>
+              <p>
+                Frequency AUC is moderate, but aggregate pure premium calibration is the pricing
+                decision metric.
+              </p>
+            </div>
+
+            <dl class="result-facts" aria-label="GLM validation and portfolio facts">
+              <div>
+                <dt>Test frequency AUC</dt>
+                <dd>0.5598</dd>
+              </div>
+              <div>
+                <dt>Test pure premium A/E</dt>
+                <dd>1.0030</dd>
+              </div>
+              <div>
+                <dt>GLM expected loss</dt>
+                <dd>164,831.10</dd>
+              </div>
+              <div>
+                <dt>GLM total commercial premium</dt>
+                <dd>274,718.50</dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+
+        <section class="evidence-section surface-band" aria-labelledby="credibility-title">
+          <div class="results-header">
+            <div class="section-heading">
+              <p class="section-kicker">Seller credibility layer</p>
+              <h2 id="credibility-title">Seller experience is used after GLM, with shrinkage.</h2>
+            </div>
+            <p>
+              Seller ID is not directly modelled because the seller population is sparse. The
+              credibility layer lets larger sellers carry more of their own experience while small
+              sellers stay near their GLM risk mix.
+            </p>
+          </div>
+
+          <div class="credibility-summary">
+            <div class="definition-band credibility-formula">
+              <span>Credibility formula</span>
+              <code>Z = n / (n + 500)</code>
+              <p>
+                Raw relativity is capped from 0.50 to 2.00, then normalized so total credibility
+                expected loss preserves GLM expected loss.
+              </p>
+            </div>
+            <dl class="mini-facts" aria-label="Seller population facts">
+              <div>
+                <dt>Eligible sellers</dt>
+                <dd>2,970</dd>
+              </div>
+              <div>
+                <dt>Median seller exposure</dt>
+                <dd>8</dd>
+              </div>
+              <div>
+                <dt>Final relativity p95</dt>
+                <dd>1.060</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="tier-chart" aria-label="Seller credibility tier table">
+            <div class="tier-row tier-head">
+              <span>Seller tier</span>
+              <span>Sellers</span>
+              <span>Exposures</span>
+              <span>Credibility A/E</span>
+            </div>
+            <div class="tier-row" style="--bar-width: 8.4%">
+              <span>Elevated</span>
+              <strong>47</strong>
+              <em>8,179</em>
+              <b>1.359</b>
+            </div>
+            <div class="tier-row" style="--bar-width: 100%">
+              <span>Near GLM</span>
+              <strong>2,905</strong>
+              <em>97,083</em>
+              <b>0.972</b>
+            </div>
+            <div class="tier-row" style="--bar-width: 5.1%">
+              <span>Lower than GLM</span>
+              <strong>18</strong>
+              <em>4,935</em>
+              <b>0.729</b>
+            </div>
+          </div>
+        </section>
+
+        <section class="evidence-section" aria-labelledby="monitoring-title">
+          <div class="results-header">
+            <div class="section-heading">
+              <p class="section-kicker">Loss ratio monitoring</p>
+              <h2 id="monitoring-title">Portfolio adequacy does not remove segment watchlists.</h2>
+            </div>
+            <p>
+              The portfolio is close to target under the GLM and credibility basis, but seller
+              tier monitoring shows elevated sellers remain above the target loss ratio.
+            </p>
+          </div>
+
+          <div class="monitoring-layout">
+            <div class="bar-panel" aria-label="Portfolio loss ratio by pricing basis">
+              <div class="bar-heading">
+                <span>Portfolio loss ratio</span>
+                <strong>Target 60%</strong>
+              </div>
+              <div class="result-bar" style="--bar-width: 60%">
+                <span>Baseline</span>
+                <strong>60.00%</strong>
+              </div>
+              <div class="result-bar" style="--bar-width: 59.37%">
+                <span>GLM</span>
+                <strong>59.37%</strong>
+              </div>
+              <div class="result-bar" style="--bar-width: 59.37%">
+                <span>GLM + credibility</span>
+                <strong>59.37%</strong>
+              </div>
+            </div>
+
+            <div class="bar-panel" aria-label="Seller tier loss ratio">
+              <div class="bar-heading">
+                <span>Seller tier loss ratio</span>
+                <strong>Watchlist read</strong>
+              </div>
+              <div class="result-bar" style="--bar-width: 58.31%">
+                <span>Near GLM</span>
+                <strong>58.31%</strong>
+              </div>
+              <div class="result-bar alert-bar" style="--bar-width: 81.53%">
+                <span>Elevated</span>
+                <strong>81.53%</strong>
+              </div>
+              <div class="result-bar" style="--bar-width: 43.73%">
+                <span>Lower than GLM</span>
+                <strong>43.73%</strong>
+              </div>
+            </div>
+          </div>
+
+          <p class="evidence-note">
+            Operational read: elevated sellers should stay on underwriting watchlist even when the
+            total portfolio appears adequate.
+          </p>
+        </section>
+
+        <section class="evidence-section surface-band" aria-labelledby="stress-title">
+          <div class="results-header">
+            <div class="section-heading">
+              <p class="section-kicker">Stress testing</p>
+              <h2 id="stress-title">Combined frequency and severity stress creates high pressure.</h2>
+            </div>
+            <p>
+              Stress testing turns the model output into a pricing control. The base portfolio is
+              near target, but simultaneous frequency and severity deterioration moves the loss
+              ratio materially above target.
+            </p>
+          </div>
+
+          <div class="stress-bars" aria-label="Credibility pricing stress scenarios">
+            <div class="stress-bar" style="--bar-width: 59.37%">
+              <span>Base observed</span>
+              <strong>59.37%</strong>
+              <em>within_target</em>
+            </div>
+            <div class="stress-bar" style="--bar-width: 65.31%">
+              <span>Frequency +10%</span>
+              <strong>65.31%</strong>
+              <em>above_target</em>
+            </div>
+            <div class="stress-bar" style="--bar-width: 71.25%">
+              <span>Frequency +20%</span>
+              <strong>71.25%</strong>
+              <em>above_target</em>
+            </div>
+            <div class="stress-bar" style="--bar-width: 65.31%">
+              <span>Severity +10%</span>
+              <strong>65.31%</strong>
+              <em>above_target</em>
+            </div>
+            <div class="stress-bar" style="--bar-width: 71.25%">
+              <span>Severity +20%</span>
+              <strong>71.25%</strong>
+              <em>above_target</em>
+            </div>
+            <div class="stress-bar" style="--bar-width: 71.84%">
+              <span>Combined +10%/+10%</span>
+              <strong>71.84%</strong>
+              <em>above_target</em>
+            </div>
+            <div class="stress-bar stress-high" style="--bar-width: 85.5%">
+              <span>Combined +20%/+20%</span>
+              <strong>85.50%</strong>
+              <em>high_pressure</em>
+            </div>
+          </div>
+        </section>
+
+        <section class="evidence-section" aria-labelledby="model-title">
+          <div class="results-header">
+            <div class="section-heading">
+              <p class="section-kicker">GLM vs XGBoost challenger</p>
+              <h2 id="model-title">XGBoost adds a slight ranking lift, not a better rate basis.</h2>
+            </div>
+            <p>
+              XGBoost is useful as a nonlinear challenger and diagnostic score. It is not selected
+              as champion because the pricing decision depends on pure premium A/E and loss-ratio
+              calibration.
+            </p>
+          </div>
+
+          <div class="model-comparison" aria-label="GLM versus XGBoost comparison">
+            <div class="model-row model-head">
+              <span>Measure</span>
+              <span>GLM champion</span>
+              <span>XGBoost challenger</span>
+              <span>Decision read</span>
+            </div>
+            <div class="model-row">
+              <span>Frequency AUC</span>
+              <strong>0.5598</strong>
+              <strong>0.5609</strong>
+              <em>XGBoost lift is +0.0011.</em>
+            </div>
+            <div class="model-row">
+              <span>Pure premium A/E</span>
+              <strong>1.0030</strong>
+              <strong>1.0145</strong>
+              <em>GLM is closer to expected loss parity.</em>
+            </div>
+            <div class="model-row">
+              <span>Test loss ratio</span>
+              <strong>60.18%</strong>
+              <strong>60.87%</strong>
+              <em>Both are near target, but GLM calibrates better.</em>
+            </div>
+          </div>
+        </section>
+
+        <section class="evidence-section surface-band" aria-labelledby="interpretability-title">
+          <div class="results-header">
+            <div class="section-heading">
+              <p class="section-kicker">XGBoost interpretability</p>
+              <h2 id="interpretability-title">The challenger uses plausible signals.</h2>
+            </div>
+            <p>
+              Native XGBoost contribution summaries show the challenger is learning recognizable
+              pricing signals. These outputs are not full external SHAP beeswarm or waterfall
+              visualizations.
+            </p>
+          </div>
+
+          <div class="interpretability-grid">
+            <div class="bar-panel" aria-label="Frequency top base contribution shares">
+              <div class="bar-heading">
+                <span>Frequency contribution shares</span>
+                <strong>Top base features</strong>
+              </div>
+              <div class="result-bar" style="--bar-width: 25.7%">
+                <span>category_group</span>
+                <strong>25.7%</strong>
+              </div>
+              <div class="result-bar" style="--bar-width: 16.8%">
+                <span>cross_state_flag</span>
+                <strong>16.8%</strong>
+              </div>
+              <div class="result-bar" style="--bar-width: 10.1%">
+                <span>purchase_month</span>
+                <strong>10.1%</strong>
+              </div>
+              <div class="result-bar" style="--bar-width: 10.1%">
+                <span>freight_to_price_ratio</span>
+                <strong>10.1%</strong>
+              </div>
+              <div class="result-bar" style="--bar-width: 8%">
+                <span>product_weight</span>
+                <strong>8.0%</strong>
+              </div>
+            </div>
+
+            <div class="severity-callout" aria-label="Severity contribution summary">
+              <span>Severity contribution</span>
+              <strong>80.7%</strong>
+              <p>
+                freight_value dominates severity contribution, which is directionally consistent
+                with Coverage A: return shipping cost.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="evidence-section closing-section" aria-labelledby="limitations-title">
+          <div class="results-header">
+            <div class="section-heading">
+              <p class="section-kicker">Limitations and production data</p>
+              <h2 id="limitations-title">The framework is transferable; the current rates are not production rates.</h2>
+            </div>
+            <p>
+              The result is a pricing architecture and governance story. Production deployment
+              would require real platform experience and insurer-level assumptions.
+            </p>
+          </div>
+
+          <div class="limitation-list" aria-label="Production requirements">
+            <div>
+              <span>Current limitation</span>
+              <p>Synthetic claims, Olist data rather than TikTok Shop data, and no true out-of-time validation.</p>
+            </div>
+            <div>
+              <span>Missing insurance layers</span>
+              <p>No claim development, IBNR, expense model, capital load, reinsurance, or compliance review.</p>
+            </div>
+            <div>
+              <span>Production input need</span>
+              <p>Real order, shipment, return, claim, payment, recovery, seller, and policy-period data.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

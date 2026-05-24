@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Return-Shipping Insurance Pricing Engine</title>
+    <meta
+      name="description"
+      content="Exposure-level actuarial pricing workflow for e-commerce return-shipping insurance."
+    />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles/shared.css" />
+    <link rel="stylesheet" href="./styles/home.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar" aria-label="Project navigation">
+        <a class="brand-mark" href="./index.html" aria-label="Homepage">
+          <span class="brand-dot" aria-hidden="true"></span>
+          <span>Shipping Insurance Pricing</span>
+        </a>
+        <nav class="topnav" aria-label="Project pages">
+          <a href="#reserved-pages">Pages</a>
+          <a href="#method">Method</a>
+          <a href="#results">Results</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero" aria-labelledby="page-title">
+          <div class="hero-copy">
+            <p class="eyebrow">Actuarial pricing project · Tom Zhang</p>
+            <h1 id="page-title">
+              <span>Return-Shipping</span>
+              <span>Insurance</span>
+              <span>Pricing Engine</span>
+            </h1>
+            <p class="hero-lede">
+              An exposure-level return-shipping pricing framework using GLM for explainable
+              expected loss, seller credibility for sparse experience, and XGBoost as a
+              challenger risk-ranking model.
+            </p>
+            <div class="hero-actions" aria-label="Primary links">
+              <a class="primary-link" href="#reserved-pages">View project pages</a>
+            </div>
+          </div>
+
+          <div class="risk-plane" aria-label="Pricing workflow visual">
+            <div class="plane-grid" aria-hidden="true"></div>
+            <div class="flow-node node-exposure">
+              <span>Exposure</span>
+              <strong>order item</strong>
+            </div>
+            <div class="flow-node node-claims">
+              <span>Claims</span>
+              <strong>covered flag</strong>
+            </div>
+            <div class="flow-node node-pricing">
+              <span>Pricing</span>
+              <strong>frequency × severity</strong>
+            </div>
+            <div class="flow-node node-credibility">
+              <span>Credibility</span>
+              <strong>seller A/E</strong>
+            </div>
+            <div class="flow-node node-challenger">
+              <span>Challenger</span>
+              <strong>XGBoost score</strong>
+            </div>
+            <div class="flow-line line-one" aria-hidden="true"></div>
+            <div class="flow-line line-two" aria-hidden="true"></div>
+            <div class="flow-line line-three" aria-hidden="true"></div>
+            <div class="flow-line line-four" aria-hidden="true"></div>
+          </div>
+        </section>
+
+        <section class="problem-section" aria-labelledby="problem-title">
+          <div>
+            <p class="section-kicker">Pricing question</p>
+            <h2 id="problem-title">
+              How should return-shipping insurance be priced for e-commerce merchants?
+            </h2>
+          </div>
+          <p>
+            This project builds an exposure-level dynamic pricing workflow for e-commerce
+            return-shipping insurance, linking logistics, returns, covered claims, product risk,
+            and seller history. GLM models frequency and severity into explainable rate factors;
+            XGBoost challenges the risk ranking; seller credibility, loss-ratio backtesting,
+            stress testing, and pricing guardrails simulate an insurer's launch and monitoring
+            process.
+          </p>
+        </section>
+
+        <section class="pages-section" id="reserved-pages" aria-labelledby="pages-title">
+          <div class="section-heading">
+            <p class="section-kicker">Project pages</p>
+            <h2 id="pages-title">Project pages are organized as focused review deliverables.</h2>
+          </div>
+          <div class="route-list">
+            <a href="./project-memo.html" aria-label="Project Memo">
+              <span>Project Memo</span>
+              <strong>Executive summary and final recommendation</strong>
+            </a>
+            <a href="./project-docs.html" aria-label="Project Docs">
+              <span>Project Docs</span>
+              <strong>Official methodology documentation</strong>
+            </a>
+            <a href="./pricing-memo.html" aria-label="Pricing Memo">
+              <span>Pricing Memo</span>
+              <strong>Actuarial pricing memo and rate basis</strong>
+            </a>
+            <a href="./results.html" aria-label="Data and Results">
+              <span>Data & Results</span>
+              <strong>KPIs, calibration, stress tests, and challenger comparison</strong>
+            </a>
+          </div>
+        </section>
+
+        <section class="method-section" id="method" aria-labelledby="method-title">
+          <div class="section-heading">
+            <p class="section-kicker">Method</p>
+            <h2 id="method-title">A complete pricing workflow, not a single model score.</h2>
+          </div>
+          <ol class="method-list">
+            <li>
+              <span>01</span>
+              <p>
+                Define exposure as
+                <code>order_id + order_item_id + seller_id + product_id</code>.
+              </p>
+            </li>
+            <li>
+              <span>02</span>
+              <p>Separate return behavior from covered insurance claims.</p>
+            </li>
+            <li>
+              <span>03</span>
+              <p>Estimate pure premium with frequency × severity using quote-time features.</p>
+            </li>
+            <li>
+              <span>04</span>
+              <p>Apply seller credibility, monitor loss ratio, stress test adverse scenarios.</p>
+            </li>
+            <li>
+              <span>05</span>
+              <p>Use XGBoost as a challenger score, not an automatic replacement for GLM.</p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="results-section" id="results" aria-labelledby="results-title">
+          <div class="results-header">
+            <div class="section-heading">
+              <p class="section-kicker">Core results</p>
+              <h2 id="results-title">
+                <span>Pricing, credibility,</span>
+                <span>and monitoring work together.</span>
+              </h2>
+            </div>
+            <p>
+              GLM produces the explainable expected-loss rate basis; seller credibility shrinks
+              sparse merchant experience toward that base; XGBoost is tested as a challenger
+              risk-ranking model and kept out of the final rate basis when calibration is weaker.
+              Backtesting and stress testing turn the rate model into an operating control loop.
+            </p>
+          </div>
+
+          <div class="system-loop" aria-label="Pricing operating loop">
+            <div>
+              <span>01</span>
+              <strong>Product boundary</strong>
+              <p>Define what is covered, excluded, and paid.</p>
+            </div>
+            <div>
+              <span>02</span>
+              <strong>Exposure data</strong>
+              <p>Price at seller-order-item-product level.</p>
+            </div>
+            <div>
+              <span>03</span>
+              <strong>Expected loss</strong>
+              <p>Frequency × severity produces pure premium.</p>
+            </div>
+            <div>
+              <span>04</span>
+              <strong>Seller credibility</strong>
+              <p>Shrink sparse seller experience toward GLM expected loss.</p>
+            </div>
+            <div>
+              <span>05</span>
+              <strong>Portfolio control</strong>
+              <p>Backtest, stress test, and monitor loss ratio.</p>
+            </div>
+          </div>
+
+          <div class="capability-grid" aria-label="Role capability coverage">
+            <div>
+              <span>Insurance product</span>
+              <p>Coverage scope, exclusions, claim definition, and risk owner are explicit.</p>
+            </div>
+            <div>
+              <span>Actuarial pricing</span>
+              <p>Pure premium, target loss ratio, GLM relativities, and credibility are linked.</p>
+            </div>
+            <div>
+              <span>E-commerce context</span>
+              <p>Return behavior, freight value, seller attribution, and route risk are modeled.</p>
+            </div>
+            <div>
+              <span>Model governance</span>
+              <p>GLM is champion for explainable pricing; XGBoost is challenger for risk ranking.</p>
+            </div>
+            <div>
+              <span>Risk control</span>
+              <p>Seller tiers, A/E monitoring, stress scenarios, and dynamic-pricing guardrails.</p>
+            </div>
+            <div>
+              <span>Communication</span>
+              <p>Pricing memo, project docs, and deck translate modelling into business decisions.</p>
+            </div>
+          </div>
+
+          <dl class="metric-strip">
+            <div>
+              <dt>Eligible exposures</dt>
+              <dd>110,197</dd>
+            </div>
+            <div>
+              <dt>Covered claim frequency</dt>
+              <dd>7.70%</dd>
+            </div>
+            <div>
+              <dt>GLM pure premium A/E</dt>
+              <dd>1.003</dd>
+            </div>
+            <div>
+              <dt>Combined +20% stress LR</dt>
+              <dd>85.5%</dd>
+            </div>
+          </dl>
+          <div class="comparison-panel" aria-label="Model comparison summary">
+            <div class="comparison-row comparison-head">
+              <span>Pricing decision</span>
+              <span>Evidence</span>
+              <span>Why it matters</span>
+            </div>
+            <div class="comparison-row">
+              <span>Use GLM + credibility as champion</span>
+              <strong>A/E 1.003</strong>
+              <em>Rate level is calibrated and explainable enough for a pricing memo.</em>
+            </div>
+            <div class="comparison-row">
+              <span>Keep XGBoost as challenger</span>
+              <strong>AUC 0.5609</strong>
+              <em>It improves ranking slightly, but does not beat GLM calibration.</em>
+            </div>
+            <div class="comparison-row">
+              <span>Monitor sellers, not only portfolio</span>
+              <strong>81.5% elevated LR</strong>
+              <em>Seller credibility turns sparse experience into an underwriting watchlist.</em>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./scripts/plane-motion.js"></script>
+  </body>
+</html>

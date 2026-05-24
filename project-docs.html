@@ -1,0 +1,1069 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Project Docs | Return-Shipping Insurance Pricing Engine</title>
+    <meta
+      name="description"
+      content="Technical documentation for the return-shipping insurance pricing engine."
+    />
+    <link rel="stylesheet" href="./styles/shared.css" />
+    <link rel="stylesheet" href="./styles/project-docs.css?v=20260524-1" />
+  </head>
+  <body>
+    <div class="site-shell project-docs-site">
+      <header class="topbar" aria-label="Project navigation">
+        <a class="brand-mark" href="./index.html" aria-label="Homepage">
+          <span class="brand-dot" aria-hidden="true"></span>
+          <span>Shipping Insurance Pricing</span>
+        </a>
+        <nav class="topnav" aria-label="Project docs navigation">
+          <a href="https://github.com/pnlync/shipping-insurance">GitHub repo</a>
+          <a href="./index.html">Back to homepage</a>
+        </nav>
+      </header>
+
+      <main class="docs-page">
+        <div class="docs-layout">
+          <aside class="docs-sidebar" aria-label="Documentation navigation">
+            <nav>
+              <span>Foundations</span>
+              <a href="#overview">Overview</a>
+              <a href="#data-foundation">Data Foundation</a>
+              <a href="#exposure-definition">Exposure Definition</a>
+              <a href="#synthetic-claims">Synthetic Claims Layer</a>
+              <span>Pricing</span>
+              <a href="#baseline-pricing">Baseline Pricing</a>
+              <a href="#glm-pricing">GLM Pricing</a>
+              <a href="#seller-credibility">Seller Credibility</a>
+              <span>Controls</span>
+              <a href="#loss-ratio-monitoring">Loss Ratio Monitoring</a>
+              <a href="#stress-testing">Stress Testing</a>
+              <a href="#xgboost-challenger">XGBoost Challenger</a>
+              <a href="#interpretability">Interpretability</a>
+              <a href="#governance">Model Governance</a>
+            </nav>
+          </aside>
+
+          <article class="docs-content" id="documentation">
+            <nav class="breadcrumb" aria-label="Current documentation path">
+              <a href="./index.html#reserved-pages">Project Pages</a>
+              <span>/</span>
+              <span>Project Docs</span>
+            </nav>
+
+            <header class="docs-hero" id="overview">
+              <p class="eyebrow">Methodology documentation</p>
+              <h1>
+                <span>Project</span>
+                <span>Docs</span>
+              </h1>
+              <p>
+                A detailed technical documentation hub for the return-shipping insurance
+                pricing experiment: data design, exposure definition, synthetic claim
+                construction, baseline pricing, GLM expected loss, seller credibility,
+                monitoring, stress testing, XGBoost challenger analysis, interpretability,
+                and model governance.
+              </p>
+              <dl class="docs-meta">
+                <div>
+                  <dt>Status</dt>
+                  <dd>First-version actuarial workflow complete</dd>
+                </div>
+                <div>
+                  <dt>Pricing unit</dt>
+                  <dd>seller-order-item-product</dd>
+                </div>
+                <div>
+                  <dt>Champion basis</dt>
+                  <dd>GLM + seller credibility</dd>
+                </div>
+              </dl>
+            </header>
+
+            <section class="docs-section" id="data-foundation">
+              <div class="docs-section-heading">
+                <span>01</span>
+                <h2>Data Foundation</h2>
+              </div>
+              <p>
+                The project uses the Olist Brazilian E-Commerce Public Dataset as a realistic
+                e-commerce logistics structure. Olist provides orders, item-level freight,
+                products, sellers, customers, purchase timing, order status, and estimated
+                delivery dates. It does not provide real TikTok Shop data, real return requests,
+                real insurance claims, expenses, claim development, or underwriting decisions.
+              </p>
+              <p>
+                The modelling value of Olist is structural: it contains the same kind of entity
+                relationships that a return-shipping insurance product would need to price. The
+                numerical rates in this project are therefore not production indications. They are
+                evidence that the pricing architecture can be run end to end once real order,
+                return, shipment, payment, expense, and claim data are available.
+              </p>
+              <dl class="docs-kpi-grid" aria-label="Exposure table portfolio facts">
+                <div>
+                  <dt>Exposure rows</dt>
+                  <dd>112,650</dd>
+                  <small>Unique order-item-seller-product rows.</small>
+                </div>
+                <div>
+                  <dt>Eligible rows</dt>
+                  <dd>110,197</dd>
+                  <small>Delivered exposures used for first-version claim simulation.</small>
+                </div>
+                <div>
+                  <dt>Unique sellers</dt>
+                  <dd>3,095</dd>
+                  <small>2,970 sellers have eligible exposure.</small>
+                </div>
+                <div>
+                  <dt>Cross-state share</dt>
+                  <dd>63.82%</dd>
+                  <small>Route risk is a meaningful pricing dimension.</small>
+                </div>
+              </dl>
+              <h3>Source Tables</h3>
+              <table class="docs-table">
+                <thead>
+                  <tr>
+                    <th>Olist table</th>
+                    <th>Role in this project</th>
+                    <th>Pricing relevance</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>order_items</td>
+                    <td>Main table for order_id, order_item_id, seller_id, product_id, price, and freight_value.</td>
+                    <td>Defines the base exposure and anchors freight cost to the correct seller/item row.</td>
+                  </tr>
+                  <tr>
+                    <td>orders</td>
+                    <td>Adds customer_id, order_status, purchase timestamp, and estimated delivery date.</td>
+                    <td>Supports eligibility, purchase month, purchase weekday, and estimated delivery window.</td>
+                  </tr>
+                  <tr>
+                    <td>products + translation</td>
+                    <td>Adds category, English category name, weight, dimensions, and derived volume.</td>
+                    <td>Supports category risk, size, weight, and severity proxy features.</td>
+                  </tr>
+                  <tr>
+                    <td>customers + sellers</td>
+                    <td>Adds customer_state and seller_state.</td>
+                    <td>Creates route_state and cross_state_flag for logistics risk.</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3>Data Audit Conclusions</h3>
+              <ul class="docs-bullets">
+                <li>All core joins are reliable: order items match orders, products, and sellers at 100%, and orders match customers at 100%.</li>
+                <li>The product category translation match is 99.96%; unmatched categories are handled as unknown rather than silently dropped.</li>
+                <li>Only product size fields have material handling needs, and even those are tiny: 18 missing rows, or 0.016% of the exposure table.</li>
+                <li>Freight and freight-to-price ratio have strong right tails, so pricing features use caps or log transforms rather than raw extremes.</li>
+                <li>Delivered exposures represent 97.82% of rows; non-delivered statuses are not mixed into the first insurance claim simulation.</li>
+              </ul>
+              <div class="docs-note">
+                <span>Core limitation</span>
+                <p>
+                  Olist is useful for proving the data model and pricing workflow, but it cannot
+                  prove actual TikTok Shop profitability. Real deployment would require platform
+                  policy data, seller history, return records, carrier recoveries, expenses,
+                  claim development, and future-period validation.
+                </p>
+              </div>
+            </section>
+
+            <section class="docs-section" id="exposure-definition">
+              <div class="docs-section-heading">
+                <span>02</span>
+                <h2>Exposure Definition</h2>
+              </div>
+              <p>
+                The base insurance exposure is one seller's product line in one order. The
+                project does not price at raw order level because a single order can contain
+                multiple products, multiple sellers, and multiple freight charges. Item-level
+                freight is the natural basis for return-shipping insurance because the insured
+                cost is attached to the item/seller logistics row, not only to the order header.
+              </p>
+              <pre><code>exposure_key = order_id + order_item_id + seller_id + product_id</code></pre>
+              <div class="docs-grid">
+                <div>
+                  <span>Purpose</span>
+                  <p>Align freight value, product attributes, seller attribution, and claim outcome on the same pricing row.</p>
+                </div>
+                <div>
+                  <span>Output</span>
+                  <p>One modelling row per order-item-seller-product exposure, preserving 112,650 unique exposure keys.</p>
+                </div>
+                <div>
+                  <span>Validation</span>
+                  <p>9,803 orders have multiple exposure rows, 1,278 orders involve multiple sellers, and one order has 21 item rows.</p>
+                </div>
+              </div>
+              <h3>Why Order-Level Pricing Is Not Enough</h3>
+              <ul class="docs-bullets">
+                <li>Using order_id alone would blur multiple products into one risk row even though product category, weight, volume, and price differ by item.</li>
+                <li>Using order_id alone would misattribute multi-seller orders, which matters because seller credibility and seller monitoring are explicit outputs.</li>
+                <li>freight_value is stored in the order item table; pricing above that level would require arbitrary allocation back down to item/seller rows.</li>
+                <li>Exposure-level pricing can be aggregated upward to order, seller, category, route, or portfolio reporting without losing the original attribution.</li>
+              </ul>
+              <h3>Aggregation Logic</h3>
+              <table class="docs-table">
+                <thead>
+                  <tr>
+                    <th>Level</th>
+                    <th>Use</th>
+                    <th>Reason</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Exposure</td>
+                    <td>Model fitting, claim simulation, expected loss, and technical premium.</td>
+                    <td>The row contains the freight, product, route, and seller variables needed for pricing.</td>
+                  </tr>
+                  <tr>
+                    <td>Order</td>
+                    <td>Customer-facing or seller-facing order premium display.</td>
+                    <td>Premium can be summed across all item exposures in the order.</td>
+                  </tr>
+                  <tr>
+                    <td>Seller</td>
+                    <td>Credibility, loss ratio monitoring, watchlists, and rate action rules.</td>
+                    <td>Seller experience is useful only after controlling for exposure mix and sample size.</td>
+                  </tr>
+                  <tr>
+                    <td>Portfolio</td>
+                    <td>Target loss ratio, total premium, rate adequacy, and stress testing.</td>
+                    <td>Insurance pricing ultimately needs aggregate expected loss and aggregate adequacy.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+
+            <section class="docs-section" id="synthetic-claims">
+              <div class="docs-section-heading">
+                <span>03</span>
+                <h2>Synthetic Claims Layer</h2>
+              </div>
+              <p>
+                Olist has real e-commerce logistics fields but no insurance returns or claims.
+                The project therefore builds a synthetic returns and claims layer to test the
+                actuarial workflow. The synthetic layer is not presented as real market evidence;
+                it is a controlled way to create frequency, severity, expected loss, and premium
+                targets while preserving insurance discipline.
+              </p>
+              <p>
+                The first version deliberately prices only Coverage A: compliant return shipping.
+                Failed delivery, replacement shipping, fraud, refund-without-return product loss,
+                and broader logistics exceptions are documented as future coverage modules rather
+                than silently folded into the current claim target.
+              </p>
+              <table class="docs-table">
+                <thead>
+                  <tr>
+                    <th>Layer</th>
+                    <th>Representative fields</th>
+                    <th>Pricing meaning</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Eligibility</td>
+                    <td>claim_eligible_flag, order_status</td>
+                    <td>Only delivered exposures enter the first-version return-shipping claim population.</td>
+                  </tr>
+                  <tr>
+                    <td>Returns</td>
+                    <td>return_requested, return_approved, refund_without_return, partial_refund, return_reason</td>
+                    <td>Describes after-sale behavior. A return event is not automatically an insurance claim.</td>
+                  </tr>
+                  <tr>
+                    <td>Claims</td>
+                    <td>covered_claim_flag, claim_type, gross_loss, recovery_from_carrier, paid_loss, net_loss</td>
+                    <td>Defines the frequency target and the severity amount used in expected loss.</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3>Synthetic Assumptions</h3>
+              <ul class="docs-bullets">
+                <li>Eligibility is restricted to 110,197 delivered exposures; 2,453 non-delivered rows receive zero return and zero claim fields.</li>
+                <li>The base return rate is 8%, clipped between 1% and 25% after category, route, freight-ratio, size, and month factors.</li>
+                <li>freight_value is capped at its P99 value of 84.52 before severity generation to prevent extreme synthetic paid losses.</li>
+                <li>freight_to_price_ratio is capped at its P99 value of 1.549 before use as a frequency or modelling factor.</li>
+                <li>Product weight and volume missing values are filled with category medians, falling back to global medians when needed.</li>
+                <li>5% of covered claims receive a carrier recovery, modelled as a small share of gross loss.</li>
+                <li>The random seed is fixed at 20260521 so the synthetic claim layer is reproducible.</li>
+              </ul>
+              <dl class="docs-kpi-grid" aria-label="Synthetic claims results">
+                <div>
+                  <dt>Return requests</dt>
+                  <dd>9,338</dd>
+                  <small>8.47% of eligible exposures.</small>
+                </div>
+                <div>
+                  <dt>Covered claims</dt>
+                  <dd>8,485</dd>
+                  <small>7.70% covered claim frequency.</small>
+                </div>
+                <div>
+                  <dt>Total net loss</dt>
+                  <dd>163,112.68</dd>
+                  <small>Paid loss equals net loss in the first version.</small>
+                </div>
+                <div>
+                  <dt>Avg severity</dt>
+                  <dd>19.22</dd>
+                  <small>Average paid loss among covered claims.</small>
+                </div>
+              </dl>
+              <p>
+                Synthetic generation fields are excluded from GLM and XGBoost features because
+                they would leak the label construction mechanism into the pricing model. This
+                includes return_probability, covered_claim_probability, return_factor_* fields,
+                and all outcome/post-claim fields.
+              </p>
+            </section>
+
+            <section class="docs-section" id="baseline-pricing">
+              <div class="docs-section-heading">
+                <span>04</span>
+                <h2>Baseline Pricing</h2>
+              </div>
+              <p>
+                Baseline pricing establishes the portfolio rate level before multivariate
+                modeling. It measures aggregate claim frequency, average severity, pure premium,
+                and commercial premium under a 60% target loss ratio. It is intentionally simple:
+                all eligible exposures receive the same benchmark expected loss, and non-eligible
+                exposures receive zero premium in the first version.
+              </p>
+              <div class="docs-formula" aria-label="Baseline pricing formulas">
+                <span>pure premium = total net loss / eligible exposures</span>
+                <span>commercial premium = pure premium / target loss ratio</span>
+                <span>target loss ratio = 60%</span>
+              </div>
+              <h3>Portfolio Benchmark</h3>
+              <table class="docs-table">
+                <thead>
+                  <tr>
+                    <th>Metric</th>
+                    <th>Value</th>
+                    <th>Interpretation</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Eligible exposures</td>
+                    <td>110,197</td>
+                    <td>Denominator for first-version pure premium.</td>
+                  </tr>
+                  <tr>
+                    <td>Claim frequency</td>
+                    <td>7.70%</td>
+                    <td>Covered claims divided by eligible exposures.</td>
+                  </tr>
+                  <tr>
+                    <td>Portfolio pure premium</td>
+                    <td>1.4802</td>
+                    <td>Average expected claim cost per eligible exposure.</td>
+                  </tr>
+                  <tr>
+                    <td>Portfolio commercial premium</td>
+                    <td>2.4670</td>
+                    <td>Pure premium divided by the 60% target loss ratio.</td>
+                  </tr>
+                  <tr>
+                    <td>Total commercial premium</td>
+                    <td>271,854.47</td>
+                    <td>Total premium implied by the portfolio benchmark.</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3>Observed Relativities</h3>
+              <p>
+                Baseline group summaries are not the final rate table, but they identify risk
+                structure before modelling. Credible category summaries use at least 500 eligible
+                exposures, route summaries use at least 500, and seller summaries use at least
+                100. These thresholds prevent small cells from being over-read as pricing factors.
+              </p>
+              <ul class="docs-bullets">
+                <li>office_furniture has the highest credible category pure premium at 2.1121, driven by high severity rather than high frequency alone.</li>
+                <li>SP_to_MA has the highest credible route pure premium at 4.1655, or 2.814 times the portfolio average.</li>
+                <li>Cross-state exposures have pure premium of 1.8644 versus 0.8024 for same-state exposures, confirming route and cross-state status as strong GLM candidates.</li>
+                <li>Seller baseline relativities are useful diagnostics but are not directly used as final prices because seller sample sizes are sparse and noisy.</li>
+              </ul>
+              <div class="docs-note">
+                <span>Pricing arithmetic</span>
+                <p>
+                  A 60% target loss ratio is not the same as adding 40% to pure premium.
+                  If pure premium is 1.4802, multiplying by 1.40 gives 2.0723 and a 71.4%
+                  loss ratio. Dividing by 0.60 gives 2.4670, leaving 40% of premium for
+                  expenses, margin, capital, and risk load.
+                </p>
+              </div>
+            </section>
+
+            <section class="docs-section" id="glm-pricing">
+              <div class="docs-section-heading">
+                <span>05</span>
+                <h2>GLM Pricing</h2>
+              </div>
+              <p>
+                GLM is the champion pricing model because it is explainable, separates frequency
+                and severity, and uses only quote-time-known variables. Seller ID and product ID
+                are retained as identifiers but not used directly as sparse rating factors.
+              </p>
+              <div class="docs-callout">
+                <span>Allowed pricing features</span>
+                <p>
+                  product category, route state, cross-state flag, purchase month, purchase
+                  weekday, price, capped freight value, capped freight-to-price ratio, filled
+                  product weight, filled product volume, and estimated delivery days.
+                </p>
+              </div>
+              <h3>Two-Part Model Form</h3>
+              <p>
+                The GLM uses a two-part insurance pricing structure. The frequency model is a
+                binomial GLM with logit link on covered_claim_flag across eligible exposures. The
+                severity model is a Gamma GLM with log link on positive net_loss for covered
+                claims only. Expected loss is the product of the predicted claim probability and
+                predicted claim severity.
+              </p>
+              <pre><code>glm_expected_loss_i = glm_frequency_i * glm_severity_i
+glm_commercial_premium_i = glm_expected_loss_i / 0.60</code></pre>
+              <div class="docs-grid">
+                <div>
+                  <span>Frequency model</span>
+                  <p>Binomial GLM with logit link on covered_claim_flag.</p>
+                </div>
+                <div>
+                  <span>Severity model</span>
+                  <p>Gamma GLM with log link on positive net_loss for covered claims.</p>
+                </div>
+                <div>
+                  <span>Expected loss</span>
+                  <p>Predicted frequency multiplied by predicted severity at exposure level.</p>
+                </div>
+              </div>
+              <h3>Validation Design</h3>
+              <ul class="docs-bullets">
+                <li>Train/test validation uses an order-level split so all item exposures from the same order stay in the same side of the split.</li>
+                <li>The split uses 80% of orders for training and 20% for testing with random_seed 20260521.</li>
+                <li>Low-exposure categories and routes are merged into Other below the 500-exposure threshold to avoid unstable coefficients.</li>
+                <li>Frequency validation reviews AUC, Brier score, actual frequency, predicted frequency, and calibration deciles.</li>
+                <li>Severity validation reviews actual severity, predicted severity, MAE, RMSE, and calibration deciles.</li>
+                <li>Pure premium validation reviews total actual loss, total expected loss, actual-to-expected ratio, and predicted pure premium.</li>
+              </ul>
+              <table class="docs-table">
+                <thead>
+                  <tr>
+                    <th>Validation metric</th>
+                    <th>Train</th>
+                    <th>Test</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Frequency AUC</td>
+                    <td>0.570</td>
+                    <td>0.560</td>
+                  </tr>
+                  <tr>
+                    <td>Actual frequency</td>
+                    <td>7.68%</td>
+                    <td>7.80%</td>
+                  </tr>
+                  <tr>
+                    <td>Predicted frequency</td>
+                    <td>7.68%</td>
+                    <td>7.66%</td>
+                  </tr>
+                  <tr>
+                    <td>Severity: actual vs predicted</td>
+                    <td>19.20 vs 19.30</td>
+                    <td>19.34 vs 19.43</td>
+                  </tr>
+                  <tr>
+                    <td>Pure premium A/E</td>
+                    <td>0.990</td>
+                    <td>1.003</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>
+                The test frequency AUC is modest, which is expected for a low-frequency synthetic
+                claim target using only quote-time-known features. The pricing result is still
+                useful because the test pure premium A/E is close to 1: actual test loss was
+                33,160.78 and predicted test loss was 33,062.58.
+              </p>
+              <h3>Portfolio Result</h3>
+              <table class="docs-table">
+                <thead>
+                  <tr>
+                    <th>Metric</th>
+                    <th>Value</th>
+                    <th>Interpretation</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>GLM expected total loss</td>
+                    <td>164,831.10</td>
+                    <td>Expected loss after exposure-level risk redistribution.</td>
+                  </tr>
+                  <tr>
+                    <td>GLM actual / expected</td>
+                    <td>0.990</td>
+                    <td>Actual synthetic loss is slightly below GLM expected loss.</td>
+                  </tr>
+                  <tr>
+                    <td>GLM mean expected loss</td>
+                    <td>1.4958</td>
+                    <td>Higher than baseline 1.4802 because the final GLM reallocates exposure risk.</td>
+                  </tr>
+                  <tr>
+                    <td>GLM total commercial premium</td>
+                    <td>274,718.50</td>
+                    <td>Expected loss divided by the 60% target loss ratio.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+
+            <section class="docs-section" id="seller-credibility">
+              <div class="docs-section-heading">
+                <span>06</span>
+                <h2>Seller Credibility</h2>
+              </div>
+              <p>
+                Seller experience is added after the GLM, not inside it. This keeps the rating
+                basis stable while still recognizing repeat seller experience when exposure count
+                is large enough to be informative.
+              </p>
+              <pre><code>Z = n / (n + 500)
+seller relativity = Z x observed A/E + (1 - Z) x 1.0</code></pre>
+              <p>
+                Relativities are capped from 0.50 to 2.00 and normalized so total portfolio
+                expected loss remains tied to the GLM expected-loss level.
+              </p>
+              <h3>Why Seller ID Is Not a Model Feature</h3>
+              <p>
+                The data contains 2,970 sellers with eligible exposure, but seller volume is
+                sparse. The median seller has only 8 eligible exposures, the 75th percentile has
+                26, and only 29 sellers have at least 500 eligible exposures. Direct seller_id
+                coefficients in GLM or direct seller_id splits in XGBoost would behave like noisy
+                experience rating rather than stable insurance pricing.
+              </p>
+              <table class="docs-table">
+                <thead>
+                  <tr>
+                    <th>Seller volume metric</th>
+                    <th>Value</th>
+                    <th>Pricing implication</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Eligible sellers</td>
+                    <td>2,970</td>
+                    <td>Seller-level monitoring is needed, but direct modelling is high-cardinality.</td>
+                  </tr>
+                  <tr>
+                    <td>Median exposures per seller</td>
+                    <td>8</td>
+                    <td>Most sellers need shrinkage toward GLM base expected loss.</td>
+                  </tr>
+                  <tr>
+                    <td>90th percentile exposures</td>
+                    <td>83</td>
+                    <td>Even larger-than-typical sellers remain thin for direct experience rating.</td>
+                  </tr>
+                  <tr>
+                    <td>Max exposures</td>
+                    <td>1,996</td>
+                    <td>Only a small group can receive material credibility weight.</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3>Mechanics</h3>
+              <ul class="docs-bullets">
+                <li>seller_observed_ae is seller actual net loss divided by seller GLM expected loss.</li>
+                <li>Z = n / (n + 500), where n is seller eligible exposure count and 500 is the first-version full-credibility constant.</li>
+                <li>The raw relativity is Z * seller_observed_ae + (1 - Z) * 1.0.</li>
+                <li>The raw relativity is capped between 0.50 and 2.00 to avoid extreme seller adjustments.</li>
+                <li>After capping, portfolio normalization preserves total GLM expected loss, so credibility reallocates risk between sellers without changing total rate level.</li>
+              </ul>
+              <dl class="docs-kpi-grid" aria-label="Seller credibility output">
+                <div>
+                  <dt>Expected loss</dt>
+                  <dd>164,831.10</dd>
+                  <small>Credibility total equals GLM total after normalization.</small>
+                </div>
+                <div>
+                  <dt>Relativity median</dt>
+                  <dd>1.000</dd>
+                  <small>Most sellers remain close to their GLM base price.</small>
+                </div>
+                <div>
+                  <dt>Relativity p95</dt>
+                  <dd>1.060</dd>
+                  <small>Material adjustments are controlled.</small>
+                </div>
+                <div>
+                  <dt>Relativity max</dt>
+                  <dd>1.226</dd>
+                  <small>Final normalized/capped maximum.</small>
+                </div>
+              </dl>
+              <div class="docs-note">
+                <span>Shrinkage target</span>
+                <p>
+                  Small sellers are not pulled back to the portfolio average pure premium. They
+                  are pulled back toward their own GLM base expected loss, which already reflects
+                  their product mix, routes, freight values, freight ratios, size, and timing.
+                </p>
+              </div>
+            </section>
+
+            <section class="docs-section" id="loss-ratio-monitoring">
+              <div class="docs-section-heading">
+                <span>07</span>
+                <h2>Loss Ratio Monitoring</h2>
+              </div>
+              <p>
+                Monitoring is designed around decision surfaces, not only the total portfolio.
+                Results are checked by portfolio, product category, route, seller tier, and
+                individual seller where exposure volume supports review.
+              </p>
+              <div class="docs-grid">
+                <div>
+                  <span>Portfolio</span>
+                  <p>Observed loss ratio is compared against the 60% target.</p>
+                </div>
+                <div>
+                  <span>Seller tier</span>
+                  <p>Elevated tiers become underwriting watchlist inputs.</p>
+                </div>
+                <div>
+                  <span>Model drift</span>
+                  <p>A/E, frequency, severity, and mix changes are monitored separately.</p>
+                </div>
+              </div>
+              <h3>Metrics</h3>
+              <pre><code>A/E = actual_loss / expected_loss
+loss_ratio = actual_loss / commercial_premium
+loss_ratio = A/E * target_loss_ratio when premium = expected_loss / target_loss_ratio</code></pre>
+              <table class="docs-table">
+                <thead>
+                  <tr>
+                    <th>Pricing basis</th>
+                    <th>A/E</th>
+                    <th>Loss ratio</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Baseline</td>
+                    <td>1.000</td>
+                    <td>60.00%</td>
+                  </tr>
+                  <tr>
+                    <td>GLM</td>
+                    <td>0.990</td>
+                    <td>59.37%</td>
+                  </tr>
+                  <tr>
+                    <td>GLM + seller credibility</td>
+                    <td>0.990</td>
+                    <td>59.37%</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3>Seller Tier Monitoring</h3>
+              <table class="docs-table">
+                <thead>
+                  <tr>
+                    <th>Seller tier</th>
+                    <th>Eligible exposure</th>
+                    <th>Credibility A/E</th>
+                    <th>Credibility loss ratio</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>near_glm</td>
+                    <td>97,083</td>
+                    <td>0.972</td>
+                    <td>58.31%</td>
+                  </tr>
+                  <tr>
+                    <td>elevated</td>
+                    <td>8,179</td>
+                    <td>1.359</td>
+                    <td>81.53%</td>
+                  </tr>
+                  <tr>
+                    <td>lower_than_glm</td>
+                    <td>4,935</td>
+                    <td>0.729</td>
+                    <td>43.73%</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>
+                The elevated tier remains above target even after credibility adjustment. That is
+                useful: it becomes an underwriting and monitoring watchlist rather than a hidden
+                portfolio average. High loss-ratio categories include consoles_games,
+                construction_tools_construction, garden_tools, and health_beauty. High loss-ratio
+                routes include SC_to_RJ, PR_to_RS, SP_to_PA, RS_to_SP, and PR_to_PR.
+              </p>
+            </section>
+
+            <section class="docs-section" id="stress-testing">
+              <div class="docs-section-heading">
+                <span>08</span>
+                <h2>Stress Testing</h2>
+              </div>
+              <p>
+                Stress testing measures the portfolio impact of adverse claim frequency and
+                severity movements. The combined +20% frequency and +20% severity scenario pushes
+                the loss ratio materially above target and is treated as a high-pressure scenario.
+              </p>
+              <table class="docs-table">
+                <thead>
+                  <tr>
+                    <th>Scenario</th>
+                    <th>Loss ratio</th>
+                    <th>Interpretation</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Base observed</td>
+                    <td>59.37%</td>
+                    <td>Near target</td>
+                  </tr>
+                  <tr>
+                    <td>Frequency +20%</td>
+                    <td>71.25%</td>
+                    <td>Above target</td>
+                  </tr>
+                  <tr>
+                    <td>Severity +20%</td>
+                    <td>71.25%</td>
+                    <td>Above target</td>
+                  </tr>
+                  <tr>
+                    <td>Combined +20% / +20%</td>
+                    <td>85.50%</td>
+                    <td>High pressure</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3>Scenario Design</h3>
+              <ul class="docs-bullets">
+                <li>Portfolio frequency shocks apply +10% and +20% claim count pressure to the entire eligible portfolio.</li>
+                <li>Portfolio severity shocks apply +10% and +20% average claim cost pressure to the entire eligible portfolio.</li>
+                <li>Combined shocks multiply frequency and severity, so +20% and +20% produces a 1.44 total loss multiplier.</li>
+                <li>Seller-tier stress applies +20% frequency and +20% severity only to one seller tier at a time, then measures portfolio-level loss ratio.</li>
+                <li>Watchlist category and route stress applies +15% frequency and +15% severity to selected high-loss-ratio segments.</li>
+              </ul>
+              <h3>Stress Interpretation</h3>
+              <table class="docs-table">
+                <thead>
+                  <tr>
+                    <th>Stress view</th>
+                    <th>Result</th>
+                    <th>Decision implication</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Base observed</td>
+                    <td>Credibility loss ratio 59.37%</td>
+                    <td>Within the 60% target under current synthetic actual losses.</td>
+                  </tr>
+                  <tr>
+                    <td>Single factor +10%</td>
+                    <td>65.31%</td>
+                    <td>Above target but still leaves some expense/margin buffer.</td>
+                  </tr>
+                  <tr>
+                    <td>Combined +20% / +20%</td>
+                    <td>85.50%</td>
+                    <td>High pressure; rate action or underwriting response would be needed.</td>
+                  </tr>
+                  <tr>
+                    <td>near_glm tier stressed</td>
+                    <td>82.26%</td>
+                    <td>Largest volume tier creates the biggest portfolio stress even though it is not the highest unit-risk tier.</td>
+                  </tr>
+                  <tr>
+                    <td>elevated tier stressed</td>
+                    <td>61.88%</td>
+                    <td>Important for rate adequacy and watchlist management, but smaller volume limits portfolio impact.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+
+            <section class="docs-section" id="xgboost-challenger">
+              <div class="docs-section-heading">
+                <span>09</span>
+                <h2>XGBoost Challenger</h2>
+              </div>
+              <p>
+                XGBoost is retained as a challenger risk-ranking model. It slightly improves
+                frequency ranking but does not replace the GLM champion because the pricing basis
+                must remain explainable and calibration-led.
+              </p>
+              <p>
+                The challenger follows the same two-part insurance structure as GLM: an XGBoost
+                classifier for covered_claim_flag, an XGBoost regressor for net_loss on covered
+                claims, and expected loss equal to predicted frequency multiplied by predicted
+                severity. It uses the same core quote-time features so that the comparison tests
+                model form rather than hidden feature expansion.
+              </p>
+              <div class="docs-comparison" role="table" aria-label="Champion and challenger comparison">
+                <div role="row">
+                  <span role="columnheader">Model</span>
+                  <span role="columnheader">Evidence</span>
+                  <span role="columnheader">Decision</span>
+                </div>
+                <div role="row">
+                  <span role="cell">GLM</span>
+                  <strong role="cell">Test pure premium A/E 1.003</strong>
+                  <em role="cell">Champion rate basis</em>
+                </div>
+                <div role="row">
+                  <span role="cell">XGBoost</span>
+                  <strong role="cell">Test AUC 0.5609; A/E 1.0145</strong>
+                  <em role="cell">Challenger score</em>
+                </div>
+              </div>
+              <h3>Parameter Sweep and Calibration</h3>
+              <ul class="docs-bullets">
+                <li>The first XGBoost configuration was too flexible: train AUC 0.635 and test AUC 0.555 indicated overfitting.</li>
+                <li>A regularized configuration with max_depth 2, learning_rate 0.03, 500 trees, reg_lambda 5, and min_child_weight 20 improved test AUC to 0.561.</li>
+                <li>Class weighting was rejected for pricing because it pushed predicted claim frequency near 49% when actual test frequency was about 7.8%.</li>
+                <li>The calibrated challenger applies train-set A/E as a multiplicative adjustment for validation, then a portfolio calibration factor for the full-data diagnostic output.</li>
+              </ul>
+              <table class="docs-table">
+                <thead>
+                  <tr>
+                    <th>Model</th>
+                    <th>Frequency AUC</th>
+                    <th>Pure premium A/E</th>
+                    <th>Loss ratio</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>GLM</td>
+                    <td>0.5598</td>
+                    <td>1.0030</td>
+                    <td>60.18%</td>
+                  </tr>
+                  <tr>
+                    <td>XGBoost calibrated</td>
+                    <td>0.5609</td>
+                    <td>1.0145</td>
+                    <td>60.87%</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="docs-note">
+                <span>Model selection conclusion</span>
+                <p>
+                  XGBoost helps ranking slightly, but GLM prices better. AUC alone is not enough
+                  to select an insurance pricing model because commercial premium depends on
+                  expected loss calibration, severity calibration, A/E, segment monitoring, and
+                  governance.
+                </p>
+              </div>
+            </section>
+
+            <section class="docs-section" id="interpretability">
+              <div class="docs-section-heading">
+                <span>10</span>
+                <h2>Interpretability</h2>
+              </div>
+              <p>
+                XGBoost interpretability is used to understand the challenger, not to overrule
+                GLM calibration. The project uses built-in XGBoost gain importance and native
+                SHAP-style contribution output from pred_contribs=True. The external shap package
+                is not required in the current implementation.
+              </p>
+              <h3>Frequency Signals</h3>
+              <p>
+                The frequency model's strongest base-feature contribution groups are directionally
+                plausible for return-shipping insurance. Category, cross-state movement, seasonality,
+                freight-to-price ratio, product weight, route, price, and estimated delivery time
+                all connect to return friction or logistics risk.
+              </p>
+              <table class="docs-table">
+                <thead>
+                  <tr>
+                    <th>Base feature</th>
+                    <th>Contribution share</th>
+                    <th>Interpretation</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>category_group</td>
+                    <td>25.74%</td>
+                    <td>Product category is the largest frequency signal.</td>
+                  </tr>
+                  <tr>
+                    <td>cross_state_flag_cat</td>
+                    <td>16.82%</td>
+                    <td>Cross-state logistics risk is material.</td>
+                  </tr>
+                  <tr>
+                    <td>purchase_month_cat</td>
+                    <td>10.10%</td>
+                    <td>Seasonality and campaign timing affect claim tendency.</td>
+                  </tr>
+                  <tr>
+                    <td>log_freight_to_price_ratio_capped</td>
+                    <td>10.06%</td>
+                    <td>High freight relative to item value changes return economics.</td>
+                  </tr>
+                  <tr>
+                    <td>log_product_weight_g_filled</td>
+                    <td>7.98%</td>
+                    <td>Product weight affects shipping friction and return behavior.</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3>Severity Signals</h3>
+              <p>
+                The severity model is dominated by freight value, which is exactly what the
+                current coverage scope implies. Coverage A pays return shipping cost, not product
+                refund value, so severity should track shipping-cost proxies.
+              </p>
+              <table class="docs-table">
+                <thead>
+                  <tr>
+                    <th>Base feature</th>
+                    <th>Contribution share</th>
+                    <th>Interpretation</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>log_freight_value_capped</td>
+                    <td>80.69%</td>
+                    <td>Severity is overwhelmingly a return-shipping cost problem.</td>
+                  </tr>
+                  <tr>
+                    <td>cross_state_flag_cat</td>
+                    <td>4.47%</td>
+                    <td>Route structure still affects severity, but far less than freight value.</td>
+                  </tr>
+                  <tr>
+                    <td>log_price</td>
+                    <td>3.78%</td>
+                    <td>Price contributes weakly compared with freight cost.</td>
+                  </tr>
+                  <tr>
+                    <td>log_freight_to_price_ratio_capped</td>
+                    <td>2.61%</td>
+                    <td>Ratio helps explain cost context but is secondary for amount prediction.</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="docs-note">
+                <span>Interpretation boundary</span>
+                <p>
+                  The contribution tables explain how the fitted XGBoost model uses current
+                  synthetic data. They are not causal explanations of real TikTok Shop claims,
+                  and they do not make the challenger a production pricing model.
+                </p>
+              </div>
+            </section>
+
+            <section class="docs-section" id="governance">
+              <div class="docs-section-heading">
+                <span>11</span>
+                <h2>Model Governance</h2>
+              </div>
+              <p>
+                The production interpretation is conservative: the project demonstrates a
+                complete pricing operating workflow, but the numeric rates are not production
+                indications because the claim layer is synthetic.
+              </p>
+              <ol class="docs-steps">
+                <li>Use GLM expected loss plus credibility as the current champion pricing basis.</li>
+                <li>Keep XGBoost as a challenger for segmentation, ranking, and exception review.</li>
+                <li>Exclude outcome, post-claim, and synthetic-generation fields from feature sets.</li>
+                <li>Monitor rate adequacy through A/E, loss ratio, seller tiers, and stress scenarios.</li>
+                <li>Require real return, claim, expense, development, and validation history before production use.</li>
+              </ol>
+              <h3>Current Model Roles</h3>
+              <table class="docs-table">
+                <thead>
+                  <tr>
+                    <th>Layer</th>
+                    <th>Role</th>
+                    <th>Governance position</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Baseline</td>
+                    <td>Portfolio-average benchmark.</td>
+                    <td>Useful control, not sufficient as final segmented rate basis.</td>
+                  </tr>
+                  <tr>
+                    <td>GLM</td>
+                    <td>Champion expected-loss model.</td>
+                    <td>Best current balance of explainability, calibration, and pricing discipline.</td>
+                  </tr>
+                  <tr>
+                    <td>Seller credibility</td>
+                    <td>Post-GLM seller experience adjustment.</td>
+                    <td>Controls sparse seller experience without direct seller_id overfitting.</td>
+                  </tr>
+                  <tr>
+                    <td>XGBoost</td>
+                    <td>Challenger risk score and nonlinear benchmark.</td>
+                    <td>Retained for governance and risk ranking, not selected as champion.</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3>What Would Be Needed for Production</h3>
+              <ul class="docs-bullets">
+                <li>Replace synthetic claims with real policy, order, shipment, return, refund, carrier recovery, and claim payment records.</li>
+                <li>Create historical training windows and future validation windows rather than validating on one synthetic snapshot.</li>
+                <li>Add claim development, reporting lag, IBNR, expense load, commission, taxes, capital cost, and risk margin assumptions.</li>
+                <li>Validate feature availability at quote time and remove fields that are unstable, unavailable, or indirectly post-outcome.</li>
+                <li>Build monthly monitoring for A/E, loss ratio, claim frequency drift, severity drift, feature drift, seller-tier movement, and segment-level adequacy.</li>
+                <li>Define controlled rate actions: sample-size thresholds, single-change caps, elevated-tier watchlists, manual review rules, and pause/limit criteria.</li>
+                <li>Maintain champion-challenger governance: XGBoost could move closer to production only if out-of-time A/E, loss ratio, decile calibration, and interpretability are at least as strong as GLM.</li>
+              </ul>
+              <div class="docs-note">
+                <span>Final technical recommendation</span>
+                <p>
+                  The project should be presented as a transferable actuarial pricing framework:
+                  exposure-level expected loss, insurance-style claim definitions, a transparent
+                  GLM champion, controlled seller credibility, monitoring, stress testing, and a
+                  governed challenger model. It should not be presented as a production TikTok
+                  Shop rate filing.
+                </p>
+              </div>
+            </section>
+
+            <footer class="docs-footer">
+              <a class="secondary-link" href="./index.html">Back to homepage</a>
+              <a class="primary-link" href="./pricing-memo.html">Next: Pricing Memo</a>
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+
+  </body>
+</html>
