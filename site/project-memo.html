@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Project Memo · Return-Shipping Insurance Pricing Engine</title>
+    <meta
+      name="description"
+      content="Executive project memo for the return-shipping insurance pricing engine."
+    />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles/shared.css" />
+    <link rel="stylesheet" href="./styles/project-memo.css?v=20260523-5" />
+  </head>
+  <body>
+    <div class="site-shell project-memo-site">
+      <header class="topbar" aria-label="Project navigation">
+        <a class="brand-mark" href="./index.html" aria-label="Homepage">
+          <span class="brand-dot" aria-hidden="true"></span>
+          <span>Shipping Insurance Pricing</span>
+        </a>
+        <nav class="topnav" aria-label="Project memo navigation">
+          <a href="./index.html">Back to homepage</a>
+        </nav>
+      </header>
+
+      <main class="executive-page">
+        <div class="executive-layout">
+          <article class="executive-article">
+            <nav class="breadcrumb" aria-label="Current page path">
+              <a href="./index.html">Project Pages</a>
+              <span>/</span>
+              <span>Project Memo</span>
+            </nav>
+
+            <header class="executive-header">
+              <p class="eyebrow">Project Memo · Executive Summary</p>
+              <h1>Return-shipping insurance pricing engine</h1>
+              <p>
+                A 3-5 minute overview of the project objective, business problem, data limits,
+                modelling approach, final recommendation, and production next steps.
+              </p>
+            </header>
+
+            <section class="executive-section" id="objective">
+              <h2>Project objective</h2>
+              <p>
+                The project builds an actuarial pricing workflow for return-shipping insurance
+                sold to e-commerce sellers. It is not a generic return prediction exercise. The
+                goal is to estimate expected insurance loss, convert that expected loss into a
+                commercial premium, and show how the rate basis would be monitored after launch.
+              </p>
+              <p>
+                The final deliverable is a portfolio-ready pricing framework: exposure definition,
+                synthetic claims, baseline pricing, GLM pricing, seller credibility, loss ratio
+                monitoring, stress testing, and challenger model governance.
+              </p>
+            </section>
+
+            <section class="executive-section" id="business-problem">
+              <h2>Business problem</h2>
+              <p>
+                A platform offering return-shipping coverage needs premiums that respond to seller,
+                product, route, and freight risk. Charging one flat rate is simple, but it can
+                underprice riskier sellers and overprice safer ones.
+              </p>
+              <p>
+                The pricing question is therefore not simply, "Will this item be returned?" The
+                better insurance question is, "What covered return-shipping loss should this
+                exposure carry, and is the total premium enough to support the target loss ratio?"
+              </p>
+              <p>
+                The broader product design can be modular: return shipping, failed delivery or
+                logistics exception, and reshipment shipping. The current implemented pricing
+                workflow deliberately keeps the first version narrower and prices covered return
+                shipping only, so the recommendation is clear and auditable.
+              </p>
+            </section>
+
+            <section class="executive-section" id="data-limitation">
+              <h2>Data limitation</h2>
+              <p>
+                The project uses the public Olist e-commerce dataset. That data contains order,
+                product, seller, route, delivery, and freight information, but it does not contain
+                real return-shipping insurance claims.
+              </p>
+              <p>
+                A synthetic returns and claims layer is created so the pricing workflow can be
+                tested end to end. This makes the results useful as a demonstration of actuarial
+                judgement and model design, but not as production TikTok Shop rate indications.
+                Production pricing would need real policy, return, claim, payment, expense, and
+                time-period data.
+              </p>
+              <p>
+                The synthetic claim definition also excludes product refund, fraud, refund without
+                return, failed delivery, and reshipment cost from the current rate indication. Those
+                modules should be added only when real operational data supports them.
+              </p>
+            </section>
+
+            <section class="executive-section" id="method-overview">
+              <h2>Method overview</h2>
+              <p>
+                The workflow starts by defining one exposure as a seller's product line within an
+                order. That level is important because freight value and seller attribution live
+                below the order level.
+              </p>
+              <ol class="executive-list">
+                <li>Define the insurable exposure and coverage boundary.</li>
+                <li>Create synthetic return and covered-claim outcomes.</li>
+                <li>Estimate expected loss using frequency and severity.</li>
+                <li>Apply seller credibility so noisy seller experience is not over-weighted.</li>
+                <li>Backtest loss ratio, stress adverse scenarios, and compare a challenger model.</li>
+              </ol>
+            </section>
+
+            <section class="executive-section" id="core-modelling-approach">
+              <h2>Core modelling approach</h2>
+              <p>
+                GLM is used as the champion pricing model because it gives a stable and explainable
+                expected-loss basis. Seller credibility is then layered on top, so credible seller
+                experience can affect price while small sellers remain close to the portfolio base.
+              </p>
+              <p>
+                XGBoost is retained as a challenger model. It is useful for testing whether a more
+                flexible model finds additional risk ranking signal, but it does not replace GLM in
+                the current recommendation because rate-level calibration matters more than a tiny
+                improvement in ranking.
+              </p>
+            </section>
+
+            <section class="executive-section" id="key-results">
+              <h2>Key results</h2>
+              <p>
+                The workflow produces a coherent first-version pricing basis. The strongest evidence
+                is that GLM calibration is close to actual loss, seller credibility preserves the
+                total expected loss while adjusting seller-level risk, and stress testing identifies
+                the main downside scenario.
+              </p>
+              <dl class="executive-facts" aria-label="Key project results">
+                <div>
+                  <dt>Eligible exposures</dt>
+                  <dd>110,197</dd>
+                </div>
+                <div>
+                  <dt>Covered claim frequency</dt>
+                  <dd>7.70%</dd>
+                </div>
+                <div>
+                  <dt>GLM test pure premium A/E</dt>
+                  <dd>1.003</dd>
+                </div>
+                <div>
+                  <dt>XGBoost calibrated A/E</dt>
+                  <dd>1.014</dd>
+                </div>
+                <div>
+                  <dt>Base credibility loss ratio</dt>
+                  <dd>59.4%</dd>
+                </div>
+                <div>
+                  <dt>Worst combined stress loss ratio</dt>
+                  <dd>85.5%</dd>
+                </div>
+              </dl>
+            </section>
+
+            <section class="executive-section" id="final-recommendation">
+              <h2>Final recommendation</h2>
+              <p>
+                Use GLM expected loss plus seller credibility as the current pricing basis. This is
+                the most mature recommendation because it balances calibration, explainability,
+                seller differentiation, and operational monitoring.
+              </p>
+              <p>
+                Do not use XGBoost as the production pricing basis in the current version. Its test
+                frequency AUC is slightly higher than GLM, but its pure premium A/E and loss ratio
+                calibration are weaker. In insurance pricing, a better ranking score is not enough
+                to replace a better-calibrated rate basis.
+              </p>
+            </section>
+
+            <section class="executive-section" id="production-next-steps">
+              <h2>Main limitation and production next steps</h2>
+              <p>
+                The main limitation is that claims are synthetic. The project demonstrates the
+                correct pricing architecture and governance logic, but production use would require
+                real claim experience and out-of-time validation.
+              </p>
+              <ol class="executive-list">
+                <li>Replace synthetic claims with real order, return, claim, and payment records.</li>
+                <li>Build training, validation, and monitoring windows based on historical time.</li>
+                <li>Add expense, margin, capital, reinsurance, and compliance assumptions.</li>
+                <li>Set dynamic pricing guardrails: monthly rate refresh, sample-size thresholds, and single-change caps.</li>
+                <li>Escalate sellers with credible loss ratios above risk thresholds to watchlist, manual review, or limit rules.</li>
+                <li>Keep XGBoost in challenger governance until it proves stronger calibration.</li>
+              </ol>
+            </section>
+
+            <footer class="executive-footer">
+              <a class="secondary-link" href="./index.html">Back to homepage</a>
+              <a class="primary-link" href="./project-docs.html">Next: Project Docs</a>
+            </footer>
+          </article>
+
+          <aside class="executive-toc" aria-label="Table of contents">
+            <nav>
+              <a href="#objective">Project objective</a>
+              <a href="#business-problem">Business problem</a>
+              <a href="#data-limitation">Data limitation</a>
+              <a href="#method-overview">Method overview</a>
+              <a href="#core-modelling-approach">Core modelling approach</a>
+              <a href="#key-results">Key results</a>
+              <a href="#final-recommendation">Final recommendation</a>
+              <a href="#production-next-steps">Main limitation and next steps</a>
+            </nav>
+          </aside>
+        </div>
+      </main>
+    </div>
+
+    <script src="./scripts/project-memo-toc.js"></script>
+  </body>
+</html>

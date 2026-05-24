@@ -1,0 +1,2158 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/au7tb4",
+    "id": "au7tb4",
+    "slide": 2,
+    "layoutId": "b98adadb-6031-4b96-89f9-f986a994e9f1",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "0ec80754-8d73-4899-a3de-516c118f0ce3",
+    "masterLayoutName": "Master",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "Work Sans"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "b98adadb-6031-4b96-89f9-f986a994e9f1",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "0ec80754-8d73-4899-a3de-516c118f0ce3",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "0ec80754-8d73-4899-a3de-516c118f0ce3",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7qpg3ex0",
+      "id": "1",
+      "bbox": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#F8F7F2"
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0bi9s36h",
+      "id": "2",
+      "bbox": [
+        72,
+        38,
+        760,
+        18
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1"
+      },
+      "geometry": "rect",
+      "text": "Product Boundary",
+      "textPreview": "Product Boundary",
+      "resolvedFontSize": 11,
+      "resolvedTextStyle": {
+        "fontSize": 11,
+        "typeface": "Work Sans",
+        "color": "#9C9990",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Product Boundary"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Product Boundary",
+          "resolvedTextStyle": {
+            "fontSize": 11,
+            "typeface": "Work Sans",
+            "color": "#9C9990",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Product Boundary",
+              "fontSize": 11,
+              "typeface": "Work Sans",
+              "color": "#9C9990",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/pwb2hwfy",
+      "id": "3",
+      "bbox": [
+        1155,
+        36,
+        56,
+        20
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.2"
+      },
+      "geometry": "rect",
+      "text": "02",
+      "textPreview": "02",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "fontSize": 12,
+        "typeface": "Work Sans",
+        "color": "#9C9990",
+        "alignment": "right",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "02"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "02",
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "typeface": "Work Sans",
+            "color": "#9C9990",
+            "alignment": "right",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "02",
+              "fontSize": 12,
+              "typeface": "Work Sans",
+              "color": "#9C9990",
+              "alignment": "right",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ed8v6psf",
+      "id": "4",
+      "bbox": [
+        72,
+        658,
+        1040,
+        1
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.3"
+      },
+      "geometry": "rect",
+      "fillColor": "#D9D6CC"
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7y1kre1w",
+      "id": "5",
+      "bbox": [
+        72,
+        673,
+        920,
+        18
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.4"
+      },
+      "geometry": "rect",
+      "text": "Source: project processed outputs; synthetic claim layer for demonstration.",
+      "textPreview": "Source: project processed outputs; synthetic claim layer for demonstration.",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "fontSize": 10,
+        "typeface": "Work Sans",
+        "color": "#9C9990",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Source: project processed outputs; synthetic claim layer for demonstration."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Source: project processed outputs; synthetic claim layer for demonstration.",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "typeface": "Work Sans",
+            "color": "#9C9990",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Source: project processed outputs; synthetic claim layer for demonstration.",
+              "fontSize": 10,
+              "typeface": "Work Sans",
+              "color": "#9C9990",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wjudg7ad",
+      "id": "6",
+      "bbox": [
+        72,
+        96,
+        720,
+        104
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.5"
+      },
+      "geometry": "rect",
+      "text": "The product prices return-shipping loss,\nnot generic refund behavior.",
+      "textPreview": "The product prices return-shipping loss, | not generic refund behavior.",
+      "resolvedFontSize": 34,
+      "resolvedTextStyle": {
+        "fontSize": 34,
+        "typeface": "Work Sans",
+        "color": "#171716",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "The product prices return-shipping loss,"
+          },
+          {
+            "index": 2,
+            "text": "not generic refund behavior."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "The product prices return-shipping loss,",
+          "resolvedTextStyle": {
+            "fontSize": 34,
+            "typeface": "Work Sans",
+            "color": "#171716",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "The product prices return-shipping loss,",
+              "fontSize": 34,
+              "typeface": "Work Sans",
+              "color": "#171716",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "not generic refund behavior.",
+          "resolvedTextStyle": {
+            "fontSize": 34,
+            "typeface": "Work Sans",
+            "color": "#171716",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "not generic refund behavior.",
+              "fontSize": 34,
+              "typeface": "Work Sans",
+              "color": "#171716",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/p4r65wju",
+      "id": "7",
+      "bbox": [
+        77,
+        236,
+        190,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.6"
+      },
+      "geometry": "rect",
+      "text": "Coverage A",
+      "textPreview": "Coverage A",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "fontSize": 13,
+        "typeface": "Work Sans",
+        "color": "#66766A",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Coverage A"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Coverage A",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "Work Sans",
+            "color": "#66766A",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Coverage A",
+              "fontSize": 13,
+              "typeface": "Work Sans",
+              "color": "#66766A",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ih4byhgn",
+      "id": "8",
+      "bbox": [
+        77,
+        266,
+        330,
+        38
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.19"
+      },
+      "geometry": "rect",
+      "text": "Return Shipping",
+      "textPreview": "Return Shipping",
+      "resolvedFontSize": 28,
+      "resolvedTextStyle": {
+        "fontSize": 28,
+        "typeface": "Work Sans",
+        "color": "#171716",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Return Shipping"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Return Shipping",
+          "resolvedTextStyle": {
+            "fontSize": 28,
+            "typeface": "Work Sans",
+            "color": "#171716",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Return Shipping",
+              "fontSize": 28,
+              "typeface": "Work Sans",
+              "color": "#171716",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/72x4nap4",
+      "id": "9",
+      "bbox": [
+        77,
+        316,
+        470,
+        56
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.8"
+      },
+      "geometry": "rect",
+      "text": "Covered loss = compliant buyer return shipping cost.",
+      "textPreview": "Covered loss = compliant buyer return shipping cost.",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "Work Sans",
+        "color": "#6F6E67",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Covered loss = compliant buyer return shipping cost."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Covered loss = compliant buyer return shipping cost.",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "Work Sans",
+            "color": "#6F6E67",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Covered loss = compliant buyer return shipping cost.",
+              "fontSize": 18,
+              "typeface": "Work Sans",
+              "color": "#6F6E67",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zqtcj6to",
+      "id": "10",
+      "bbox": [
+        632,
+        222,
+        1,
+        310
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.9"
+      },
+      "geometry": "rect",
+      "fillColor": "#D9D6CC"
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/65wjudg7",
+      "id": "11",
+      "bbox": [
+        688,
+        236,
+        330,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.10"
+      },
+      "geometry": "rect",
+      "text": "Explicitly not covered",
+      "textPreview": "Explicitly not covered",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "fontSize": 13,
+        "typeface": "Work Sans",
+        "color": "#9C9990",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Explicitly not covered"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Explicitly not covered",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "Work Sans",
+            "color": "#9C9990",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Explicitly not covered",
+              "fontSize": 13,
+              "typeface": "Work Sans",
+              "color": "#9C9990",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hwfyxobm",
+      "id": "12",
+      "bbox": [
+        688,
+        278,
+        4,
+        4
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.11"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#171716"
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/obm58z25",
+      "id": "13",
+      "bbox": [
+        706,
+        270,
+        432,
+        28
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.12"
+      },
+      "geometry": "rect",
+      "text": "Product refund itself",
+      "textPreview": "Product refund itself",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "Work Sans",
+        "color": "#171716",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Product refund itself"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Product refund itself",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "Work Sans",
+            "color": "#171716",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Product refund itself",
+              "fontSize": 18,
+              "typeface": "Work Sans",
+              "color": "#171716",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zed8v6ps",
+      "id": "14",
+      "bbox": [
+        688,
+        311,
+        4,
+        4
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.13"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#171716"
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6xkf6dcb",
+      "id": "15",
+      "bbox": [
+        706,
+        303,
+        432,
+        28
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.14"
+      },
+      "geometry": "rect",
+      "text": "Fraud or refund without return",
+      "textPreview": "Fraud or refund without return",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "Work Sans",
+        "color": "#171716",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Fraud or refund without return"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Fraud or refund without return",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "Work Sans",
+            "color": "#171716",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Fraud or refund without return",
+              "fontSize": 18,
+              "typeface": "Work Sans",
+              "color": "#171716",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hk3q5o7q",
+      "id": "16",
+      "bbox": [
+        688,
+        344,
+        4,
+        4
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.15"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#171716"
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/oza1gvy9",
+      "id": "17",
+      "bbox": [
+        706,
+        336,
+        432,
+        28
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.16"
+      },
+      "geometry": "rect",
+      "text": "Failed delivery / replacement shipping",
+      "textPreview": "Failed delivery / replacement shipping",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "Work Sans",
+        "color": "#171716",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Failed delivery / replacement shipping"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Failed delivery / replacement shipping",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "Work Sans",
+            "color": "#171716",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Failed delivery / replacement shipping",
+              "fontSize": 18,
+              "typeface": "Work Sans",
+              "color": "#171716",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/z61032ls",
+      "id": "18",
+      "bbox": [
+        688,
+        377,
+        4,
+        4
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.17"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#171716"
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/al87ed8b",
+      "id": "19",
+      "bbox": [
+        706,
+        369,
+        432,
+        28
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.18"
+      },
+      "geometry": "rect",
+      "text": "Non-delivered exposure",
+      "textPreview": "Non-delivered exposure",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "Work Sans",
+        "color": "#171716",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Non-delivered exposure"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Non-delivered exposure",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "Work Sans",
+            "color": "#171716",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Non-delivered exposure",
+              "fontSize": 18,
+              "typeface": "Work Sans",
+              "color": "#171716",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ih4byhgn",
+      "id": "20",
+      "bbox": [
+        77,
+        560,
+        800,
+        58
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.19"
+      },
+      "geometry": "rect",
+      "text": "A return event is not automatically an insurance claim. The claim layer only pays covered return-shipping cost.",
+      "textPreview": "A return event is not automatically an insurance claim. The claim layer only pays covered return-shipping cost.",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "Work Sans",
+        "color": "#6F6E67",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "A return event is not automatically an insurance claim. The claim layer only pays covered"
+          },
+          {
+            "index": 2,
+            "text": "return-shipping cost."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "A return event is not automatically an insurance claim. The claim layer only pays covered return-shipping cost.",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "Work Sans",
+            "color": "#6F6E67",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "A return event is not automatically an insurance claim. The claim layer only pays covered return-shipping cost.",
+              "fontSize": 18,
+              "typeface": "Work Sans",
+              "color": "#6F6E67",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    }
+  ],
+  "composeRuns": [
+    {
+      "index": 1,
+      "frame": {
+        "left": 0,
+        "top": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "root": {
+        "path": "0",
+        "kind": "layers",
+        "requestedSize": {
+          "width": {
+            "mode": "fixed",
+            "value": 1280
+          },
+          "height": {
+            "mode": "fixed",
+            "value": 720
+          }
+        },
+        "intrinsicSize": {
+          "width": 1280,
+          "height": 720
+        },
+        "frame": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "children": [
+          {
+            "path": "0.0",
+            "kind": "shape",
+            "position": {
+              "left": 0,
+              "top": 0
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 1280
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 720
+              }
+            },
+            "intrinsicSize": {
+              "width": 1280,
+              "height": 720
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1280,
+              "height": 720
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/7qpg3ex0",
+              "id": "1",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.1",
+            "kind": "text",
+            "position": {
+              "left": 72,
+              "top": 38
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 760
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 18
+              }
+            },
+            "intrinsicSize": {
+              "width": 760,
+              "height": 18
+            },
+            "frame": {
+              "left": 72,
+              "top": 38,
+              "width": 760,
+              "height": 18
+            },
+            "children": [],
+            "text": "Product Boundary",
+            "transform": "none",
+            "element": {
+              "aid": "sh/0bi9s36h",
+              "id": "2",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.2",
+            "kind": "text",
+            "position": {
+              "left": 1155,
+              "top": 36
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 56
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 20
+              }
+            },
+            "intrinsicSize": {
+              "width": 56,
+              "height": 20
+            },
+            "frame": {
+              "left": 1155,
+              "top": 36,
+              "width": 56,
+              "height": 20
+            },
+            "children": [],
+            "text": "02",
+            "transform": "none",
+            "element": {
+              "aid": "sh/pwb2hwfy",
+              "id": "3",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.3",
+            "kind": "shape",
+            "position": {
+              "left": 72,
+              "top": 658
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 1040
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 1
+              }
+            },
+            "intrinsicSize": {
+              "width": 1040,
+              "height": 1
+            },
+            "frame": {
+              "left": 72,
+              "top": 658,
+              "width": 1040,
+              "height": 1
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/ed8v6psf",
+              "id": "4",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.4",
+            "kind": "text",
+            "position": {
+              "left": 72,
+              "top": 673
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 920
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 18
+              }
+            },
+            "intrinsicSize": {
+              "width": 920,
+              "height": 18
+            },
+            "frame": {
+              "left": 72,
+              "top": 673,
+              "width": 920,
+              "height": 18
+            },
+            "children": [],
+            "text": "Source: project processed outputs; synthetic claim layer for demonstration.",
+            "transform": "none",
+            "element": {
+              "aid": "sh/7y1kre1w",
+              "id": "5",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.5",
+            "kind": "text",
+            "position": {
+              "left": 72,
+              "top": 96
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 720
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 104
+              }
+            },
+            "intrinsicSize": {
+              "width": 720,
+              "height": 104
+            },
+            "frame": {
+              "left": 72,
+              "top": 96,
+              "width": 720,
+              "height": 104
+            },
+            "children": [],
+            "text": "The product prices return-shipping loss,\nnot generic refund behavior.",
+            "transform": "none",
+            "element": {
+              "aid": "sh/wjudg7ad",
+              "id": "6",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.6",
+            "kind": "text",
+            "position": {
+              "left": 77,
+              "top": 236
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 190
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 24
+              }
+            },
+            "intrinsicSize": {
+              "width": 190,
+              "height": 24
+            },
+            "frame": {
+              "left": 77,
+              "top": 236,
+              "width": 190,
+              "height": 24
+            },
+            "children": [],
+            "text": "Coverage A",
+            "transform": "none",
+            "element": {
+              "aid": "sh/p4r65wju",
+              "id": "7",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.7",
+            "kind": "text",
+            "position": {
+              "left": 77,
+              "top": 266
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 330
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 38
+              }
+            },
+            "intrinsicSize": {
+              "width": 330,
+              "height": 38
+            },
+            "frame": {
+              "left": 77,
+              "top": 266,
+              "width": 330,
+              "height": 38
+            },
+            "children": [],
+            "text": "Return Shipping",
+            "transform": "none",
+            "element": {
+              "aid": "sh/ih4byhgn",
+              "id": "8",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.8",
+            "kind": "text",
+            "position": {
+              "left": 77,
+              "top": 316
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 470
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 56
+              }
+            },
+            "intrinsicSize": {
+              "width": 470,
+              "height": 56
+            },
+            "frame": {
+              "left": 77,
+              "top": 316,
+              "width": 470,
+              "height": 56
+            },
+            "children": [],
+            "text": "Covered loss = compliant buyer return shipping cost.",
+            "transform": "none",
+            "element": {
+              "aid": "sh/72x4nap4",
+              "id": "9",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.9",
+            "kind": "shape",
+            "position": {
+              "left": 632,
+              "top": 222
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 1
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 310
+              }
+            },
+            "intrinsicSize": {
+              "width": 1,
+              "height": 310
+            },
+            "frame": {
+              "left": 632,
+              "top": 222,
+              "width": 1,
+              "height": 310
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/zqtcj6to",
+              "id": "10",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.10",
+            "kind": "text",
+            "position": {
+              "left": 688,
+              "top": 236
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 330
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 24
+              }
+            },
+            "intrinsicSize": {
+              "width": 330,
+              "height": 24
+            },
+            "frame": {
+              "left": 688,
+              "top": 236,
+              "width": 330,
+              "height": 24
+            },
+            "children": [],
+            "text": "Explicitly not covered",
+            "transform": "none",
+            "element": {
+              "aid": "sh/65wjudg7",
+              "id": "11",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.11",
+            "kind": "shape",
+            "position": {
+              "left": 688,
+              "top": 278
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 4
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 4
+              }
+            },
+            "intrinsicSize": {
+              "width": 4,
+              "height": 4
+            },
+            "frame": {
+              "left": 688,
+              "top": 278,
+              "width": 4,
+              "height": 4
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/hwfyxobm",
+              "id": "12",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.12",
+            "kind": "text",
+            "position": {
+              "left": 706,
+              "top": 270
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 432
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 28
+              }
+            },
+            "intrinsicSize": {
+              "width": 432,
+              "height": 28
+            },
+            "frame": {
+              "left": 706,
+              "top": 270,
+              "width": 432,
+              "height": 28
+            },
+            "children": [],
+            "text": "Product refund itself",
+            "transform": "none",
+            "element": {
+              "aid": "sh/obm58z25",
+              "id": "13",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.13",
+            "kind": "shape",
+            "position": {
+              "left": 688,
+              "top": 311
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 4
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 4
+              }
+            },
+            "intrinsicSize": {
+              "width": 4,
+              "height": 4
+            },
+            "frame": {
+              "left": 688,
+              "top": 311,
+              "width": 4,
+              "height": 4
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/zed8v6ps",
+              "id": "14",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.14",
+            "kind": "text",
+            "position": {
+              "left": 706,
+              "top": 303
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 432
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 28
+              }
+            },
+            "intrinsicSize": {
+              "width": 432,
+              "height": 28
+            },
+            "frame": {
+              "left": 706,
+              "top": 303,
+              "width": 432,
+              "height": 28
+            },
+            "children": [],
+            "text": "Fraud or refund without return",
+            "transform": "none",
+            "element": {
+              "aid": "sh/6xkf6dcb",
+              "id": "15",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.15",
+            "kind": "shape",
+            "position": {
+              "left": 688,
+              "top": 344
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 4
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 4
+              }
+            },
+            "intrinsicSize": {
+              "width": 4,
+              "height": 4
+            },
+            "frame": {
+              "left": 688,
+              "top": 344,
+              "width": 4,
+              "height": 4
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/hk3q5o7q",
+              "id": "16",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.16",
+            "kind": "text",
+            "position": {
+              "left": 706,
+              "top": 336
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 432
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 28
+              }
+            },
+            "intrinsicSize": {
+              "width": 432,
+              "height": 28
+            },
+            "frame": {
+              "left": 706,
+              "top": 336,
+              "width": 432,
+              "height": 28
+            },
+            "children": [],
+            "text": "Failed delivery / replacement shipping",
+            "transform": "none",
+            "element": {
+              "aid": "sh/oza1gvy9",
+              "id": "17",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.17",
+            "kind": "shape",
+            "position": {
+              "left": 688,
+              "top": 377
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 4
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 4
+              }
+            },
+            "intrinsicSize": {
+              "width": 4,
+              "height": 4
+            },
+            "frame": {
+              "left": 688,
+              "top": 377,
+              "width": 4,
+              "height": 4
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/z61032ls",
+              "id": "18",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.18",
+            "kind": "text",
+            "position": {
+              "left": 706,
+              "top": 369
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 432
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 28
+              }
+            },
+            "intrinsicSize": {
+              "width": 432,
+              "height": 28
+            },
+            "frame": {
+              "left": 706,
+              "top": 369,
+              "width": 432,
+              "height": 28
+            },
+            "children": [],
+            "text": "Non-delivered exposure",
+            "transform": "none",
+            "element": {
+              "aid": "sh/al87ed8b",
+              "id": "19",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.19",
+            "kind": "text",
+            "position": {
+              "left": 77,
+              "top": 560
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 800
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 58
+              }
+            },
+            "intrinsicSize": {
+              "width": 800,
+              "height": 58
+            },
+            "frame": {
+              "left": 77,
+              "top": 560,
+              "width": 800,
+              "height": 58
+            },
+            "children": [],
+            "text": "A return event is not automatically an insurance claim. The claim layer only pays covered return-shipping cost.",
+            "transform": "none",
+            "element": {
+              "aid": "sh/ih4byhgn",
+              "id": "20",
+              "kind": "shape"
+            }
+          }
+        ],
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignItems": "stretch",
+        "justifyItems": "stretch",
+        "contentFrame": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "items": [
+          {
+            "path": "0.0",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1280,
+              "height": 720
+            }
+          },
+          {
+            "path": "0.1",
+            "frame": {
+              "left": 72,
+              "top": 38,
+              "width": 760,
+              "height": 18
+            }
+          },
+          {
+            "path": "0.2",
+            "frame": {
+              "left": 1155,
+              "top": 36,
+              "width": 56,
+              "height": 20
+            }
+          },
+          {
+            "path": "0.3",
+            "frame": {
+              "left": 72,
+              "top": 658,
+              "width": 1040,
+              "height": 1
+            }
+          },
+          {
+            "path": "0.4",
+            "frame": {
+              "left": 72,
+              "top": 673,
+              "width": 920,
+              "height": 18
+            }
+          },
+          {
+            "path": "0.5",
+            "frame": {
+              "left": 72,
+              "top": 96,
+              "width": 720,
+              "height": 104
+            }
+          },
+          {
+            "path": "0.6",
+            "frame": {
+              "left": 77,
+              "top": 236,
+              "width": 190,
+              "height": 24
+            }
+          },
+          {
+            "path": "0.7",
+            "frame": {
+              "left": 77,
+              "top": 266,
+              "width": 330,
+              "height": 38
+            }
+          },
+          {
+            "path": "0.8",
+            "frame": {
+              "left": 77,
+              "top": 316,
+              "width": 470,
+              "height": 56
+            }
+          },
+          {
+            "path": "0.9",
+            "frame": {
+              "left": 632,
+              "top": 222,
+              "width": 1,
+              "height": 310
+            }
+          },
+          {
+            "path": "0.10",
+            "frame": {
+              "left": 688,
+              "top": 236,
+              "width": 330,
+              "height": 24
+            }
+          },
+          {
+            "path": "0.11",
+            "frame": {
+              "left": 688,
+              "top": 278,
+              "width": 4,
+              "height": 4
+            }
+          },
+          {
+            "path": "0.12",
+            "frame": {
+              "left": 706,
+              "top": 270,
+              "width": 432,
+              "height": 28
+            }
+          },
+          {
+            "path": "0.13",
+            "frame": {
+              "left": 688,
+              "top": 311,
+              "width": 4,
+              "height": 4
+            }
+          },
+          {
+            "path": "0.14",
+            "frame": {
+              "left": 706,
+              "top": 303,
+              "width": 432,
+              "height": 28
+            }
+          },
+          {
+            "path": "0.15",
+            "frame": {
+              "left": 688,
+              "top": 344,
+              "width": 4,
+              "height": 4
+            }
+          },
+          {
+            "path": "0.16",
+            "frame": {
+              "left": 706,
+              "top": 336,
+              "width": 432,
+              "height": 28
+            }
+          },
+          {
+            "path": "0.17",
+            "frame": {
+              "left": 688,
+              "top": 377,
+              "width": 4,
+              "height": 4
+            }
+          },
+          {
+            "path": "0.18",
+            "frame": {
+              "left": 706,
+              "top": 369,
+              "width": 432,
+              "height": 28
+            }
+          },
+          {
+            "path": "0.19",
+            "frame": {
+              "left": 77,
+              "top": 560,
+              "width": 800,
+              "height": 58
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

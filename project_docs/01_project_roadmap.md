@@ -65,9 +65,11 @@ final README polish
 
 ## Current Priority
 
-Phase 1 已完成。Phase 2 第一版 GLM Pricing 已完成。
+Phase 1、Phase 2 和 Phase 3 第一版已完成。
 
-暂时不要提前做 XGBoost、SHAP、Dashboard 或 PDF 报告。
+Phase 4 已开始，当前只完成 challenger model 和 GLM comparison。
+
+暂时不要直接做 SHAP、Dashboard 或 PDF 报告，除非明确决定继续展示层。
 
 当前进度：
 
@@ -81,5 +83,47 @@ synthetic claims: done
 baseline pricing: done
 GLM pricing design: done
 GLM pricing build: done
-seller credibility: next
+seller credibility design: done
+seller credibility build: done
+loss ratio backtesting design: done
+loss ratio backtesting build: done
+stress testing design: done
+stress testing build: done
+pricing memo: done
+Phase 3 documentation review: done
+XGBoost challenger: done with xgboost 3.2.0
+GLM vs challenger comparison: done
+XGBoost parameter sweep: done
+model selection / governance note: done
+XGBoost interpretability: done
+interview deck outline: done
+dashboard: not started
+PPTX interview deck: not started
+```
+
+## Phase 4 Current Conclusion
+
+当前已安装并使用：
+
+```text
+xgboost 3.2.0
+```
+
+验证结论：
+
+```text
+GLM test frequency AUC = 0.560
+XGBoost challenger calibrated test frequency AUC = 0.561
+GLM test loss ratio = 60.18%
+XGBoost challenger calibrated test loss ratio = 60.87%
+```
+
+因此当前不应把 challenger 替换为最终定价模型。XGBoost 在 frequency ranking 上略高于 GLM，但 pricing calibration 仍较弱。
+
+它的价值是：
+
+```text
+1. 证明项目做了 champion-challenger comparison。
+2. 说明更复杂模型未必在定价校准上更好。
+3. 为后续 SHAP / feature importance / model governance 提供基础。
 ```

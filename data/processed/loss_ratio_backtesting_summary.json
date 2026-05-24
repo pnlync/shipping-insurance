@@ -1,0 +1,444 @@
+{
+  "parameters": {
+    "target_loss_ratio": 0.6,
+    "input": "data/processed/pricing_glm_credibility.csv",
+    "pricing_bases": [
+      "baseline",
+      "glm",
+      "credibility"
+    ],
+    "note": "Current version is a synthetic-data monitoring framework, not a true out-of-time production backtest."
+  },
+  "portfolio": {
+    "eligible_exposures": 110197.0,
+    "covered_claim_count": 8485.0,
+    "actual_loss": 163112.682297622,
+    "baseline_expected_loss": 163112.68229762197,
+    "glm_expected_loss": 164831.0987919977,
+    "credibility_expected_loss": 164831.09879199773,
+    "baseline_commercial_premium": 271854.47049603664,
+    "glm_commercial_premium": 274718.4979866629,
+    "credibility_commercial_premium": 274718.4979866629,
+    "unique_orders": 96478.0,
+    "unique_sellers": 2970.0,
+    "unique_products": 32216.0,
+    "claim_frequency": 0.07699846638293238,
+    "average_severity": 19.22365141987295,
+    "actual_pure_premium": 1.480191677610298,
+    "baseline_expected_pure_premium": 1.4801916776102977,
+    "baseline_ae": 1.0000000000000002,
+    "baseline_loss_ratio": 0.6000000000000001,
+    "baseline_loss_ratio_vs_target": 1.1102230246251565e-16,
+    "glm_expected_pure_premium": 1.495785718231873,
+    "glm_ae": 0.9895746827693954,
+    "glm_loss_ratio": 0.5937448096616371,
+    "glm_loss_ratio_vs_target": -0.006255190338362859,
+    "credibility_expected_pure_premium": 1.4957857182318732,
+    "credibility_ae": 0.9895746827693952,
+    "credibility_loss_ratio": 0.5937448096616371,
+    "credibility_loss_ratio_vs_target": -0.006255190338362859,
+    "glm_ae_improvement_vs_baseline": -0.010425317230604358,
+    "credibility_ae_improvement_vs_glm": -2.220446049250313e-16,
+    "credibility_expected_loss_change_vs_glm": 2.220446049250313e-16
+  },
+  "monitoring_dimensions": {
+    "month_count": 12,
+    "category_count": 72,
+    "route_count": 412,
+    "seller_tier_count": 3,
+    "seller_count": 2970
+  },
+  "top_category_high_loss_ratio": [
+    {
+      "product_category_name_english": "consoles_games",
+      "eligible_exposures": 1089,
+      "covered_claim_count": 86,
+      "actual_loss": 1572.8711621945263,
+      "credibility_expected_loss": 1443.631507203448,
+      "credibility_ae": 1.0895239916462038,
+      "credibility_loss_ratio": 0.6537143949877223
+    },
+    {
+      "product_category_name_english": "construction_tools_construction",
+      "eligible_exposures": 916,
+      "covered_claim_count": 60,
+      "actual_loss": 1350.334139716071,
+      "credibility_expected_loss": 1255.562294216168,
+      "credibility_ae": 1.0754815957252584,
+      "credibility_loss_ratio": 0.645288957435155
+    },
+    {
+      "product_category_name_english": "books_general_interest",
+      "eligible_exposures": 537,
+      "covered_claim_count": 45,
+      "actual_loss": 791.5585190743972,
+      "credibility_expected_loss": 757.4503108832229,
+      "credibility_ae": 1.0450302913618221,
+      "credibility_loss_ratio": 0.6270181748170932
+    },
+    {
+      "product_category_name_english": "garden_tools",
+      "eligible_exposures": 4268,
+      "covered_claim_count": 278,
+      "actual_loss": 6416.06129429883,
+      "credibility_expected_loss": 6247.567186105725,
+      "credibility_ae": 1.0269695552162812,
+      "credibility_loss_ratio": 0.6161817331297686
+    },
+    {
+      "product_category_name_english": "health_beauty",
+      "eligible_exposures": 9465,
+      "covered_claim_count": 858,
+      "actual_loss": 16201.840244133602,
+      "credibility_expected_loss": 15811.141150116731,
+      "credibility_ae": 1.0247103665894468,
+      "credibility_loss_ratio": 0.614826219953668
+    },
+    {
+      "product_category_name_english": "bed_bath_table",
+      "eligible_exposures": 10953,
+      "covered_claim_count": 862,
+      "actual_loss": 15695.270554962539,
+      "credibility_expected_loss": 15383.988230070152,
+      "credibility_ae": 1.020234175965108,
+      "credibility_loss_ratio": 0.6121405055790646
+    },
+    {
+      "product_category_name_english": "home_construction",
+      "eligible_exposures": 596,
+      "covered_claim_count": 47,
+      "actual_loss": 1081.7229863253774,
+      "credibility_expected_loss": 1065.5188502708647,
+      "credibility_ae": 1.015207742266027,
+      "credibility_loss_ratio": 0.6091246453596162
+    },
+    {
+      "product_category_name_english": "housewares",
+      "eligible_exposures": 6795,
+      "covered_claim_count": 455,
+      "actual_loss": 9463.083446461611,
+      "credibility_expected_loss": 9442.79016378484,
+      "credibility_ae": 1.0021490769491628,
+      "credibility_loss_ratio": 0.6012894461694975
+    },
+    {
+      "product_category_name_english": "telephony",
+      "eligible_exposures": 4430,
+      "covered_claim_count": 404,
+      "actual_loss": 6245.467968343178,
+      "credibility_expected_loss": 6248.611576172366,
+      "credibility_ae": 0.9994969109872063,
+      "credibility_loss_ratio": 0.5996981465923238
+    },
+    {
+      "product_category_name_english": "unknown",
+      "eligible_exposures": 1559,
+      "covered_claim_count": 111,
+      "actual_loss": 2010.8203360311713,
+      "credibility_expected_loss": 2015.166536321752,
+      "credibility_ae": 0.9978432550301706,
+      "credibility_loss_ratio": 0.5987059530181024
+    }
+  ],
+  "top_route_high_loss_ratio": [
+    {
+      "route_state": "SC_to_RJ",
+      "eligible_exposures": 531,
+      "covered_claim_count": 52,
+      "actual_loss": 1289.2376831913145,
+      "credibility_expected_loss": 1175.4291738421216,
+      "credibility_ae": 1.0968229408303585,
+      "credibility_loss_ratio": 0.658093764498215
+    },
+    {
+      "route_state": "PR_to_RS",
+      "eligible_exposures": 685,
+      "covered_claim_count": 52,
+      "actual_loss": 1126.2838071853753,
+      "credibility_expected_loss": 1036.6815273252428,
+      "credibility_ae": 1.0864318283854413,
+      "credibility_loss_ratio": 0.6518590970312648
+    },
+    {
+      "route_state": "SP_to_PA",
+      "eligible_exposures": 765,
+      "covered_claim_count": 74,
+      "actual_loss": 2339.901550659372,
+      "credibility_expected_loss": 2164.202644512261,
+      "credibility_ae": 1.0811841287564399,
+      "credibility_loss_ratio": 0.6487104772538639
+    },
+    {
+      "route_state": "RS_to_SP",
+      "eligible_exposures": 749,
+      "covered_claim_count": 64,
+      "actual_loss": 1558.215894982183,
+      "credibility_expected_loss": 1451.4694542899058,
+      "credibility_ae": 1.0735437045380334,
+      "credibility_loss_ratio": 0.6441262227228199
+    },
+    {
+      "route_state": "PR_to_PR",
+      "eligible_exposures": 805,
+      "covered_claim_count": 46,
+      "actual_loss": 674.0344619474947,
+      "credibility_expected_loss": 639.119089904086,
+      "credibility_ae": 1.054630463390866,
+      "credibility_loss_ratio": 0.6327782780345196
+    },
+    {
+      "route_state": "MG_to_MG",
+      "eligible_exposures": 1669,
+      "covered_claim_count": 95,
+      "actual_loss": 1555.97588988844,
+      "credibility_expected_loss": 1494.711331964572,
+      "credibility_ae": 1.040987551652094,
+      "credibility_loss_ratio": 0.6245925309912563
+    },
+    {
+      "route_state": "SP_to_MA",
+      "eligible_exposures": 549,
+      "covered_claim_count": 62,
+      "actual_loss": 2286.858002219924,
+      "credibility_expected_loss": 2222.3969828646736,
+      "credibility_ae": 1.0290051776762943,
+      "credibility_loss_ratio": 0.6174031066057766
+    },
+    {
+      "route_state": "RJ_to_RJ",
+      "eligible_exposures": 1084,
+      "covered_claim_count": 61,
+      "actual_loss": 750.9300978622038,
+      "credibility_expected_loss": 730.1038382518452,
+      "credibility_ae": 1.0285250652293854,
+      "credibility_loss_ratio": 0.6171150391376312
+    },
+    {
+      "route_state": "SP_to_RS",
+      "eligible_exposures": 4134,
+      "covered_claim_count": 337,
+      "actual_loss": 6715.025753016154,
+      "credibility_expected_loss": 6557.22469887149,
+      "credibility_ae": 1.0240652198744726,
+      "credibility_loss_ratio": 0.6144391319246835
+    },
+    {
+      "route_state": "SP_to_PR",
+      "eligible_exposures": 3609,
+      "covered_claim_count": 289,
+      "actual_loss": 5646.433264199094,
+      "credibility_expected_loss": 5543.857598423005,
+      "credibility_ae": 1.0185025794683593,
+      "credibility_loss_ratio": 0.6111015476810155
+    }
+  ],
+  "top_seller_high_loss_ratio": [
+    {
+      "seller_id": "ca3bd7cd9f149df75950150d010fe4a2",
+      "eligible_exposures": 135,
+      "covered_claim_count": 16,
+      "actual_loss": 450.405403194552,
+      "credibility_expected_loss": 271.87733240744916,
+      "credibility_ae": 1.6566493396350954,
+      "credibility_loss_ratio": 0.9939896037810572
+    },
+    {
+      "seller_id": "25e6ffe976bd75618accfe16cefcbd0d",
+      "eligible_exposures": 115,
+      "covered_claim_count": 17,
+      "actual_loss": 247.00380258154178,
+      "credibility_expected_loss": 159.57879670609375,
+      "credibility_ae": 1.5478485092005307,
+      "credibility_loss_ratio": 0.9287091055203183
+    },
+    {
+      "seller_id": "c31eff8334d6b3047ed34bebd4d62c36",
+      "eligible_exposures": 121,
+      "covered_claim_count": 13,
+      "actual_loss": 264.1279323953803,
+      "credibility_expected_loss": 182.02654508212748,
+      "credibility_ae": 1.451040738460481,
+      "credibility_loss_ratio": 0.8706244430762885
+    },
+    {
+      "seller_id": "b14db04aa7881970e83ffa9426897925",
+      "eligible_exposures": 105,
+      "covered_claim_count": 10,
+      "actual_loss": 228.6559051865753,
+      "credibility_expected_loss": 161.19409462467675,
+      "credibility_ae": 1.4185129158669005,
+      "credibility_loss_ratio": 0.8511077495201402
+    },
+    {
+      "seller_id": "822166ed1e47908f7cfb49946d03c726",
+      "eligible_exposures": 108,
+      "covered_claim_count": 13,
+      "actual_loss": 238.99254191210244,
+      "credibility_expected_loss": 170.7587627505486,
+      "credibility_ae": 1.3995916699234494,
+      "credibility_loss_ratio": 0.8397550019540696
+    },
+    {
+      "seller_id": "e5a38146df062edaf55c38afa99e42dc",
+      "eligible_exposures": 124,
+      "covered_claim_count": 13,
+      "actual_loss": 214.51193246328384,
+      "credibility_expected_loss": 153.82434260813065,
+      "credibility_ae": 1.3945252671077917,
+      "credibility_loss_ratio": 0.8367151602646749
+    },
+    {
+      "seller_id": "f45122a9ab94eb4f3f8953578bc0c560",
+      "eligible_exposures": 197,
+      "covered_claim_count": 25,
+      "actual_loss": 460.54028581910296,
+      "credibility_expected_loss": 330.9251998268333,
+      "credibility_ae": 1.3916748741410285,
+      "credibility_loss_ratio": 0.8350049244846172
+    },
+    {
+      "seller_id": "cab85505710c7cb9b720bceb52b01cee",
+      "eligible_exposures": 204,
+      "covered_claim_count": 29,
+      "actual_loss": 488.78174182848034,
+      "credibility_expected_loss": 362.07191999086467,
+      "credibility_ae": 1.3499576046681903,
+      "credibility_loss_ratio": 0.8099745628009141
+    },
+    {
+      "seller_id": "86ccac0b835037332a596a33b6949ee1",
+      "eligible_exposures": 208,
+      "covered_claim_count": 19,
+      "actual_loss": 419.301335148534,
+      "credibility_expected_loss": 311.6954299326291,
+      "credibility_ae": 1.3452277283602239,
+      "credibility_loss_ratio": 0.8071366370161344
+    },
+    {
+      "seller_id": "cfb1a033743668a192316f3c6d1d2671",
+      "eligible_exposures": 179,
+      "covered_claim_count": 21,
+      "actual_loss": 406.6205751626621,
+      "credibility_expected_loss": 304.2195828969127,
+      "credibility_ae": 1.336602237405765,
+      "credibility_loss_ratio": 0.8019613424434588
+    }
+  ],
+  "seller_tier_summary": [
+    {
+      "seller_risk_tier": "near_glm",
+      "eligible_exposures": 97083,
+      "covered_claim_count": 7412,
+      "actual_loss": 142863.4768631991,
+      "baseline_expected_loss": 143701.44863744054,
+      "glm_expected_loss": 147530.91224103072,
+      "credibility_expected_loss": 146995.79376300136,
+      "baseline_commercial_premium": 239502.41439573423,
+      "glm_commercial_premium": 245884.8537350512,
+      "credibility_commercial_premium": 244992.9896050023,
+      "unique_orders": 85076,
+      "unique_sellers": 2905,
+      "unique_products": 29643,
+      "claim_frequency": 0.07634704325165065,
+      "average_severity": 19.274619112682014,
+      "actual_pure_premium": 1.471560179055026,
+      "baseline_expected_pure_premium": 1.4801916776102977,
+      "baseline_ae": 0.994168661609281,
+      "baseline_loss_ratio": 0.5965011969655686,
+      "baseline_loss_ratio_vs_target": -0.003498803034431397,
+      "glm_expected_pure_premium": 1.5196369317082363,
+      "glm_ae": 0.9683630006285995,
+      "glm_loss_ratio": 0.5810178003771597,
+      "glm_loss_ratio_vs_target": -0.018982199622840312,
+      "credibility_expected_pure_premium": 1.514124962794736,
+      "credibility_ae": 0.9718881962944822,
+      "credibility_loss_ratio": 0.5831329177766892,
+      "credibility_loss_ratio_vs_target": -0.016867082223310792,
+      "glm_ae_improvement_vs_baseline": -0.02580566098068149,
+      "credibility_ae_improvement_vs_glm": 0.003525195665882719,
+      "credibility_expected_loss_change_vs_glm": -0.0036271617242839005
+    },
+    {
+      "seller_risk_tier": "elevated",
+      "eligible_exposures": 8179,
+      "covered_claim_count": 806,
+      "actual_loss": 15639.22297927602,
+      "baseline_expected_loss": 12106.487731174626,
+      "glm_expected_loss": 10054.773680401302,
+      "credibility_expected_loss": 11509.968090619093,
+      "baseline_commercial_premium": 20177.47955195771,
+      "glm_commercial_premium": 16757.95613400217,
+      "credibility_commercial_premium": 19183.28015103182,
+      "unique_orders": 7390,
+      "unique_sellers": 47,
+      "unique_products": 1714,
+      "claim_frequency": 0.0985450544076293,
+      "average_severity": 19.403502455677444,
+      "actual_pure_premium": 1.9121192051933025,
+      "baseline_expected_pure_premium": 1.480191677610298,
+      "baseline_ae": 1.2918051318058563,
+      "baseline_loss_ratio": 0.7750830790835138,
+      "baseline_loss_ratio_vs_target": 0.17508307908351384,
+      "glm_expected_pure_premium": 1.2293402225701555,
+      "glm_ae": 1.555402784426654,
+      "glm_loss_ratio": 0.9332416706559925,
+      "glm_loss_ratio_vs_target": 0.33324167065599253,
+      "credibility_expected_pure_premium": 1.4072586001490517,
+      "credibility_ae": 1.3587546773498331,
+      "credibility_loss_ratio": 0.8152528064098999,
+      "credibility_loss_ratio_vs_target": 0.21525280640989997,
+      "glm_ae_improvement_vs_baseline": -0.2635976526207977,
+      "credibility_ae_improvement_vs_glm": 0.1966481070768209,
+      "credibility_expected_loss_change_vs_glm": 0.1447267195137616
+    },
+    {
+      "seller_risk_tier": "lower_than_glm",
+      "eligible_exposures": 4935,
+      "covered_claim_count": 267,
+      "actual_loss": 4609.9824551469055,
+      "baseline_expected_loss": 7304.74592900682,
+      "glm_expected_loss": 7245.412870565712,
+      "credibility_expected_loss": 6325.3369383772715,
+      "baseline_commercial_premium": 12174.5765483447,
+      "glm_commercial_premium": 12075.688117609521,
+      "credibility_commercial_premium": 10542.228230628787,
+      "unique_orders": 4287,
+      "unique_sellers": 18,
+      "unique_products": 1054,
+      "claim_frequency": 0.05410334346504559,
+      "average_severity": 17.265851891935977,
+      "actual_pure_premium": 0.9341403151260194,
+      "baseline_expected_pure_premium": 1.480191677610298,
+      "baseline_ae": 0.6310941543963727,
+      "baseline_loss_ratio": 0.3786564926378237,
+      "baseline_loss_ratio_vs_target": -0.22134350736217628,
+      "glm_expected_pure_premium": 1.468168768098422,
+      "glm_ae": 0.6362622168675619,
+      "glm_loss_ratio": 0.38175733012053714,
+      "glm_loss_ratio_vs_target": -0.21824266987946284,
+      "credibility_expected_pure_premium": 1.2817298760642901,
+      "credibility_ae": 0.7288121565788983,
+      "credibility_loss_ratio": 0.43728729394733895,
+      "credibility_loss_ratio_vs_target": -0.16271270605266103,
+      "glm_ae_improvement_vs_baseline": 0.005168062471189172,
+      "credibility_ae_improvement_vs_glm": 0.0925499397113364,
+      "credibility_expected_loss_change_vs_glm": -0.12698737099251078
+    }
+  ],
+  "validation": {
+    "portfolio_actual_loss": 163112.682297622,
+    "portfolio_baseline_expected_loss": 163112.68229762197,
+    "portfolio_glm_expected_loss": 164831.0987919977,
+    "portfolio_credibility_expected_loss": 164831.09879199773,
+    "credibility_expected_loss_matches_glm": true,
+    "credibility_loss_ratio_equals_target_times_ae": true
+  },
+  "output": {
+    "loss_ratio_backtesting_summary": "data/processed/loss_ratio_backtesting_summary.json",
+    "backtest_by_month": "data/processed/backtest_by_month.csv",
+    "backtest_by_category": "data/processed/backtest_by_category.csv",
+    "backtest_by_route": "data/processed/backtest_by_route.csv",
+    "backtest_by_seller_tier": "data/processed/backtest_by_seller_tier.csv",
+    "backtest_by_seller": "data/processed/backtest_by_seller.csv"
+  }
+}

@@ -1,0 +1,480 @@
+{
+  "parameters": {
+    "input": "data/processed/pricing_glm.csv",
+    "pricing_unit": "order_id + order_item_id + seller_id + product_id",
+    "frequency_target": "covered_claim_flag",
+    "severity_target": "log1p(net_loss) on covered claims only",
+    "xgboost_frequency_params": {
+      "n_estimators": 500,
+      "max_depth": 2,
+      "learning_rate": 0.03,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "reg_lambda": 5,
+      "min_child_weight": 20,
+      "objective": "binary:logistic",
+      "eval_metric": "logloss",
+      "random_state": 20260521,
+      "n_jobs": 4
+    },
+    "xgboost_severity_params": {
+      "n_estimators": 350,
+      "max_depth": 3,
+      "learning_rate": 0.04,
+      "subsample": 0.85,
+      "colsample_bytree": 0.85,
+      "objective": "reg:squarederror",
+      "random_state": 20260521,
+      "n_jobs": 4
+    },
+    "contribution_method": "XGBoost native booster.predict(pred_contribs=True)",
+    "external_shap_package_used": false,
+    "frequency_contribution_scale": "model margin / log-odds",
+    "severity_contribution_scale": "log1p(net_loss)"
+  },
+  "input": {
+    "rows": 112650,
+    "eligible_exposures": 110197,
+    "train_eligible_exposures": 88201,
+    "test_eligible_exposures": 21996,
+    "test_claims_for_severity": 1715,
+    "unique_exposure_keys": 112650
+  },
+  "feature_controls": {
+    "model_features": [
+      "category_group",
+      "route_group",
+      "cross_state_flag_cat",
+      "purchase_month_cat",
+      "purchase_weekday_cat",
+      "log_price",
+      "log_freight_value_capped",
+      "log_freight_to_price_ratio_capped",
+      "log_product_weight_g_filled",
+      "log_product_volume_cm3_filled",
+      "log_estimated_delivery_days"
+    ],
+    "seller_id_used_as_feature": false,
+    "excluded_leakage_fields": [
+      "return_probability",
+      "covered_claim_probability",
+      "return_factor_category",
+      "return_factor_route",
+      "return_factor_freight_ratio",
+      "return_factor_size",
+      "return_factor_month",
+      "return_requested",
+      "return_approved",
+      "refund_without_return",
+      "partial_refund",
+      "request_days_after_delivery",
+      "return_reason",
+      "claim_type",
+      "gross_loss",
+      "paid_loss",
+      "net_loss",
+      "claim_status"
+    ]
+  },
+  "top_frequency_gain_features": [
+    {
+      "encoded_feature": "cross_state_flag_cat_0",
+      "base_feature": "cross_state_flag_cat",
+      "gain": 32.036739349365234,
+      "gain_share": 0.07973766915743481
+    },
+    {
+      "encoded_feature": "cross_state_flag_cat_1",
+      "base_feature": "cross_state_flag_cat",
+      "gain": 31.203372955322266,
+      "gain_share": 0.07766346637760543
+    },
+    {
+      "encoded_feature": "route_group_SP_to_SP",
+      "base_feature": "route_group",
+      "gain": 26.72608757019043,
+      "gain_share": 0.0665197511302504
+    },
+    {
+      "encoded_feature": "category_group_fashion_bags_accessories",
+      "base_feature": "category_group",
+      "gain": 11.662908554077148,
+      "gain_share": 0.02902833317576204
+    },
+    {
+      "encoded_feature": "category_group_health_beauty",
+      "base_feature": "category_group",
+      "gain": 10.70838451385498,
+      "gain_share": 0.026652575727663275
+    },
+    {
+      "encoded_feature": "log_freight_to_price_ratio_capped",
+      "base_feature": "log_freight_to_price_ratio_capped",
+      "gain": 8.680536270141602,
+      "gain_share": 0.021605373807536955
+    },
+    {
+      "encoded_feature": "category_group_electronics",
+      "base_feature": "category_group",
+      "gain": 7.660186290740967,
+      "gain_share": 0.019065779244089122
+    },
+    {
+      "encoded_feature": "log_product_weight_g_filled",
+      "base_feature": "log_product_weight_g_filled",
+      "gain": 7.4789299964904785,
+      "gain_share": 0.018614642370700214
+    },
+    {
+      "encoded_feature": "log_price",
+      "base_feature": "log_price",
+      "gain": 7.404973030090332,
+      "gain_share": 0.01843056757911818
+    },
+    {
+      "encoded_feature": "route_group_SP_to_BA",
+      "base_feature": "route_group",
+      "gain": 7.339781284332275,
+      "gain_share": 0.018268308936053287
+    }
+  ],
+  "top_severity_gain_features": [
+    {
+      "encoded_feature": "cross_state_flag_cat_0",
+      "base_feature": "cross_state_flag_cat",
+      "gain": 24.129526138305664,
+      "gain_share": 0.38120551315970136
+    },
+    {
+      "encoded_feature": "log_freight_value_capped",
+      "base_feature": "log_freight_value_capped",
+      "gain": 22.647302627563477,
+      "gain_share": 0.3577889002187261
+    },
+    {
+      "encoded_feature": "route_group_Other",
+      "base_feature": "route_group",
+      "gain": 1.7047224044799805,
+      "gain_share": 0.026931717401735198
+    },
+    {
+      "encoded_feature": "log_product_weight_g_filled",
+      "base_feature": "log_product_weight_g_filled",
+      "gain": 1.6610323190689087,
+      "gain_share": 0.026241488288504537
+    },
+    {
+      "encoded_feature": "cross_state_flag_cat_1",
+      "base_feature": "cross_state_flag_cat",
+      "gain": 1.5392245054244995,
+      "gain_share": 0.024317131803382165
+    },
+    {
+      "encoded_feature": "log_freight_to_price_ratio_capped",
+      "base_feature": "log_freight_to_price_ratio_capped",
+      "gain": 0.6064527630805969,
+      "gain_share": 0.009580923198912478
+    },
+    {
+      "encoded_feature": "log_price",
+      "base_feature": "log_price",
+      "gain": 0.333020955324173,
+      "gain_share": 0.005261165239617073
+    },
+    {
+      "encoded_feature": "route_group_SP_to_BA",
+      "base_feature": "route_group",
+      "gain": 0.29787489771842957,
+      "gain_share": 0.00470591724807576
+    },
+    {
+      "encoded_feature": "purchase_month_cat_2",
+      "base_feature": "purchase_month_cat",
+      "gain": 0.2935490906238556,
+      "gain_share": 0.004637576846201927
+    },
+    {
+      "encoded_feature": "category_group_musical_instruments",
+      "base_feature": "category_group",
+      "gain": 0.2825128734111786,
+      "gain_share": 0.004463223366494684
+    }
+  ],
+  "top_frequency_contribution_features": [
+    {
+      "encoded_feature": "cross_state_flag_cat_0",
+      "base_feature": "cross_state_flag_cat",
+      "mean_abs_contribution": 0.06328645348548889,
+      "mean_abs_contribution_share": 0.12949788570404053,
+      "mean_contribution": -0.001820097560994327
+    },
+    {
+      "encoded_feature": "log_freight_to_price_ratio_capped",
+      "base_feature": "log_freight_to_price_ratio_capped",
+      "mean_abs_contribution": 0.049141719937324524,
+      "mean_abs_contribution_share": 0.10055467486381531,
+      "mean_contribution": -0.006708408240228891
+    },
+    {
+      "encoded_feature": "log_product_weight_g_filled",
+      "base_feature": "log_product_weight_g_filled",
+      "mean_abs_contribution": 0.03898944705724716,
+      "mean_abs_contribution_share": 0.07978091388940811,
+      "mean_contribution": -0.0022024381905794144
+    },
+    {
+      "encoded_feature": "log_price",
+      "base_feature": "log_price",
+      "mean_abs_contribution": 0.03008807823061943,
+      "mean_abs_contribution_share": 0.06156677007675171,
+      "mean_contribution": 0.002022011438384652
+    },
+    {
+      "encoded_feature": "log_estimated_delivery_days",
+      "base_feature": "log_estimated_delivery_days",
+      "mean_abs_contribution": 0.025534747168421745,
+      "mean_abs_contribution_share": 0.05224965885281563,
+      "mean_contribution": -0.002122887410223484
+    },
+    {
+      "encoded_feature": "category_group_health_beauty",
+      "base_feature": "category_group",
+      "mean_abs_contribution": 0.024232253432273865,
+      "mean_abs_contribution_share": 0.04958447441458702,
+      "mean_contribution": -0.0016681229462847114
+    },
+    {
+      "encoded_feature": "log_product_volume_cm3_filled",
+      "base_feature": "log_product_volume_cm3_filled",
+      "mean_abs_contribution": 0.02308044210076332,
+      "mean_abs_contribution_share": 0.04722761735320091,
+      "mean_contribution": -0.00191598164383322
+    },
+    {
+      "encoded_feature": "log_freight_value_capped",
+      "base_feature": "log_freight_value_capped",
+      "mean_abs_contribution": 0.022092213854193687,
+      "mean_abs_contribution_share": 0.045205485075712204,
+      "mean_contribution": -0.0007641599513590336
+    },
+    {
+      "encoded_feature": "cross_state_flag_cat_1",
+      "base_feature": "cross_state_flag_cat",
+      "mean_abs_contribution": 0.01893688552081585,
+      "mean_abs_contribution_share": 0.03874899819493294,
+      "mean_contribution": -0.0009962843032553792
+    },
+    {
+      "encoded_feature": "category_group_watches_gifts",
+      "base_feature": "category_group",
+      "mean_abs_contribution": 0.018706385046243668,
+      "mean_abs_contribution_share": 0.03827734291553497,
+      "mean_contribution": -0.0003129613178316504
+    }
+  ],
+  "top_severity_contribution_features": [
+    {
+      "encoded_feature": "log_freight_value_capped",
+      "base_feature": "log_freight_value_capped",
+      "mean_abs_contribution": 0.32075366377830505,
+      "mean_abs_contribution_share": 0.8069092631340027,
+      "mean_contribution": 0.002561736386269331
+    },
+    {
+      "encoded_feature": "cross_state_flag_cat_0",
+      "base_feature": "cross_state_flag_cat",
+      "mean_abs_contribution": 0.017114732414484024,
+      "mean_abs_contribution_share": 0.043054960668087006,
+      "mean_contribution": 0.0008751389104872942
+    },
+    {
+      "encoded_feature": "log_price",
+      "base_feature": "log_price",
+      "mean_abs_contribution": 0.015038233250379562,
+      "mean_abs_contribution_share": 0.037831179797649384,
+      "mean_contribution": 0.001286064158193767
+    },
+    {
+      "encoded_feature": "log_freight_to_price_ratio_capped",
+      "base_feature": "log_freight_to_price_ratio_capped",
+      "mean_abs_contribution": 0.010368085466325283,
+      "mean_abs_contribution_share": 0.02608264610171318,
+      "mean_contribution": -0.0007145039853639901
+    },
+    {
+      "encoded_feature": "log_product_weight_g_filled",
+      "base_feature": "log_product_weight_g_filled",
+      "mean_abs_contribution": 0.0059121884405612946,
+      "mean_abs_contribution_share": 0.014873094856739044,
+      "mean_contribution": -0.0006152791902422905
+    },
+    {
+      "encoded_feature": "log_estimated_delivery_days",
+      "base_feature": "log_estimated_delivery_days",
+      "mean_abs_contribution": 0.0034803729504346848,
+      "mean_abs_contribution_share": 0.008755458518862724,
+      "mean_contribution": -1.9095756215392612e-05
+    },
+    {
+      "encoded_feature": "log_product_volume_cm3_filled",
+      "base_feature": "log_product_volume_cm3_filled",
+      "mean_abs_contribution": 0.0026470532175153494,
+      "mean_abs_contribution_share": 0.006659103557467461,
+      "mean_contribution": -0.00019306120520923287
+    },
+    {
+      "encoded_feature": "route_group_Other",
+      "base_feature": "route_group",
+      "mean_abs_contribution": 0.0018835087539628148,
+      "mean_abs_contribution_share": 0.004738280083984137,
+      "mean_contribution": -0.0004207889724057168
+    },
+    {
+      "encoded_feature": "purchase_month_cat_6",
+      "base_feature": "purchase_month_cat",
+      "mean_abs_contribution": 0.0018590224208310246,
+      "mean_abs_contribution_share": 0.00467668054625392,
+      "mean_contribution": -0.00010437994205858558
+    },
+    {
+      "encoded_feature": "route_group_SP_to_SP",
+      "base_feature": "route_group",
+      "mean_abs_contribution": 0.001515670446678996,
+      "mean_abs_contribution_share": 0.003812921466305852,
+      "mean_contribution": 0.0001889877166831866
+    }
+  ],
+  "top_frequency_base_features": [
+    {
+      "base_feature": "category_group",
+      "encoded_feature_count": 27,
+      "mean_abs_contribution": 0.12577727437019348,
+      "mean_abs_contribution_share": 0.25736773014068604
+    },
+    {
+      "base_feature": "cross_state_flag_cat",
+      "encoded_feature_count": 2,
+      "mean_abs_contribution": 0.08222334086894989,
+      "mean_abs_contribution_share": 0.16824688017368317
+    },
+    {
+      "base_feature": "purchase_month_cat",
+      "encoded_feature_count": 12,
+      "mean_abs_contribution": 0.049351297318935394,
+      "mean_abs_contribution_share": 0.10098351538181305
+    },
+    {
+      "base_feature": "log_freight_to_price_ratio_capped",
+      "encoded_feature_count": 1,
+      "mean_abs_contribution": 0.049141719937324524,
+      "mean_abs_contribution_share": 0.10055467486381531
+    },
+    {
+      "base_feature": "log_product_weight_g_filled",
+      "encoded_feature_count": 1,
+      "mean_abs_contribution": 0.03898944705724716,
+      "mean_abs_contribution_share": 0.07978091388940811
+    },
+    {
+      "base_feature": "route_group",
+      "encoded_feature_count": 28,
+      "mean_abs_contribution": 0.03753940388560295,
+      "mean_abs_contribution_share": 0.07681380212306976
+    },
+    {
+      "base_feature": "log_price",
+      "encoded_feature_count": 1,
+      "mean_abs_contribution": 0.03008807823061943,
+      "mean_abs_contribution_share": 0.06156677007675171
+    },
+    {
+      "base_feature": "log_estimated_delivery_days",
+      "encoded_feature_count": 1,
+      "mean_abs_contribution": 0.025534747168421745,
+      "mean_abs_contribution_share": 0.05224965885281563
+    },
+    {
+      "base_feature": "log_product_volume_cm3_filled",
+      "encoded_feature_count": 1,
+      "mean_abs_contribution": 0.02308044210076332,
+      "mean_abs_contribution_share": 0.04722761735320091
+    },
+    {
+      "base_feature": "log_freight_value_capped",
+      "encoded_feature_count": 1,
+      "mean_abs_contribution": 0.022092213854193687,
+      "mean_abs_contribution_share": 0.045205485075712204
+    }
+  ],
+  "top_severity_base_features": [
+    {
+      "base_feature": "log_freight_value_capped",
+      "encoded_feature_count": 1,
+      "mean_abs_contribution": 0.32075366377830505,
+      "mean_abs_contribution_share": 0.8069092631340027
+    },
+    {
+      "base_feature": "cross_state_flag_cat",
+      "encoded_feature_count": 2,
+      "mean_abs_contribution": 0.017779415473341942,
+      "mean_abs_contribution_share": 0.044727083295583725
+    },
+    {
+      "base_feature": "log_price",
+      "encoded_feature_count": 1,
+      "mean_abs_contribution": 0.015038233250379562,
+      "mean_abs_contribution_share": 0.037831179797649384
+    },
+    {
+      "base_feature": "log_freight_to_price_ratio_capped",
+      "encoded_feature_count": 1,
+      "mean_abs_contribution": 0.010368085466325283,
+      "mean_abs_contribution_share": 0.02608264610171318
+    },
+    {
+      "base_feature": "category_group",
+      "encoded_feature_count": 27,
+      "mean_abs_contribution": 0.008187178522348404,
+      "mean_abs_contribution_share": 0.020596211776137352
+    },
+    {
+      "base_feature": "route_group",
+      "encoded_feature_count": 28,
+      "mean_abs_contribution": 0.006644942332059145,
+      "mean_abs_contribution_share": 0.01671645976603031
+    },
+    {
+      "base_feature": "log_product_weight_g_filled",
+      "encoded_feature_count": 1,
+      "mean_abs_contribution": 0.0059121884405612946,
+      "mean_abs_contribution_share": 0.014873094856739044
+    },
+    {
+      "base_feature": "purchase_month_cat",
+      "encoded_feature_count": 12,
+      "mean_abs_contribution": 0.004782503005117178,
+      "mean_abs_contribution_share": 0.012031182646751404
+    },
+    {
+      "base_feature": "log_estimated_delivery_days",
+      "encoded_feature_count": 1,
+      "mean_abs_contribution": 0.0034803729504346848,
+      "mean_abs_contribution_share": 0.008755458518862724
+    },
+    {
+      "base_feature": "log_product_volume_cm3_filled",
+      "encoded_feature_count": 1,
+      "mean_abs_contribution": 0.0026470532175153494,
+      "mean_abs_contribution_share": 0.006659103557467461
+    }
+  ],
+  "output": {
+    "xgboost_interpretability_summary": "data/processed/xgboost_interpretability_summary.json",
+    "xgboost_frequency_feature_importance": "data/processed/xgboost_frequency_feature_importance.csv",
+    "xgboost_severity_feature_importance": "data/processed/xgboost_severity_feature_importance.csv",
+    "xgboost_frequency_shap_summary": "data/processed/xgboost_frequency_shap_summary.csv",
+    "xgboost_severity_shap_summary": "data/processed/xgboost_severity_shap_summary.csv",
+    "xgboost_frequency_base_feature_summary": "data/processed/xgboost_frequency_base_feature_summary.csv",
+    "xgboost_severity_base_feature_summary": "data/processed/xgboost_severity_base_feature_summary.csv"
+  }
+}

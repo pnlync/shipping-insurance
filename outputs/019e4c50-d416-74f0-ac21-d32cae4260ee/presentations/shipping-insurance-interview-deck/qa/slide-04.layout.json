@@ -1,0 +1,2759 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/het84q",
+    "id": "het84q",
+    "slide": 4,
+    "layoutId": "b98adadb-6031-4b96-89f9-f986a994e9f1",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "0ec80754-8d73-4899-a3de-516c118f0ce3",
+    "masterLayoutName": "Master",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "Work Sans"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "b98adadb-6031-4b96-89f9-f986a994e9f1",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "0ec80754-8d73-4899-a3de-516c118f0ce3",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "0ec80754-8d73-4899-a3de-516c118f0ce3",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/e1w7mp0b",
+      "id": "1",
+      "bbox": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#F8F7F2"
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/psfil0rq",
+      "id": "2",
+      "bbox": [
+        72,
+        38,
+        760,
+        18
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.18"
+      },
+      "geometry": "rect",
+      "text": "Synthetic Claims Layer",
+      "textPreview": "Synthetic Claims Layer",
+      "resolvedFontSize": 11,
+      "resolvedTextStyle": {
+        "fontSize": 11,
+        "typeface": "Work Sans",
+        "color": "#9C9990",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Synthetic Claims Layer"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Synthetic Claims Layer",
+          "resolvedTextStyle": {
+            "fontSize": 11,
+            "typeface": "Work Sans",
+            "color": "#9C9990",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Synthetic Claims Layer",
+              "fontSize": 11,
+              "typeface": "Work Sans",
+              "color": "#9C9990",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/w7mp0bi9",
+      "id": "3",
+      "bbox": [
+        1155,
+        36,
+        56,
+        20
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.17"
+      },
+      "geometry": "rect",
+      "text": "04",
+      "textPreview": "04",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "fontSize": 12,
+        "typeface": "Work Sans",
+        "color": "#9C9990",
+        "alignment": "right",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "04"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "04",
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "typeface": "Work Sans",
+            "color": "#9C9990",
+            "alignment": "right",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "04",
+              "fontSize": 12,
+              "typeface": "Work Sans",
+              "color": "#9C9990",
+              "alignment": "right",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7adsji5s",
+      "id": "4",
+      "bbox": [
+        72,
+        658,
+        1040,
+        1
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.3"
+      },
+      "geometry": "rect",
+      "fillColor": "#D9D6CC"
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/epkzupwb",
+      "id": "5",
+      "bbox": [
+        72,
+        673,
+        920,
+        18
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.4"
+      },
+      "geometry": "rect",
+      "text": "Source: data/processed/synthetic_claims_summary.json; claim data is synthetic.",
+      "textPreview": "Source: data/processed/synthetic_claims_summary.json; claim data is synthetic.",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "fontSize": 10,
+        "typeface": "Work Sans",
+        "color": "#9C9990",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Source: data/processed/synthetic_claims_summary.json; claim data is synthetic."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Source: data/processed/synthetic_claims_summary.json; claim data is synthetic.",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "typeface": "Work Sans",
+            "color": "#9C9990",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Source: data/processed/synthetic_claims_summary.json; claim data is synthetic.",
+              "fontSize": 10,
+              "typeface": "Work Sans",
+              "color": "#9C9990",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/pg3ex0nu",
+      "id": "6",
+      "bbox": [
+        72,
+        90,
+        760,
+        96
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.5"
+      },
+      "geometry": "rect",
+      "text": "Olist has real commerce logistics data,\nbut no insurance claim history.",
+      "textPreview": "Olist has real commerce logistics data, | but no insurance claim history.",
+      "resolvedFontSize": 32,
+      "resolvedTextStyle": {
+        "fontSize": 32,
+        "typeface": "Work Sans",
+        "color": "#171716",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Olist has real commerce logistics data,"
+          },
+          {
+            "index": 2,
+            "text": "but no insurance claim history."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Olist has real commerce logistics data,",
+          "resolvedTextStyle": {
+            "fontSize": 32,
+            "typeface": "Work Sans",
+            "color": "#171716",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Olist has real commerce logistics data,",
+              "fontSize": 32,
+              "typeface": "Work Sans",
+              "color": "#171716",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "but no insurance claim history.",
+          "resolvedTextStyle": {
+            "fontSize": 32,
+            "typeface": "Work Sans",
+            "color": "#171716",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "but no insurance claim history.",
+              "fontSize": 32,
+              "typeface": "Work Sans",
+              "color": "#171716",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wval87ed",
+      "id": "7",
+      "bbox": [
+        80,
+        232,
+        430,
+        102
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.6"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#ECEBE4",
+      "lineColor": "#D9D6CC",
+      "lineWidth": 1
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/36hcrmhk",
+      "id": "8",
+      "bbox": [
+        106,
+        252,
+        180,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.12"
+      },
+      "geometry": "rect",
+      "text": "Returns layer",
+      "textPreview": "Returns layer",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "fontSize": 15,
+        "typeface": "Work Sans",
+        "color": "#66766A",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Returns layer"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Returns layer",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Work Sans",
+            "color": "#66766A",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Returns layer",
+              "fontSize": 15,
+              "typeface": "Work Sans",
+              "color": "#66766A",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/eloj2t83",
+      "id": "9",
+      "bbox": [
+        106,
+        283,
+        360,
+        40
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.11"
+      },
+      "geometry": "rect",
+      "text": "return_requested, return_approved,\nrefund_without_return, return_reason",
+      "textPreview": "return_requested, return_approved, | refund_without_return, return_reason",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "fontSize": 17,
+        "typeface": "Work Sans",
+        "color": "#6F6E67",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "return_requested, return_approved,"
+          },
+          {
+            "index": 2,
+            "text": "refund_without_return, return_reason"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "return_requested, return_approved,",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "typeface": "Work Sans",
+            "color": "#6F6E67",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "return_requested, return_approved,",
+              "fontSize": 17,
+              "typeface": "Work Sans",
+              "color": "#6F6E67",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "refund_without_return, return_reason",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "typeface": "Work Sans",
+            "color": "#6F6E67",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "refund_without_return, return_reason",
+              "fontSize": 17,
+              "typeface": "Work Sans",
+              "color": "#6F6E67",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wra5gbq1",
+      "id": "10",
+      "bbox": [
+        80,
+        366,
+        430,
+        118
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.9"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#E8ECE6",
+      "lineColor": "#D9D6CC",
+      "lineWidth": 1
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/lc7u54zi",
+      "id": "11",
+      "bbox": [
+        106,
+        386,
+        180,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.10"
+      },
+      "geometry": "rect",
+      "text": "Claims layer",
+      "textPreview": "Claims layer",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "fontSize": 15,
+        "typeface": "Work Sans",
+        "color": "#66766A",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Claims layer"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Claims layer",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Work Sans",
+            "color": "#66766A",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Claims layer",
+              "fontSize": 15,
+              "typeface": "Work Sans",
+              "color": "#66766A",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/eloj2t83",
+      "id": "12",
+      "bbox": [
+        106,
+        417,
+        360,
+        46
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.11"
+      },
+      "geometry": "rect",
+      "text": "covered_claim_flag, claim_type,\ngross_loss, paid_loss, net_loss",
+      "textPreview": "covered_claim_flag, claim_type, | gross_loss, paid_loss, net_loss",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "fontSize": 17,
+        "typeface": "Work Sans",
+        "color": "#6F6E67",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "covered_claim_flag, claim_type,"
+          },
+          {
+            "index": 2,
+            "text": "gross_loss, paid_loss, net_loss"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "covered_claim_flag, claim_type,",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "typeface": "Work Sans",
+            "color": "#6F6E67",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "covered_claim_flag, claim_type,",
+              "fontSize": 17,
+              "typeface": "Work Sans",
+              "color": "#6F6E67",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "gross_loss, paid_loss, net_loss",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "typeface": "Work Sans",
+            "color": "#6F6E67",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "gross_loss, paid_loss, net_loss",
+              "fontSize": 17,
+              "typeface": "Work Sans",
+              "color": "#6F6E67",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/36hcrmhk",
+      "id": "13",
+      "bbox": [
+        622,
+        224,
+        180,
+        18
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.12"
+      },
+      "geometry": "rect",
+      "text": "Eligible exposures",
+      "textPreview": "Eligible exposures",
+      "resolvedFontSize": 11,
+      "resolvedTextStyle": {
+        "fontSize": 11,
+        "typeface": "Work Sans",
+        "color": "#9C9990",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Eligible exposures"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Eligible exposures",
+          "resolvedTextStyle": {
+            "fontSize": 11,
+            "typeface": "Work Sans",
+            "color": "#9C9990",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Eligible exposures",
+              "fontSize": 11,
+              "typeface": "Work Sans",
+              "color": "#9C9990",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wfyxobm5",
+      "id": "14",
+      "bbox": [
+        622,
+        244,
+        180,
+        34
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.13"
+      },
+      "geometry": "rect",
+      "text": "110,197",
+      "textPreview": "110,197",
+      "resolvedFontSize": 28,
+      "resolvedTextStyle": {
+        "fontSize": 28,
+        "typeface": "Work Sans",
+        "color": "#171716",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "110,197"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "110,197",
+          "resolvedTextStyle": {
+            "fontSize": 28,
+            "typeface": "Work Sans",
+            "color": "#171716",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "110,197",
+              "fontSize": 28,
+              "typeface": "Work Sans",
+              "color": "#171716",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/l0rqd4vm",
+      "id": "15",
+      "bbox": [
+        622,
+        310,
+        180,
+        18
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.14"
+      },
+      "geometry": "rect",
+      "text": "Covered claims",
+      "textPreview": "Covered claims",
+      "resolvedFontSize": 11,
+      "resolvedTextStyle": {
+        "fontSize": 11,
+        "typeface": "Work Sans",
+        "color": "#9C9990",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Covered claims"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Covered claims",
+          "resolvedTextStyle": {
+            "fontSize": 11,
+            "typeface": "Work Sans",
+            "color": "#9C9990",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Covered claims",
+              "fontSize": 11,
+              "typeface": "Work Sans",
+              "color": "#9C9990",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ed8bat47",
+      "id": "16",
+      "bbox": [
+        622,
+        330,
+        180,
+        34
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.15"
+      },
+      "geometry": "rect",
+      "text": "8,485",
+      "textPreview": "8,485",
+      "resolvedFontSize": 28,
+      "resolvedTextStyle": {
+        "fontSize": 28,
+        "typeface": "Work Sans",
+        "color": "#171716",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "8,485"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "8,485",
+          "resolvedTextStyle": {
+            "fontSize": 28,
+            "typeface": "Work Sans",
+            "color": "#171716",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "8,485",
+              "fontSize": 28,
+              "typeface": "Work Sans",
+              "color": "#171716",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7u54zido",
+      "id": "17",
+      "bbox": [
+        622,
+        396,
+        180,
+        18
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.16"
+      },
+      "geometry": "rect",
+      "text": "Frequency",
+      "textPreview": "Frequency",
+      "resolvedFontSize": 11,
+      "resolvedTextStyle": {
+        "fontSize": 11,
+        "typeface": "Work Sans",
+        "color": "#9C9990",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Frequency"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Frequency",
+          "resolvedTextStyle": {
+            "fontSize": 11,
+            "typeface": "Work Sans",
+            "color": "#9C9990",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Frequency",
+              "fontSize": 11,
+              "typeface": "Work Sans",
+              "color": "#9C9990",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/w7mp0bi9",
+      "id": "18",
+      "bbox": [
+        622,
+        416,
+        180,
+        34
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.17"
+      },
+      "geometry": "rect",
+      "text": "7.70%",
+      "textPreview": "7.70%",
+      "resolvedFontSize": 28,
+      "resolvedTextStyle": {
+        "fontSize": 28,
+        "typeface": "Work Sans",
+        "color": "#171716",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "7.70%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "7.70%",
+          "resolvedTextStyle": {
+            "fontSize": 28,
+            "typeface": "Work Sans",
+            "color": "#171716",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "7.70%",
+              "fontSize": 28,
+              "typeface": "Work Sans",
+              "color": "#171716",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/psfil0rq",
+      "id": "19",
+      "bbox": [
+        872,
+        310,
+        180,
+        18
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.18"
+      },
+      "geometry": "rect",
+      "text": "Avg severity",
+      "textPreview": "Avg severity",
+      "resolvedFontSize": 11,
+      "resolvedTextStyle": {
+        "fontSize": 11,
+        "typeface": "Work Sans",
+        "color": "#9C9990",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Avg severity"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Avg severity",
+          "resolvedTextStyle": {
+            "fontSize": 11,
+            "typeface": "Work Sans",
+            "color": "#9C9990",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Avg severity",
+              "fontSize": 11,
+              "typeface": "Work Sans",
+              "color": "#9C9990",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9w3m94fu",
+      "id": "20",
+      "bbox": [
+        872,
+        330,
+        180,
+        34
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.19"
+      },
+      "geometry": "rect",
+      "text": "19.22",
+      "textPreview": "19.22",
+      "resolvedFontSize": 28,
+      "resolvedTextStyle": {
+        "fontSize": 28,
+        "typeface": "Work Sans",
+        "color": "#171716",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "19.22"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "19.22",
+          "resolvedTextStyle": {
+            "fontSize": 28,
+            "typeface": "Work Sans",
+            "color": "#171716",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "19.22",
+              "fontSize": 28,
+              "typeface": "Work Sans",
+              "color": "#171716",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/kb6xkf6d",
+      "id": "21",
+      "bbox": [
+        872,
+        396,
+        230,
+        18
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.20"
+      },
+      "geometry": "rect",
+      "text": "Total net loss",
+      "textPreview": "Total net loss",
+      "resolvedFontSize": 11,
+      "resolvedTextStyle": {
+        "fontSize": 11,
+        "typeface": "Work Sans",
+        "color": "#9C9990",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Total net loss"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Total net loss",
+          "resolvedTextStyle": {
+            "fontSize": 11,
+            "typeface": "Work Sans",
+            "color": "#9C9990",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Total net loss",
+              "fontSize": 11,
+              "typeface": "Work Sans",
+              "color": "#9C9990",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 22,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/rqd4vmtw",
+      "id": "22",
+      "bbox": [
+        872,
+        416,
+        230,
+        34
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.21"
+      },
+      "geometry": "rect",
+      "text": "163,112.68",
+      "textPreview": "163,112.68",
+      "resolvedFontSize": 28,
+      "resolvedTextStyle": {
+        "fontSize": 28,
+        "typeface": "Work Sans",
+        "color": "#171716",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "163,112.68"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "163,112.68",
+          "resolvedTextStyle": {
+            "fontSize": 28,
+            "typeface": "Work Sans",
+            "color": "#171716",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "163,112.68",
+              "fontSize": 28,
+              "typeface": "Work Sans",
+              "color": "#171716",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 23,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/25kb6xkf",
+      "id": "23",
+      "bbox": [
+        80,
+        558,
+        900,
+        44
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.22"
+      },
+      "geometry": "rect",
+      "text": "Frequency target = covered_claim_flag. Severity target = net_loss on covered claims only.",
+      "textPreview": "Frequency target = covered_claim_flag. Severity target = net_loss on covered claims only.",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "Work Sans",
+        "color": "#6F6E67",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Frequency target = covered_claim_flag. Severity target = net_loss on covered claims only."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Frequency target = covered_claim_flag. Severity target = net_loss on covered claims only.",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "Work Sans",
+            "color": "#6F6E67",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Frequency target = covered_claim_flag. Severity target = net_loss on covered claims only.",
+              "fontSize": 18,
+              "typeface": "Work Sans",
+              "color": "#6F6E67",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    }
+  ],
+  "composeRuns": [
+    {
+      "index": 1,
+      "frame": {
+        "left": 0,
+        "top": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "root": {
+        "path": "0",
+        "kind": "layers",
+        "requestedSize": {
+          "width": {
+            "mode": "fixed",
+            "value": 1280
+          },
+          "height": {
+            "mode": "fixed",
+            "value": 720
+          }
+        },
+        "intrinsicSize": {
+          "width": 1280,
+          "height": 720
+        },
+        "frame": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "children": [
+          {
+            "path": "0.0",
+            "kind": "shape",
+            "position": {
+              "left": 0,
+              "top": 0
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 1280
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 720
+              }
+            },
+            "intrinsicSize": {
+              "width": 1280,
+              "height": 720
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1280,
+              "height": 720
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/e1w7mp0b",
+              "id": "1",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.1",
+            "kind": "text",
+            "position": {
+              "left": 72,
+              "top": 38
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 760
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 18
+              }
+            },
+            "intrinsicSize": {
+              "width": 760,
+              "height": 18
+            },
+            "frame": {
+              "left": 72,
+              "top": 38,
+              "width": 760,
+              "height": 18
+            },
+            "children": [],
+            "text": "Synthetic Claims Layer",
+            "transform": "none",
+            "element": {
+              "aid": "sh/psfil0rq",
+              "id": "2",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.2",
+            "kind": "text",
+            "position": {
+              "left": 1155,
+              "top": 36
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 56
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 20
+              }
+            },
+            "intrinsicSize": {
+              "width": 56,
+              "height": 20
+            },
+            "frame": {
+              "left": 1155,
+              "top": 36,
+              "width": 56,
+              "height": 20
+            },
+            "children": [],
+            "text": "04",
+            "transform": "none",
+            "element": {
+              "aid": "sh/w7mp0bi9",
+              "id": "3",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.3",
+            "kind": "shape",
+            "position": {
+              "left": 72,
+              "top": 658
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 1040
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 1
+              }
+            },
+            "intrinsicSize": {
+              "width": 1040,
+              "height": 1
+            },
+            "frame": {
+              "left": 72,
+              "top": 658,
+              "width": 1040,
+              "height": 1
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/7adsji5s",
+              "id": "4",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.4",
+            "kind": "text",
+            "position": {
+              "left": 72,
+              "top": 673
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 920
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 18
+              }
+            },
+            "intrinsicSize": {
+              "width": 920,
+              "height": 18
+            },
+            "frame": {
+              "left": 72,
+              "top": 673,
+              "width": 920,
+              "height": 18
+            },
+            "children": [],
+            "text": "Source: data/processed/synthetic_claims_summary.json; claim data is synthetic.",
+            "transform": "none",
+            "element": {
+              "aid": "sh/epkzupwb",
+              "id": "5",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.5",
+            "kind": "text",
+            "position": {
+              "left": 72,
+              "top": 90
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 760
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 96
+              }
+            },
+            "intrinsicSize": {
+              "width": 760,
+              "height": 96
+            },
+            "frame": {
+              "left": 72,
+              "top": 90,
+              "width": 760,
+              "height": 96
+            },
+            "children": [],
+            "text": "Olist has real commerce logistics data,\nbut no insurance claim history.",
+            "transform": "none",
+            "element": {
+              "aid": "sh/pg3ex0nu",
+              "id": "6",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.6",
+            "kind": "shape",
+            "position": {
+              "left": 80,
+              "top": 232
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 430
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 102
+              }
+            },
+            "intrinsicSize": {
+              "width": 430,
+              "height": 102
+            },
+            "frame": {
+              "left": 80,
+              "top": 232,
+              "width": 430,
+              "height": 102
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/wval87ed",
+              "id": "7",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.7",
+            "kind": "text",
+            "position": {
+              "left": 106,
+              "top": 252
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 180
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 24
+              }
+            },
+            "intrinsicSize": {
+              "width": 180,
+              "height": 24
+            },
+            "frame": {
+              "left": 106,
+              "top": 252,
+              "width": 180,
+              "height": 24
+            },
+            "children": [],
+            "text": "Returns layer",
+            "transform": "none",
+            "element": {
+              "aid": "sh/36hcrmhk",
+              "id": "8",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.8",
+            "kind": "text",
+            "position": {
+              "left": 106,
+              "top": 283
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 360
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 40
+              }
+            },
+            "intrinsicSize": {
+              "width": 360,
+              "height": 40
+            },
+            "frame": {
+              "left": 106,
+              "top": 283,
+              "width": 360,
+              "height": 40
+            },
+            "children": [],
+            "text": "return_requested, return_approved,\nrefund_without_return, return_reason",
+            "transform": "none",
+            "element": {
+              "aid": "sh/eloj2t83",
+              "id": "9",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.9",
+            "kind": "shape",
+            "position": {
+              "left": 80,
+              "top": 366
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 430
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 118
+              }
+            },
+            "intrinsicSize": {
+              "width": 430,
+              "height": 118
+            },
+            "frame": {
+              "left": 80,
+              "top": 366,
+              "width": 430,
+              "height": 118
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/wra5gbq1",
+              "id": "10",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.10",
+            "kind": "text",
+            "position": {
+              "left": 106,
+              "top": 386
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 180
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 24
+              }
+            },
+            "intrinsicSize": {
+              "width": 180,
+              "height": 24
+            },
+            "frame": {
+              "left": 106,
+              "top": 386,
+              "width": 180,
+              "height": 24
+            },
+            "children": [],
+            "text": "Claims layer",
+            "transform": "none",
+            "element": {
+              "aid": "sh/lc7u54zi",
+              "id": "11",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.11",
+            "kind": "text",
+            "position": {
+              "left": 106,
+              "top": 417
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 360
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 46
+              }
+            },
+            "intrinsicSize": {
+              "width": 360,
+              "height": 46
+            },
+            "frame": {
+              "left": 106,
+              "top": 417,
+              "width": 360,
+              "height": 46
+            },
+            "children": [],
+            "text": "covered_claim_flag, claim_type,\ngross_loss, paid_loss, net_loss",
+            "transform": "none",
+            "element": {
+              "aid": "sh/eloj2t83",
+              "id": "12",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.12",
+            "kind": "text",
+            "position": {
+              "left": 622,
+              "top": 224
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 180
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 18
+              }
+            },
+            "intrinsicSize": {
+              "width": 180,
+              "height": 18
+            },
+            "frame": {
+              "left": 622,
+              "top": 224,
+              "width": 180,
+              "height": 18
+            },
+            "children": [],
+            "text": "Eligible exposures",
+            "transform": "none",
+            "element": {
+              "aid": "sh/36hcrmhk",
+              "id": "13",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.13",
+            "kind": "text",
+            "position": {
+              "left": 622,
+              "top": 244
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 180
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 34
+              }
+            },
+            "intrinsicSize": {
+              "width": 180,
+              "height": 34
+            },
+            "frame": {
+              "left": 622,
+              "top": 244,
+              "width": 180,
+              "height": 34
+            },
+            "children": [],
+            "text": "110,197",
+            "transform": "none",
+            "element": {
+              "aid": "sh/wfyxobm5",
+              "id": "14",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.14",
+            "kind": "text",
+            "position": {
+              "left": 622,
+              "top": 310
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 180
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 18
+              }
+            },
+            "intrinsicSize": {
+              "width": 180,
+              "height": 18
+            },
+            "frame": {
+              "left": 622,
+              "top": 310,
+              "width": 180,
+              "height": 18
+            },
+            "children": [],
+            "text": "Covered claims",
+            "transform": "none",
+            "element": {
+              "aid": "sh/l0rqd4vm",
+              "id": "15",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.15",
+            "kind": "text",
+            "position": {
+              "left": 622,
+              "top": 330
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 180
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 34
+              }
+            },
+            "intrinsicSize": {
+              "width": 180,
+              "height": 34
+            },
+            "frame": {
+              "left": 622,
+              "top": 330,
+              "width": 180,
+              "height": 34
+            },
+            "children": [],
+            "text": "8,485",
+            "transform": "none",
+            "element": {
+              "aid": "sh/ed8bat47",
+              "id": "16",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.16",
+            "kind": "text",
+            "position": {
+              "left": 622,
+              "top": 396
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 180
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 18
+              }
+            },
+            "intrinsicSize": {
+              "width": 180,
+              "height": 18
+            },
+            "frame": {
+              "left": 622,
+              "top": 396,
+              "width": 180,
+              "height": 18
+            },
+            "children": [],
+            "text": "Frequency",
+            "transform": "none",
+            "element": {
+              "aid": "sh/7u54zido",
+              "id": "17",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.17",
+            "kind": "text",
+            "position": {
+              "left": 622,
+              "top": 416
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 180
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 34
+              }
+            },
+            "intrinsicSize": {
+              "width": 180,
+              "height": 34
+            },
+            "frame": {
+              "left": 622,
+              "top": 416,
+              "width": 180,
+              "height": 34
+            },
+            "children": [],
+            "text": "7.70%",
+            "transform": "none",
+            "element": {
+              "aid": "sh/w7mp0bi9",
+              "id": "18",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.18",
+            "kind": "text",
+            "position": {
+              "left": 872,
+              "top": 310
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 180
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 18
+              }
+            },
+            "intrinsicSize": {
+              "width": 180,
+              "height": 18
+            },
+            "frame": {
+              "left": 872,
+              "top": 310,
+              "width": 180,
+              "height": 18
+            },
+            "children": [],
+            "text": "Avg severity",
+            "transform": "none",
+            "element": {
+              "aid": "sh/psfil0rq",
+              "id": "19",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.19",
+            "kind": "text",
+            "position": {
+              "left": 872,
+              "top": 330
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 180
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 34
+              }
+            },
+            "intrinsicSize": {
+              "width": 180,
+              "height": 34
+            },
+            "frame": {
+              "left": 872,
+              "top": 330,
+              "width": 180,
+              "height": 34
+            },
+            "children": [],
+            "text": "19.22",
+            "transform": "none",
+            "element": {
+              "aid": "sh/9w3m94fu",
+              "id": "20",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.20",
+            "kind": "text",
+            "position": {
+              "left": 872,
+              "top": 396
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 230
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 18
+              }
+            },
+            "intrinsicSize": {
+              "width": 230,
+              "height": 18
+            },
+            "frame": {
+              "left": 872,
+              "top": 396,
+              "width": 230,
+              "height": 18
+            },
+            "children": [],
+            "text": "Total net loss",
+            "transform": "none",
+            "element": {
+              "aid": "sh/kb6xkf6d",
+              "id": "21",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.21",
+            "kind": "text",
+            "position": {
+              "left": 872,
+              "top": 416
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 230
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 34
+              }
+            },
+            "intrinsicSize": {
+              "width": 230,
+              "height": 34
+            },
+            "frame": {
+              "left": 872,
+              "top": 416,
+              "width": 230,
+              "height": 34
+            },
+            "children": [],
+            "text": "163,112.68",
+            "transform": "none",
+            "element": {
+              "aid": "sh/rqd4vmtw",
+              "id": "22",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.22",
+            "kind": "text",
+            "position": {
+              "left": 80,
+              "top": 558
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 900
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 44
+              }
+            },
+            "intrinsicSize": {
+              "width": 900,
+              "height": 44
+            },
+            "frame": {
+              "left": 80,
+              "top": 558,
+              "width": 900,
+              "height": 44
+            },
+            "children": [],
+            "text": "Frequency target = covered_claim_flag. Severity target = net_loss on covered claims only.",
+            "transform": "none",
+            "element": {
+              "aid": "sh/25kb6xkf",
+              "id": "23",
+              "kind": "shape"
+            }
+          }
+        ],
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignItems": "stretch",
+        "justifyItems": "stretch",
+        "contentFrame": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "items": [
+          {
+            "path": "0.0",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1280,
+              "height": 720
+            }
+          },
+          {
+            "path": "0.1",
+            "frame": {
+              "left": 72,
+              "top": 38,
+              "width": 760,
+              "height": 18
+            }
+          },
+          {
+            "path": "0.2",
+            "frame": {
+              "left": 1155,
+              "top": 36,
+              "width": 56,
+              "height": 20
+            }
+          },
+          {
+            "path": "0.3",
+            "frame": {
+              "left": 72,
+              "top": 658,
+              "width": 1040,
+              "height": 1
+            }
+          },
+          {
+            "path": "0.4",
+            "frame": {
+              "left": 72,
+              "top": 673,
+              "width": 920,
+              "height": 18
+            }
+          },
+          {
+            "path": "0.5",
+            "frame": {
+              "left": 72,
+              "top": 90,
+              "width": 760,
+              "height": 96
+            }
+          },
+          {
+            "path": "0.6",
+            "frame": {
+              "left": 80,
+              "top": 232,
+              "width": 430,
+              "height": 102
+            }
+          },
+          {
+            "path": "0.7",
+            "frame": {
+              "left": 106,
+              "top": 252,
+              "width": 180,
+              "height": 24
+            }
+          },
+          {
+            "path": "0.8",
+            "frame": {
+              "left": 106,
+              "top": 283,
+              "width": 360,
+              "height": 40
+            }
+          },
+          {
+            "path": "0.9",
+            "frame": {
+              "left": 80,
+              "top": 366,
+              "width": 430,
+              "height": 118
+            }
+          },
+          {
+            "path": "0.10",
+            "frame": {
+              "left": 106,
+              "top": 386,
+              "width": 180,
+              "height": 24
+            }
+          },
+          {
+            "path": "0.11",
+            "frame": {
+              "left": 106,
+              "top": 417,
+              "width": 360,
+              "height": 46
+            }
+          },
+          {
+            "path": "0.12",
+            "frame": {
+              "left": 622,
+              "top": 224,
+              "width": 180,
+              "height": 18
+            }
+          },
+          {
+            "path": "0.13",
+            "frame": {
+              "left": 622,
+              "top": 244,
+              "width": 180,
+              "height": 34
+            }
+          },
+          {
+            "path": "0.14",
+            "frame": {
+              "left": 622,
+              "top": 310,
+              "width": 180,
+              "height": 18
+            }
+          },
+          {
+            "path": "0.15",
+            "frame": {
+              "left": 622,
+              "top": 330,
+              "width": 180,
+              "height": 34
+            }
+          },
+          {
+            "path": "0.16",
+            "frame": {
+              "left": 622,
+              "top": 396,
+              "width": 180,
+              "height": 18
+            }
+          },
+          {
+            "path": "0.17",
+            "frame": {
+              "left": 622,
+              "top": 416,
+              "width": 180,
+              "height": 34
+            }
+          },
+          {
+            "path": "0.18",
+            "frame": {
+              "left": 872,
+              "top": 310,
+              "width": 180,
+              "height": 18
+            }
+          },
+          {
+            "path": "0.19",
+            "frame": {
+              "left": 872,
+              "top": 330,
+              "width": 180,
+              "height": 34
+            }
+          },
+          {
+            "path": "0.20",
+            "frame": {
+              "left": 872,
+              "top": 396,
+              "width": 230,
+              "height": 18
+            }
+          },
+          {
+            "path": "0.21",
+            "frame": {
+              "left": 872,
+              "top": 416,
+              "width": 230,
+              "height": 34
+            }
+          },
+          {
+            "path": "0.22",
+            "frame": {
+              "left": 80,
+              "top": 558,
+              "width": 900,
+              "height": 44
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

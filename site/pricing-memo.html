@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pricing Memo · Return-Shipping Insurance Pricing Engine</title>
+    <meta
+      name="description"
+      content="Actuarial pricing memo and rate basis for the return-shipping insurance pricing engine."
+    />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles/shared.css" />
+    <link rel="stylesheet" href="./styles/pricing-memo.css?v=20260524-1" />
+  </head>
+  <body>
+    <div class="site-shell pricing-memo-site">
+      <header class="topbar" aria-label="Project navigation">
+        <a class="brand-mark" href="./index.html" aria-label="Homepage">
+          <span class="brand-dot" aria-hidden="true"></span>
+          <span>Shipping Insurance Pricing</span>
+        </a>
+        <nav class="topnav" aria-label="Pricing memo navigation">
+          <a href="./index.html">Back to homepage</a>
+        </nav>
+      </header>
+
+      <main class="executive-page">
+        <div class="executive-layout">
+          <article class="executive-article">
+            <nav class="breadcrumb" aria-label="Current page path">
+              <a href="./index.html">Project Pages</a>
+              <span>/</span>
+              <span>Pricing Memo</span>
+            </nav>
+
+            <header class="executive-header">
+              <p class="eyebrow">Pricing Memo · Actuarial Rate Basis</p>
+              <h1>Return-shipping insurance technical pricing memo</h1>
+              <p>
+                A formal pricing-committee style memo for the current rate indication, coverage
+                boundary, expected-loss method, credibility adjustment, monitoring evidence, stress
+                testing, and model governance position.
+              </p>
+            </header>
+
+            <section class="executive-section" id="pricing-recommendation">
+              <h2>Pricing recommendation</h2>
+              <p>
+                Adopt GLM expected loss plus seller credibility as the current technical pricing
+                basis. The GLM provides the explainable base rate structure, and credibility adds
+                controlled seller experience without allowing sparse seller history to dominate the
+                indication.
+              </p>
+              <p>
+                The recommended commercial premium is calculated as credibility expected loss
+                divided by the 60% target loss ratio. XGBoost should remain a challenger risk
+                score and governance benchmark, not the champion rate formula, because its ranking
+                improvement is too small and its pricing calibration is weaker than GLM on the test
+                split.
+              </p>
+              <dl class="executive-facts" aria-label="Recommended pricing position">
+                <div>
+                  <dt>Champion basis</dt>
+                  <dd>GLM + credibility</dd>
+                </div>
+                <div>
+                  <dt>Target loss ratio</dt>
+                  <dd>60%</dd>
+                </div>
+                <div>
+                  <dt>Base credibility LR</dt>
+                  <dd>59.37%</dd>
+                </div>
+                <div>
+                  <dt>Worst stress LR</dt>
+                  <dd>85.50%</dd>
+                </div>
+              </dl>
+            </section>
+
+            <section class="executive-section" id="product-coverage">
+              <h2>Product and coverage scope</h2>
+              <p>
+                The priced coverage is Coverage A: return shipping. It represents the return
+                shipping cost when a delivered order has an eligible, approved buyer return. The
+                pricing unit is not a generic order, seller, or product prediction score; it is an
+                insurance exposure carrying expected covered return-shipping loss.
+              </p>
+              <p>
+                The current version excludes product refund, refund without return, failed
+                delivery, replacement shipping, fraud, platform-policy exceptions, and claim
+                development. Those modules should be priced separately only after real operational
+                data supports their frequency, severity, recoveries, expenses, and coverage rules.
+              </p>
+            </section>
+
+            <section class="executive-section" id="exposure-basis">
+              <h2>Data limitation and exposure basis</h2>
+              <p>
+                The project uses the public Olist e-commerce dataset. Olist contains order,
+                product, seller, customer state, route, freight, and delivery fields, but it does
+                not contain real return-shipping insurance claims. The numerical rate indications
+                are therefore framework evidence, not production TikTok Shop rates.
+              </p>
+              <p>
+                The exposure key is <strong>order_id + order_item_id + seller_id + product_id</strong>.
+                This grain is necessary because freight value is recorded at the order-item level,
+                and one order can contain multiple products or multiple sellers. Pricing above this
+                level would require arbitrary allocation of freight, loss, and premium back to the
+                seller-item exposure.
+              </p>
+              <dl class="executive-facts" aria-label="Exposure basis facts">
+                <div>
+                  <dt>Total rows</dt>
+                  <dd>112,650</dd>
+                </div>
+                <div>
+                  <dt>Eligible exposures</dt>
+                  <dd>110,197</dd>
+                </div>
+                <div>
+                  <dt>Ineligible exposures</dt>
+                  <dd>2,453</dd>
+                </div>
+                <div>
+                  <dt>Unique exposure keys</dt>
+                  <dd>112,650</dd>
+                </div>
+              </dl>
+            </section>
+
+            <section class="executive-section" id="claim-definition">
+              <h2>Synthetic claim definition</h2>
+              <p>
+                Because Olist has no claim table, the project creates a synthetic returns and
+                claims layer. The design deliberately separates return behavior from insurance
+                indemnity: a return request is not automatically a covered claim, and a covered
+                claim is the event that drives frequency, severity, pure premium, and loss ratio.
+              </p>
+              <p>
+                The returns layer contains fields such as return requested, return approved, refund
+                without return, partial refund, return reason, and request days after delivery. The
+                claims layer contains covered claim flag, claim type, gross loss, carrier recovery,
+                paid loss, net loss, and claim status.
+              </p>
+              <dl class="executive-facts" aria-label="Synthetic claim result facts">
+                <div>
+                  <dt>Covered claims</dt>
+                  <dd>8,485</dd>
+                </div>
+                <div>
+                  <dt>Claim frequency</dt>
+                  <dd>7.70%</dd>
+                </div>
+                <div>
+                  <dt>Total net loss</dt>
+                  <dd>163,112.68</dd>
+                </div>
+                <div>
+                  <dt>Average severity</dt>
+                  <dd>19.22</dd>
+                </div>
+              </dl>
+            </section>
+
+            <section class="executive-section" id="technical-methodology">
+              <h2>Technical premium methodology</h2>
+              <p>
+                Baseline pricing sets the portfolio benchmark. The portfolio pure premium is total
+                net loss divided by eligible exposures, and the commercial premium is pure premium
+                divided by the 60% target loss ratio. This gives a baseline commercial premium of
+                2.4670 per eligible exposure.
+              </p>
+              <p>
+                The champion model is a two-part GLM. Frequency is modelled with a binomial GLM
+                and logit link using covered_claim_flag. Severity is modelled with a gamma GLM and
+                log link using net_loss on covered claims only. Expected loss is frequency times
+                severity, and commercial premium is expected loss divided by target loss ratio.
+              </p>
+              <p>
+                The model uses quote-time-known fields only: category, route, cross-state flag,
+                purchase month and weekday, price, capped freight value, capped freight-to-price
+                ratio, product weight, product volume, and estimated delivery days. Outcome and
+                synthetic-generation fields such as return_requested, return_reason, claim_type,
+                paid_loss, net_loss, covered_claim_probability, and return_factor fields are
+                excluded from modelling.
+              </p>
+              <dl class="executive-facts" aria-label="Technical premium facts">
+                <div>
+                  <dt>Portfolio pure premium</dt>
+                  <dd>1.4802</dd>
+                </div>
+                <div>
+                  <dt>Baseline commercial premium</dt>
+                  <dd>2.4670</dd>
+                </div>
+                <div>
+                  <dt>Formula</dt>
+                  <dd>freq x severity</dd>
+                </div>
+                <div>
+                  <dt>Rate conversion</dt>
+                  <dd>EL / 60%</dd>
+                </div>
+              </dl>
+            </section>
+
+            <section class="executive-section" id="glm-result">
+              <h2>GLM pricing result</h2>
+              <p>
+                The GLM has moderate frequency ranking power, which is expected for sparse
+                insurance claim events using only quote-time fields. The more important pricing
+                result is aggregate calibration: test pure premium actual-to-expected is 1.003,
+                which means expected loss is close to observed synthetic loss on the holdout split.
+              </p>
+              <p>
+                On the full portfolio, GLM expected total loss is 164,831.10 versus actual total
+                net loss of 163,112.68. This implies a GLM actual-to-expected ratio of 0.990 and a
+                GLM total commercial premium of 274,718.50 at the 60% target loss ratio.
+              </p>
+              <dl class="executive-facts" aria-label="GLM validation facts">
+                <div>
+                  <dt>Train frequency AUC</dt>
+                  <dd>0.570</dd>
+                </div>
+                <div>
+                  <dt>Test frequency AUC</dt>
+                  <dd>0.560</dd>
+                </div>
+                <div>
+                  <dt>Test pure premium A/E</dt>
+                  <dd>1.003</dd>
+                </div>
+                <div>
+                  <dt>GLM expected loss</dt>
+                  <dd>164,831.10</dd>
+                </div>
+              </dl>
+            </section>
+
+            <section class="executive-section" id="seller-credibility">
+              <h2>Seller credibility adjustment</h2>
+              <p>
+                Seller ID is not included directly in the GLM because it is high-cardinality and
+                sparse. The portfolio has 2,970 sellers with eligible exposure, but the median
+                seller has only 8 eligible exposures. Direct seller coefficients would overreact to
+                noise and create unstable rate indications.
+              </p>
+              <p>
+                Credibility is applied after the GLM. Seller observed A/E is blended with 1.0 using
+                <strong>Z = n / (n + 500)</strong>. Raw relativity is capped from 0.50 to 2.00,
+                and then normalized so total credibility expected loss exactly preserves the GLM
+                expected total loss. Small sellers are pulled back toward their own GLM exposure
+                mix, not toward a flat portfolio average price.
+              </p>
+              <dl class="executive-facts" aria-label="Seller credibility facts">
+                <div>
+                  <dt>Eligible sellers</dt>
+                  <dd>2,970</dd>
+                </div>
+                <div>
+                  <dt>Median seller exposure</dt>
+                  <dd>8</dd>
+                </div>
+                <div>
+                  <dt>Final relativity p95</dt>
+                  <dd>1.060</dd>
+                </div>
+                <div>
+                  <dt>Expected loss change</dt>
+                  <dd>0.00%</dd>
+                </div>
+              </dl>
+            </section>
+
+            <section class="executive-section" id="loss-ratio-monitoring">
+              <h2>Loss ratio monitoring</h2>
+              <p>
+                Monitoring compares actual loss, expected loss, and commercial premium. The two
+                core metrics are A/E, equal to actual loss divided by expected loss, and loss
+                ratio, equal to actual loss divided by commercial premium. Portfolio calibration is
+                necessary but not sufficient; category, route, seller tier, and seller-level views
+                identify where the rate basis needs monitoring.
+              </p>
+              <p>
+                At portfolio level, baseline loss ratio is exactly 60.00% by construction. GLM and
+                credibility both produce a 59.37% observed synthetic loss ratio because credibility
+                preserves the total GLM expected loss. The elevated seller tier remains weak after
+                credibility, with a credibility loss ratio of 81.53%, and should stay on a pricing
+                and underwriting watchlist.
+              </p>
+              <dl class="executive-facts" aria-label="Loss ratio monitoring facts">
+                <div>
+                  <dt>Baseline LR</dt>
+                  <dd>60.00%</dd>
+                </div>
+                <div>
+                  <dt>GLM LR</dt>
+                  <dd>59.37%</dd>
+                </div>
+                <div>
+                  <dt>Credibility LR</dt>
+                  <dd>59.37%</dd>
+                </div>
+                <div>
+                  <dt>Elevated tier LR</dt>
+                  <dd>81.53%</dd>
+                </div>
+              </dl>
+            </section>
+
+            <section class="executive-section" id="stress-testing">
+              <h2>Stress testing</h2>
+              <p>
+                Stress testing evaluates whether the current premiums remain adequate under
+                adverse loss scenarios. The current version does not retrain the model; it applies
+                deterministic frequency and severity multipliers to observed synthetic loss and
+                compares the stressed loss against baseline, GLM, and credibility premium.
+              </p>
+              <p>
+                Under credibility pricing, a 20% frequency deterioration or a 20% severity
+                deterioration each increases portfolio loss ratio to 71.25%. A combined 20%
+                frequency and 20% severity deterioration increases the loss ratio to 85.50%, which
+                is classified as high pressure. A near_glm seller tier combined stress also creates
+                high pressure because that tier contains most exposures.
+              </p>
+              <dl class="executive-facts" aria-label="Stress testing facts">
+                <div>
+                  <dt>Base observed LR</dt>
+                  <dd>59.37%</dd>
+                </div>
+                <div>
+                  <dt>Frequency +20%</dt>
+                  <dd>71.25%</dd>
+                </div>
+                <div>
+                  <dt>Severity +20%</dt>
+                  <dd>71.25%</dd>
+                </div>
+                <div>
+                  <dt>Combined +20/+20</dt>
+                  <dd>85.50%</dd>
+                </div>
+              </dl>
+            </section>
+
+            <section class="executive-section" id="model-governance">
+              <h2>Champion-challenger governance</h2>
+              <p>
+                XGBoost is implemented as a challenger model using the same quote-time-known
+                feature philosophy as the GLM. It uses covered_claim_flag for frequency and net
+                loss on covered claims for severity, excludes seller_id as a direct feature, and
+                excludes outcome and synthetic-generation fields to avoid leakage.
+              </p>
+              <p>
+                The challenger slightly improves test frequency AUC, moving from 0.560 for GLM to
+                0.561 for XGBoost. That is not enough to change the rate basis. The calibrated
+                XGBoost challenger has weaker test pricing calibration, with a 60.87% test loss
+                ratio versus 60.18% for GLM. In insurance pricing, ranking improvement does not
+                override expected-loss calibration.
+              </p>
+              <dl class="executive-facts" aria-label="Champion challenger facts">
+                <div>
+                  <dt>GLM test AUC</dt>
+                  <dd>0.560</dd>
+                </div>
+                <div>
+                  <dt>XGBoost test AUC</dt>
+                  <dd>0.561</dd>
+                </div>
+                <div>
+                  <dt>GLM test LR</dt>
+                  <dd>60.18%</dd>
+                </div>
+                <div>
+                  <dt>XGBoost test LR</dt>
+                  <dd>60.87%</dd>
+                </div>
+              </dl>
+            </section>
+
+            <section class="executive-section" id="production-requirements">
+              <h2>Limitations and production requirements</h2>
+              <p>
+                The main limitation is that the claim layer is synthetic. The project demonstrates
+                the actuarial workflow and governance logic, but the numerical rates should not be
+                interpreted as production TikTok Shop insurance rates. Olist is Brazilian
+                e-commerce data, not platform policy, seller, claim, and payment history for the
+                target product.
+              </p>
+              <p>
+                Production deployment would require real policy, order, return, claim, payment,
+                recovery, expense, seller, and exposure history. It would also need historical
+                training and future validation windows, claim development and IBNR treatment,
+                explicit expense, margin, capital, reinsurance, underwriting, and compliance
+                assumptions. XGBoost should remain in challenger governance until it proves better
+                calibration, not only better ranking.
+              </p>
+              <ol class="executive-list">
+                <li>Replace synthetic claims with real order, return, claim, payment, and recovery records.</li>
+                <li>Create historical training, validation, monitoring, and out-of-time evaluation windows.</li>
+                <li>Add expenses, profit margin, risk margin, capital, reinsurance, and compliance constraints.</li>
+                <li>Define rate-change caps, minimum credibility thresholds, and seller watchlist actions.</li>
+                <li>Keep GLM + credibility as champion until a challenger wins on calibration and governance.</li>
+              </ol>
+            </section>
+
+            <footer class="executive-footer">
+              <a class="secondary-link" href="./index.html">Back to homepage</a>
+              <a class="primary-link" href="./results.html">Next: Data & Results</a>
+            </footer>
+          </article>
+
+          <aside class="executive-toc" aria-label="Table of contents">
+            <nav>
+              <a href="#pricing-recommendation">Pricing recommendation</a>
+              <a href="#product-coverage">Product and coverage scope</a>
+              <a href="#exposure-basis">Data limitation and exposure basis</a>
+              <a href="#claim-definition">Synthetic claim definition</a>
+              <a href="#technical-methodology">Technical premium methodology</a>
+              <a href="#glm-result">GLM pricing result</a>
+              <a href="#seller-credibility">Seller credibility adjustment</a>
+              <a href="#loss-ratio-monitoring">Loss ratio monitoring</a>
+              <a href="#stress-testing">Stress testing</a>
+              <a href="#model-governance">Champion-challenger governance</a>
+              <a href="#production-requirements">Limitations and production requirements</a>
+            </nav>
+          </aside>
+        </div>
+      </main>
+    </div>
+
+    <script src="./scripts/pricing-memo-toc.js"></script>
+  </body>
+</html>

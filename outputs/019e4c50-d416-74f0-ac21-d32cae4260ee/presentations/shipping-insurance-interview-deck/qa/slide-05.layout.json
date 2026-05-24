@@ -1,0 +1,2180 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/ecgmpf",
+    "id": "ecgmpf",
+    "slide": 5,
+    "layoutId": "b98adadb-6031-4b96-89f9-f986a994e9f1",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "0ec80754-8d73-4899-a3de-516c118f0ce3",
+    "masterLayoutName": "Master",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "Work Sans"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "b98adadb-6031-4b96-89f9-f986a994e9f1",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "0ec80754-8d73-4899-a3de-516c118f0ce3",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "0ec80754-8d73-4899-a3de-516c118f0ce3",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/sneloj2t",
+      "id": "1",
+      "bbox": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#F8F7F2"
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/32lszqtc",
+      "id": "2",
+      "bbox": [
+        72,
+        38,
+        760,
+        18
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1"
+      },
+      "geometry": "rect",
+      "text": "Baseline Pricing",
+      "textPreview": "Baseline Pricing",
+      "resolvedFontSize": 11,
+      "resolvedTextStyle": {
+        "fontSize": 11,
+        "typeface": "Work Sans",
+        "color": "#9C9990",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Baseline Pricing"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Baseline Pricing",
+          "resolvedTextStyle": {
+            "fontSize": 11,
+            "typeface": "Work Sans",
+            "color": "#9C9990",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Baseline Pricing",
+              "fontSize": 11,
+              "typeface": "Work Sans",
+              "color": "#9C9990",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ahoza1gv",
+      "id": "3",
+      "bbox": [
+        1155,
+        36,
+        56,
+        20
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.2"
+      },
+      "geometry": "rect",
+      "text": "05",
+      "textPreview": "05",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "fontSize": 12,
+        "typeface": "Work Sans",
+        "color": "#9C9990",
+        "alignment": "right",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "05"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "05",
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "typeface": "Work Sans",
+            "color": "#9C9990",
+            "alignment": "right",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "05",
+              "fontSize": 12,
+              "typeface": "Work Sans",
+              "color": "#9C9990",
+              "alignment": "right",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/lkjm1cfa",
+      "id": "4",
+      "bbox": [
+        72,
+        658,
+        1040,
+        1
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.3"
+      },
+      "geometry": "rect",
+      "fillColor": "#D9D6CC"
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/szqtcj6t",
+      "id": "5",
+      "bbox": [
+        72,
+        673,
+        920,
+        18
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.4"
+      },
+      "geometry": "rect",
+      "text": "Source: data/processed/pricing_baseline_summary.json; target loss ratio = 60%.",
+      "textPreview": "Source: data/processed/pricing_baseline_summary.json; target loss ratio = 60%.",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "fontSize": 10,
+        "typeface": "Work Sans",
+        "color": "#9C9990",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Source: data/processed/pricing_baseline_summary.json; target loss ratio = 60%."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Source: data/processed/pricing_baseline_summary.json; target loss ratio = 60%.",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "typeface": "Work Sans",
+            "color": "#9C9990",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Source: data/processed/pricing_baseline_summary.json; target loss ratio = 60%.",
+              "fontSize": 10,
+              "typeface": "Work Sans",
+              "color": "#9C9990",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3ex0nuxc",
+      "id": "6",
+      "bbox": [
+        72,
+        92,
+        840,
+        50
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.5"
+      },
+      "geometry": "rect",
+      "text": "Start with a simple actuarial benchmark before modelling.",
+      "textPreview": "Start with a simple actuarial benchmark before modelling.",
+      "resolvedFontSize": 32,
+      "resolvedTextStyle": {
+        "fontSize": 32,
+        "typeface": "Work Sans",
+        "color": "#171716",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Start with a simple actuarial benchmark before"
+          },
+          {
+            "index": 2,
+            "text": "modelling."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Start with a simple actuarial benchmark before modelling.",
+          "resolvedTextStyle": {
+            "fontSize": 32,
+            "typeface": "Work Sans",
+            "color": "#171716",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Start with a simple actuarial benchmark before modelling.",
+              "fontSize": 32,
+              "typeface": "Work Sans",
+              "color": "#171716",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/at47y1kr",
+      "id": "7",
+      "bbox": [
+        90,
+        216,
+        310,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.6"
+      },
+      "geometry": "rect",
+      "text": "Portfolio pure premium",
+      "textPreview": "Portfolio pure premium",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "fontSize": 15,
+        "typeface": "Work Sans",
+        "color": "#9C9990",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Portfolio pure premium"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Portfolio pure premium",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Work Sans",
+            "color": "#9C9990",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Portfolio pure premium",
+              "fontSize": 15,
+              "typeface": "Work Sans",
+              "color": "#9C9990",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/loj2t83i",
+      "id": "8",
+      "bbox": [
+        90,
+        248,
+        440,
+        30
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.7"
+      },
+      "geometry": "rect",
+      "text": "total net loss / eligible exposures",
+      "textPreview": "total net loss / eligible exposures",
+      "resolvedFontSize": 25,
+      "resolvedTextStyle": {
+        "fontSize": 25,
+        "typeface": "Work Sans",
+        "color": "#171716",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "total net loss / eligible exposures"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "total net loss / eligible exposures",
+          "resolvedTextStyle": {
+            "fontSize": 25,
+            "typeface": "Work Sans",
+            "color": "#171716",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "total net loss / eligible exposures",
+              "fontSize": 25,
+              "typeface": "Work Sans",
+              "color": "#171716",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/w3m94fu1",
+      "id": "9",
+      "bbox": [
+        90,
+        300,
+        500,
+        1
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.8"
+      },
+      "geometry": "rect",
+      "fillColor": "#D9D6CC"
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/udg7adsj",
+      "id": "10",
+      "bbox": [
+        90,
+        336,
+        310,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.9"
+      },
+      "geometry": "rect",
+      "text": "Commercial premium",
+      "textPreview": "Commercial premium",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "fontSize": 15,
+        "typeface": "Work Sans",
+        "color": "#9C9990",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Commercial premium"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Commercial premium",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Work Sans",
+            "color": "#9C9990",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Commercial premium",
+              "fontSize": 15,
+              "typeface": "Work Sans",
+              "color": "#9C9990",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nyd0z610",
+      "id": "11",
+      "bbox": [
+        90,
+        368,
+        440,
+        30
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.10"
+      },
+      "geometry": "rect",
+      "text": "pure premium / target loss ratio",
+      "textPreview": "pure premium / target loss ratio",
+      "resolvedFontSize": 25,
+      "resolvedTextStyle": {
+        "fontSize": 25,
+        "typeface": "Work Sans",
+        "color": "#171716",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "pure premium / target loss ratio"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "pure premium / target loss ratio",
+          "resolvedTextStyle": {
+            "fontSize": 25,
+            "typeface": "Work Sans",
+            "color": "#171716",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "pure premium / target loss ratio",
+              "fontSize": 25,
+              "typeface": "Work Sans",
+              "color": "#171716",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cj6tovah",
+      "id": "12",
+      "bbox": [
+        720,
+        188,
+        330,
+        298
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.11"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#ECEBE4",
+      "lineColor": "#D9D6CC",
+      "lineWidth": 1
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/54zidony",
+      "id": "13",
+      "bbox": [
+        752,
+        224,
+        230,
+        18
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.12"
+      },
+      "geometry": "rect",
+      "text": "Target loss ratio",
+      "textPreview": "Target loss ratio",
+      "resolvedFontSize": 11,
+      "resolvedTextStyle": {
+        "fontSize": 11,
+        "typeface": "Work Sans",
+        "color": "#9C9990",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Target loss ratio"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Target loss ratio",
+          "resolvedTextStyle": {
+            "fontSize": 11,
+            "typeface": "Work Sans",
+            "color": "#9C9990",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Target loss ratio",
+              "fontSize": 11,
+              "typeface": "Work Sans",
+              "color": "#9C9990",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/upwb2hwf",
+      "id": "14",
+      "bbox": [
+        752,
+        244,
+        230,
+        34
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.13"
+      },
+      "geometry": "rect",
+      "text": "60.00%",
+      "textPreview": "60.00%",
+      "resolvedFontSize": 28,
+      "resolvedTextStyle": {
+        "fontSize": 28,
+        "typeface": "Work Sans",
+        "color": "#171716",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "60.00%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "60.00%",
+          "resolvedTextStyle": {
+            "fontSize": 28,
+            "typeface": "Work Sans",
+            "color": "#171716",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "60.00%",
+              "fontSize": 28,
+              "typeface": "Work Sans",
+              "color": "#171716",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nap4r65w",
+      "id": "15",
+      "bbox": [
+        752,
+        314,
+        230,
+        18
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.14"
+      },
+      "geometry": "rect",
+      "text": "Portfolio pure premium",
+      "textPreview": "Portfolio pure premium",
+      "resolvedFontSize": 11,
+      "resolvedTextStyle": {
+        "fontSize": 11,
+        "typeface": "Work Sans",
+        "color": "#9C9990",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Portfolio pure premium"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Portfolio pure premium",
+          "resolvedTextStyle": {
+            "fontSize": 11,
+            "typeface": "Work Sans",
+            "color": "#9C9990",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Portfolio pure premium",
+              "fontSize": 11,
+              "typeface": "Work Sans",
+              "color": "#9C9990",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cvixczed",
+      "id": "16",
+      "bbox": [
+        752,
+        334,
+        230,
+        34
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.15"
+      },
+      "geometry": "rect",
+      "text": "1.4802",
+      "textPreview": "1.4802",
+      "resolvedFontSize": 28,
+      "resolvedTextStyle": {
+        "fontSize": 28,
+        "typeface": "Work Sans",
+        "color": "#171716",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "1.4802"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "1.4802",
+          "resolvedTextStyle": {
+            "fontSize": 28,
+            "typeface": "Work Sans",
+            "color": "#171716",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "1.4802",
+              "fontSize": 28,
+              "typeface": "Work Sans",
+              "color": "#171716",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5gbq1ory",
+      "id": "17",
+      "bbox": [
+        752,
+        404,
+        230,
+        18
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.16"
+      },
+      "geometry": "rect",
+      "text": "Commercial premium",
+      "textPreview": "Commercial premium",
+      "resolvedFontSize": 11,
+      "resolvedTextStyle": {
+        "fontSize": 11,
+        "typeface": "Work Sans",
+        "color": "#9C9990",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Commercial premium"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Commercial premium",
+          "resolvedTextStyle": {
+            "fontSize": 11,
+            "typeface": "Work Sans",
+            "color": "#9C9990",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Commercial premium",
+              "fontSize": 11,
+              "typeface": "Work Sans",
+              "color": "#9C9990",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/u18jqh0f",
+      "id": "18",
+      "bbox": [
+        752,
+        424,
+        230,
+        34
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.17"
+      },
+      "geometry": "rect",
+      "text": "2.4670",
+      "textPreview": "2.4670",
+      "resolvedFontSize": 28,
+      "resolvedTextStyle": {
+        "fontSize": 28,
+        "typeface": "Work Sans",
+        "color": "#171716",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "2.4670"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "2.4670",
+          "resolvedTextStyle": {
+            "fontSize": 28,
+            "typeface": "Work Sans",
+            "color": "#171716",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "2.4670",
+              "fontSize": 28,
+              "typeface": "Work Sans",
+              "color": "#171716",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/jm1cfa9w",
+      "id": "19",
+      "bbox": [
+        90,
+        566,
+        920,
+        46
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.18"
+      },
+      "geometry": "rect",
+      "text": "Baseline is the control model: everyone gets the same price, so it cannot differentiate category, route, freight, or seller risk.",
+      "textPreview": "Baseline is the control model: everyone gets the same price, so it cannot differentiate category, route, freight, or seller risk.",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "Work Sans",
+        "color": "#6F6E67",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Baseline is the control model: everyone gets the same price, so it cannot differentiate category, route,"
+          },
+          {
+            "index": 2,
+            "text": "freight, or seller risk."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Baseline is the control model: everyone gets the same price, so it cannot differentiate category, route, freight, or seller risk.",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "Work Sans",
+            "color": "#6F6E67",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Baseline is the control model: everyone gets the same price, so it cannot differentiate category, route, freight, or seller risk.",
+              "fontSize": 18,
+              "typeface": "Work Sans",
+              "color": "#6F6E67",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    }
+  ],
+  "composeRuns": [
+    {
+      "index": 1,
+      "frame": {
+        "left": 0,
+        "top": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "root": {
+        "path": "0",
+        "kind": "layers",
+        "requestedSize": {
+          "width": {
+            "mode": "fixed",
+            "value": 1280
+          },
+          "height": {
+            "mode": "fixed",
+            "value": 720
+          }
+        },
+        "intrinsicSize": {
+          "width": 1280,
+          "height": 720
+        },
+        "frame": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "children": [
+          {
+            "path": "0.0",
+            "kind": "shape",
+            "position": {
+              "left": 0,
+              "top": 0
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 1280
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 720
+              }
+            },
+            "intrinsicSize": {
+              "width": 1280,
+              "height": 720
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1280,
+              "height": 720
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/sneloj2t",
+              "id": "1",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.1",
+            "kind": "text",
+            "position": {
+              "left": 72,
+              "top": 38
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 760
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 18
+              }
+            },
+            "intrinsicSize": {
+              "width": 760,
+              "height": 18
+            },
+            "frame": {
+              "left": 72,
+              "top": 38,
+              "width": 760,
+              "height": 18
+            },
+            "children": [],
+            "text": "Baseline Pricing",
+            "transform": "none",
+            "element": {
+              "aid": "sh/32lszqtc",
+              "id": "2",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.2",
+            "kind": "text",
+            "position": {
+              "left": 1155,
+              "top": 36
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 56
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 20
+              }
+            },
+            "intrinsicSize": {
+              "width": 56,
+              "height": 20
+            },
+            "frame": {
+              "left": 1155,
+              "top": 36,
+              "width": 56,
+              "height": 20
+            },
+            "children": [],
+            "text": "05",
+            "transform": "none",
+            "element": {
+              "aid": "sh/ahoza1gv",
+              "id": "3",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.3",
+            "kind": "shape",
+            "position": {
+              "left": 72,
+              "top": 658
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 1040
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 1
+              }
+            },
+            "intrinsicSize": {
+              "width": 1040,
+              "height": 1
+            },
+            "frame": {
+              "left": 72,
+              "top": 658,
+              "width": 1040,
+              "height": 1
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/lkjm1cfa",
+              "id": "4",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.4",
+            "kind": "text",
+            "position": {
+              "left": 72,
+              "top": 673
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 920
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 18
+              }
+            },
+            "intrinsicSize": {
+              "width": 920,
+              "height": 18
+            },
+            "frame": {
+              "left": 72,
+              "top": 673,
+              "width": 920,
+              "height": 18
+            },
+            "children": [],
+            "text": "Source: data/processed/pricing_baseline_summary.json; target loss ratio = 60%.",
+            "transform": "none",
+            "element": {
+              "aid": "sh/szqtcj6t",
+              "id": "5",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.5",
+            "kind": "text",
+            "position": {
+              "left": 72,
+              "top": 92
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 840
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 50
+              }
+            },
+            "intrinsicSize": {
+              "width": 840,
+              "height": 50
+            },
+            "frame": {
+              "left": 72,
+              "top": 92,
+              "width": 840,
+              "height": 50
+            },
+            "children": [],
+            "text": "Start with a simple actuarial benchmark before modelling.",
+            "transform": "none",
+            "element": {
+              "aid": "sh/3ex0nuxc",
+              "id": "6",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.6",
+            "kind": "text",
+            "position": {
+              "left": 90,
+              "top": 216
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 310
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 24
+              }
+            },
+            "intrinsicSize": {
+              "width": 310,
+              "height": 24
+            },
+            "frame": {
+              "left": 90,
+              "top": 216,
+              "width": 310,
+              "height": 24
+            },
+            "children": [],
+            "text": "Portfolio pure premium",
+            "transform": "none",
+            "element": {
+              "aid": "sh/at47y1kr",
+              "id": "7",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.7",
+            "kind": "text",
+            "position": {
+              "left": 90,
+              "top": 248
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 440
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 30
+              }
+            },
+            "intrinsicSize": {
+              "width": 440,
+              "height": 30
+            },
+            "frame": {
+              "left": 90,
+              "top": 248,
+              "width": 440,
+              "height": 30
+            },
+            "children": [],
+            "text": "total net loss / eligible exposures",
+            "transform": "none",
+            "element": {
+              "aid": "sh/loj2t83i",
+              "id": "8",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.8",
+            "kind": "shape",
+            "position": {
+              "left": 90,
+              "top": 300
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 500
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 1
+              }
+            },
+            "intrinsicSize": {
+              "width": 500,
+              "height": 1
+            },
+            "frame": {
+              "left": 90,
+              "top": 300,
+              "width": 500,
+              "height": 1
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/w3m94fu1",
+              "id": "9",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.9",
+            "kind": "text",
+            "position": {
+              "left": 90,
+              "top": 336
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 310
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 24
+              }
+            },
+            "intrinsicSize": {
+              "width": 310,
+              "height": 24
+            },
+            "frame": {
+              "left": 90,
+              "top": 336,
+              "width": 310,
+              "height": 24
+            },
+            "children": [],
+            "text": "Commercial premium",
+            "transform": "none",
+            "element": {
+              "aid": "sh/udg7adsj",
+              "id": "10",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.10",
+            "kind": "text",
+            "position": {
+              "left": 90,
+              "top": 368
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 440
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 30
+              }
+            },
+            "intrinsicSize": {
+              "width": 440,
+              "height": 30
+            },
+            "frame": {
+              "left": 90,
+              "top": 368,
+              "width": 440,
+              "height": 30
+            },
+            "children": [],
+            "text": "pure premium / target loss ratio",
+            "transform": "none",
+            "element": {
+              "aid": "sh/nyd0z610",
+              "id": "11",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.11",
+            "kind": "shape",
+            "position": {
+              "left": 720,
+              "top": 188
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 330
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 298
+              }
+            },
+            "intrinsicSize": {
+              "width": 330,
+              "height": 298
+            },
+            "frame": {
+              "left": 720,
+              "top": 188,
+              "width": 330,
+              "height": 298
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/cj6tovah",
+              "id": "12",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.12",
+            "kind": "text",
+            "position": {
+              "left": 752,
+              "top": 224
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 230
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 18
+              }
+            },
+            "intrinsicSize": {
+              "width": 230,
+              "height": 18
+            },
+            "frame": {
+              "left": 752,
+              "top": 224,
+              "width": 230,
+              "height": 18
+            },
+            "children": [],
+            "text": "Target loss ratio",
+            "transform": "none",
+            "element": {
+              "aid": "sh/54zidony",
+              "id": "13",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.13",
+            "kind": "text",
+            "position": {
+              "left": 752,
+              "top": 244
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 230
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 34
+              }
+            },
+            "intrinsicSize": {
+              "width": 230,
+              "height": 34
+            },
+            "frame": {
+              "left": 752,
+              "top": 244,
+              "width": 230,
+              "height": 34
+            },
+            "children": [],
+            "text": "60.00%",
+            "transform": "none",
+            "element": {
+              "aid": "sh/upwb2hwf",
+              "id": "14",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.14",
+            "kind": "text",
+            "position": {
+              "left": 752,
+              "top": 314
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 230
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 18
+              }
+            },
+            "intrinsicSize": {
+              "width": 230,
+              "height": 18
+            },
+            "frame": {
+              "left": 752,
+              "top": 314,
+              "width": 230,
+              "height": 18
+            },
+            "children": [],
+            "text": "Portfolio pure premium",
+            "transform": "none",
+            "element": {
+              "aid": "sh/nap4r65w",
+              "id": "15",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.15",
+            "kind": "text",
+            "position": {
+              "left": 752,
+              "top": 334
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 230
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 34
+              }
+            },
+            "intrinsicSize": {
+              "width": 230,
+              "height": 34
+            },
+            "frame": {
+              "left": 752,
+              "top": 334,
+              "width": 230,
+              "height": 34
+            },
+            "children": [],
+            "text": "1.4802",
+            "transform": "none",
+            "element": {
+              "aid": "sh/cvixczed",
+              "id": "16",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.16",
+            "kind": "text",
+            "position": {
+              "left": 752,
+              "top": 404
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 230
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 18
+              }
+            },
+            "intrinsicSize": {
+              "width": 230,
+              "height": 18
+            },
+            "frame": {
+              "left": 752,
+              "top": 404,
+              "width": 230,
+              "height": 18
+            },
+            "children": [],
+            "text": "Commercial premium",
+            "transform": "none",
+            "element": {
+              "aid": "sh/5gbq1ory",
+              "id": "17",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.17",
+            "kind": "text",
+            "position": {
+              "left": 752,
+              "top": 424
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 230
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 34
+              }
+            },
+            "intrinsicSize": {
+              "width": 230,
+              "height": 34
+            },
+            "frame": {
+              "left": 752,
+              "top": 424,
+              "width": 230,
+              "height": 34
+            },
+            "children": [],
+            "text": "2.4670",
+            "transform": "none",
+            "element": {
+              "aid": "sh/u18jqh0f",
+              "id": "18",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.18",
+            "kind": "text",
+            "position": {
+              "left": 90,
+              "top": 566
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 920
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 46
+              }
+            },
+            "intrinsicSize": {
+              "width": 920,
+              "height": 46
+            },
+            "frame": {
+              "left": 90,
+              "top": 566,
+              "width": 920,
+              "height": 46
+            },
+            "children": [],
+            "text": "Baseline is the control model: everyone gets the same price, so it cannot differentiate category, route, freight, or seller risk.",
+            "transform": "none",
+            "element": {
+              "aid": "sh/jm1cfa9w",
+              "id": "19",
+              "kind": "shape"
+            }
+          }
+        ],
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignItems": "stretch",
+        "justifyItems": "stretch",
+        "contentFrame": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "items": [
+          {
+            "path": "0.0",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1280,
+              "height": 720
+            }
+          },
+          {
+            "path": "0.1",
+            "frame": {
+              "left": 72,
+              "top": 38,
+              "width": 760,
+              "height": 18
+            }
+          },
+          {
+            "path": "0.2",
+            "frame": {
+              "left": 1155,
+              "top": 36,
+              "width": 56,
+              "height": 20
+            }
+          },
+          {
+            "path": "0.3",
+            "frame": {
+              "left": 72,
+              "top": 658,
+              "width": 1040,
+              "height": 1
+            }
+          },
+          {
+            "path": "0.4",
+            "frame": {
+              "left": 72,
+              "top": 673,
+              "width": 920,
+              "height": 18
+            }
+          },
+          {
+            "path": "0.5",
+            "frame": {
+              "left": 72,
+              "top": 92,
+              "width": 840,
+              "height": 50
+            }
+          },
+          {
+            "path": "0.6",
+            "frame": {
+              "left": 90,
+              "top": 216,
+              "width": 310,
+              "height": 24
+            }
+          },
+          {
+            "path": "0.7",
+            "frame": {
+              "left": 90,
+              "top": 248,
+              "width": 440,
+              "height": 30
+            }
+          },
+          {
+            "path": "0.8",
+            "frame": {
+              "left": 90,
+              "top": 300,
+              "width": 500,
+              "height": 1
+            }
+          },
+          {
+            "path": "0.9",
+            "frame": {
+              "left": 90,
+              "top": 336,
+              "width": 310,
+              "height": 24
+            }
+          },
+          {
+            "path": "0.10",
+            "frame": {
+              "left": 90,
+              "top": 368,
+              "width": 440,
+              "height": 30
+            }
+          },
+          {
+            "path": "0.11",
+            "frame": {
+              "left": 720,
+              "top": 188,
+              "width": 330,
+              "height": 298
+            }
+          },
+          {
+            "path": "0.12",
+            "frame": {
+              "left": 752,
+              "top": 224,
+              "width": 230,
+              "height": 18
+            }
+          },
+          {
+            "path": "0.13",
+            "frame": {
+              "left": 752,
+              "top": 244,
+              "width": 230,
+              "height": 34
+            }
+          },
+          {
+            "path": "0.14",
+            "frame": {
+              "left": 752,
+              "top": 314,
+              "width": 230,
+              "height": 18
+            }
+          },
+          {
+            "path": "0.15",
+            "frame": {
+              "left": 752,
+              "top": 334,
+              "width": 230,
+              "height": 34
+            }
+          },
+          {
+            "path": "0.16",
+            "frame": {
+              "left": 752,
+              "top": 404,
+              "width": 230,
+              "height": 18
+            }
+          },
+          {
+            "path": "0.17",
+            "frame": {
+              "left": 752,
+              "top": 424,
+              "width": 230,
+              "height": 34
+            }
+          },
+          {
+            "path": "0.18",
+            "frame": {
+              "left": 90,
+              "top": 566,
+              "width": 920,
+              "height": 46
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

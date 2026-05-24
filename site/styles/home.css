@@ -1,0 +1,150 @@
+/* Homepage-only layout, hero visual, and flow graphic. */
+.risk-plane {
+  min-height: 500px;
+  border-left: 1px solid rgba(216, 213, 203, 0.86);
+  isolation: isolate;
+}
+
+.plane-grid {
+  position: absolute;
+  inset: 10px 0 10px 0;
+  background:
+    linear-gradient(rgba(102, 118, 106, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(102, 118, 106, 0.08) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: linear-gradient(90deg, transparent 0%, black 18%, black 72%, transparent 100%);
+  opacity: 0.72;
+}
+
+.flow-node {
+  position: absolute;
+  z-index: 3;
+  width: 190px;
+  min-height: 78px;
+  padding: 17px 18px;
+  border: 1px solid rgba(216, 213, 203, 0.86);
+  border-radius: 8px;
+  background: rgba(247, 246, 241, 0.78);
+  box-shadow: var(--shadow);
+  transform: translate3d(0, 0, 0);
+}
+
+.flow-node span {
+  display: block;
+  color: var(--quiet);
+  font-size: 11px;
+  line-height: 1.2;
+}
+
+.flow-node strong {
+  display: block;
+  margin-top: 10px;
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.node-exposure {
+  top: 54px;
+  left: 8%;
+}
+
+.node-claims {
+  top: 144px;
+  right: 12%;
+}
+
+.node-pricing {
+  top: 244px;
+  left: 18%;
+  background: rgba(223, 229, 222, 0.76);
+}
+
+.node-credibility {
+  top: 340px;
+  right: 4%;
+}
+
+.node-challenger {
+  top: 414px;
+  left: 4%;
+}
+
+.flow-line {
+  position: absolute;
+  z-index: 2;
+  height: 1px;
+  background: rgba(102, 118, 106, 0.38);
+  transform-origin: left center;
+}
+
+.line-one {
+  top: 122px;
+  left: 29%;
+  width: 38%;
+  transform: rotate(12deg);
+}
+
+.line-two {
+  top: 230px;
+  left: 31%;
+  width: 29%;
+  transform: rotate(-18deg);
+}
+
+.line-three {
+  top: 334px;
+  left: 38%;
+  width: 32%;
+  transform: rotate(12deg);
+}
+
+.line-four {
+  top: 424px;
+  left: 29%;
+  width: 38%;
+  transform: rotate(-7deg);
+}
+
+@media (max-width: 980px) {
+  .risk-plane {
+    min-height: 520px;
+    border-left: 0;
+    border-top: 1px solid var(--rule);
+    padding-top: 28px;
+  }
+}
+
+@media (max-width: 640px) {
+  .risk-plane {
+    min-height: 620px;
+  }
+
+  .flow-node {
+    width: min(260px, 74vw);
+  }
+
+  .node-exposure,
+  .node-pricing,
+  .node-challenger {
+    left: 0;
+  }
+
+  .node-claims,
+  .node-credibility {
+    right: 0;
+  }
+
+  .node-exposure { top: 48px; }
+  .node-claims { top: 150px; }
+  .node-pricing { top: 264px; }
+  .node-credibility { top: 378px; }
+  .node-challenger { top: 492px; }
+
+  .plane-note {
+    left: 0;
+    right: auto;
+    bottom: 0;
+  }
+}

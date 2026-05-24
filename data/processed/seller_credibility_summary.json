@@ -1,0 +1,111 @@
+{
+  "parameters": {
+    "target_loss_ratio": 0.6,
+    "credibility_k": 500,
+    "relativity_min": 0.5,
+    "relativity_max": 2.0,
+    "formula": "Z = n / (n + k); relativity = Z * seller_observed_ae + (1 - Z)",
+    "portfolio_normalization": "preserve total GLM expected loss"
+  },
+  "input": {
+    "rows": 112650,
+    "eligible_exposures": 110197,
+    "sellers_with_eligible_exposure": 2970,
+    "unique_exposure_keys": 112650
+  },
+  "portfolio": {
+    "actual_total_net_loss": 163112.682297622,
+    "glm_expected_total_loss": 164831.0987919977,
+    "credibility_expected_total_loss": 164831.0987919977,
+    "glm_actual_to_expected": 0.9895746827693954,
+    "credibility_actual_to_expected": 0.9895746827693954,
+    "credibility_total_commercial_premium": 274718.4979866629,
+    "credibility_expected_loss_ratio": 0.5999999999999999,
+    "portfolio_expected_loss_change_vs_glm": 0.0
+  },
+  "seller_distribution": {
+    "eligible_exposures_per_seller": {
+      "count": 2970.0,
+      "mean": 37.103367003367005,
+      "std": 119.67296751297397,
+      "min": 1.0,
+      "25%": 2.0,
+      "50%": 8.0,
+      "75%": 26.0,
+      "90%": 83.0,
+      "95%": 151.0,
+      "99%": 432.88999999999896,
+      "max": 1996.0
+    },
+    "credibility_weight": {
+      "count": 2970.0,
+      "mean": 0.05056981087277281,
+      "std": 0.09414091019862796,
+      "min": 0.001996007984031936,
+      "25%": 0.00398406374501992,
+      "50%": 0.015748031496062992,
+      "75%": 0.049429657794676805,
+      "90%": 0.1423670668953688,
+      "95%": 0.23195084485407066,
+      "99%": 0.4639839350835055,
+      "max": 0.7996794871794872
+    },
+    "final_relativity": {
+      "count": 2970.0,
+      "mean": 1.0034244372206398,
+      "std": 0.03338335237133291,
+      "min": 0.8449701874926028,
+      "25%": 0.9916506171812983,
+      "50%": 0.9997307822710387,
+      "75%": 1.0132600384043808,
+      "90%": 1.0411879809603148,
+      "95%": 1.059775495245849,
+      "99%": 1.1200544027123547,
+      "max": 1.2257935459004219
+    }
+  },
+  "tier_summary": [
+    {
+      "seller_risk_tier": "elevated",
+      "sellers": 47,
+      "eligible_exposures": 8179,
+      "actual_net_loss": 15639.22297927602,
+      "glm_expected_loss": 10054.773680401302,
+      "credibility_expected_loss": 11509.968090619093,
+      "glm_ae": 1.555402784426654,
+      "credibility_ae": 1.3587546773498331
+    },
+    {
+      "seller_risk_tier": "lower_than_glm",
+      "sellers": 18,
+      "eligible_exposures": 4935,
+      "actual_net_loss": 4609.9824551469055,
+      "glm_expected_loss": 7245.412870565712,
+      "credibility_expected_loss": 6325.3369383772715,
+      "glm_ae": 0.6362622168675619,
+      "credibility_ae": 0.7288121565788983
+    },
+    {
+      "seller_risk_tier": "near_glm",
+      "sellers": 2905,
+      "eligible_exposures": 97083,
+      "actual_net_loss": 142863.4768631991,
+      "glm_expected_loss": 147530.91224103072,
+      "credibility_expected_loss": 146995.79376300136,
+      "glm_ae": 0.9683630006285995,
+      "credibility_ae": 0.9718881962944822
+    }
+  ],
+  "validation": {
+    "pricing_rows": 112650,
+    "unique_exposure_keys": 112650,
+    "ineligible_credibility_expected_loss_nonzero": 0,
+    "ineligible_credibility_premium_nonzero": 0,
+    "portfolio_expected_loss_preserved": true
+  },
+  "output": {
+    "pricing_glm_credibility": "data/processed/pricing_glm_credibility.csv",
+    "seller_credibility_summary": "data/processed/seller_credibility_summary.csv",
+    "seller_credibility_summary_json": "data/processed/seller_credibility_summary.json"
+  }
+}

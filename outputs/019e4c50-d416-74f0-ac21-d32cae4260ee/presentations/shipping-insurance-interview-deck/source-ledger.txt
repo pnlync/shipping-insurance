@@ -1,0 +1,23 @@
+Source ledger for interview deck
+
+Project docs:
+- project_docs/32_interview_deck_outline.md
+- project_docs/23_pricing_memo.md
+- project_docs/26_xgboost_challenger_build.md
+- project_docs/31_xgboost_interpretability_build.md
+- project_docs/29_model_selection_and_governance.md
+
+Processed outputs:
+- data/processed/synthetic_claims_summary.json
+- data/processed/pricing_baseline_summary.json
+- data/processed/glm_pricing_summary.json
+- data/processed/seller_credibility_summary.json
+- data/processed/backtest_by_seller_tier.csv
+- data/processed/stress_test_portfolio.csv
+- data/processed/model_comparison_glm_vs_xgboost.csv
+- data/processed/xgboost_frequency_base_feature_summary.csv
+- data/processed/xgboost_severity_base_feature_summary.csv
+
+Important source caveat:
+- Claim outcomes are synthetic because the Olist source data does not include insurance claim history.
+- Numerical rates are project demonstration outputs, not production insurance rates.
