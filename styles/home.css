@@ -45,6 +45,10 @@
   line-height: 1.2;
 }
 
+.hero-actions {
+  gap: 36px;
+}
+
 .node-exposure {
   top: 54px;
   left: 8%;

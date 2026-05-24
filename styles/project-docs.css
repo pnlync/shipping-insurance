@@ -102,25 +102,6 @@
   min-width: 0;
 }
 
-.breadcrumb {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 9px;
-  align-items: center;
-  color: var(--quiet);
-  font-size: 13px;
-  line-height: 1.35;
-}
-
-.breadcrumb a {
-  color: var(--muted);
-  transition: color 180ms ease;
-}
-
-.breadcrumb a:hover {
-  color: var(--ink);
-}
-
 .project-docs-site .breadcrumb a,
 .docs-footer a {
   text-decoration-line: underline;
