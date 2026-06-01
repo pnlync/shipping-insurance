@@ -1,21 +1,21 @@
 # Project Docs
 
-这个文件夹用于记录项目推进过程中的关键理解、数据口径、建模假设和阶段性结论。
+This folder records the key project rationale, data definitions, modeling assumptions, and interim conclusions developed during the project.
 
-如果从仓库根目录开始阅读，先看：
+If you are starting from the repository root, read this first:
 
 ```text
 ../README.md
 ```
 
-建议原则：
+Recommended documentation principles:
 
-1. 每完成一个小环节，就写一页短文档。
-2. 每页只回答一个问题，不写成大而全的报告。
-3. 重要口径必须记录原因，尤其是 exposure definition、claim definition、feature eligibility。
-4. 代码结果可以变，但这里记录“为什么这么做”。
+1. Write one short document after each small piece of work is completed.
+2. Keep each page focused on one question rather than turning it into a comprehensive report.
+3. Record the reasoning behind important definitions, especially exposure definition, claim definition, and feature eligibility.
+4. Code outputs may change, but this folder records why decisions were made.
 
-推荐阅读顺序：
+Recommended reading order:
 
 ```text
 01_project_roadmap.md
