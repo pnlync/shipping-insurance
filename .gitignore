@@ -3,6 +3,7 @@
 
 # Do not publish project design/implementation notes
 Project designing and implementation/
+article_linkedin/
 
 # Python cache/build outputs
 __pycache__/
