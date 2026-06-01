@@ -2,28 +2,28 @@
 
 ## Project Goal
 
-构建一个面向 TikTok Shop 中小卖家的往返运费险动态定价项目。
+Build a dynamic pricing project for return shipping insurance aimed at small and medium-sized TikTok Shop sellers.
 
-项目重点不是单纯预测退货率，而是建立一个完整的保险定价闭环：
+The project focus is not simply to predict return rates, but to build a complete insurance pricing workflow:
 
 ```text
-数据口径 -> exposure table -> 合成理赔层 -> 纯保费 -> 商业保费
--> 赔付率监控 -> credibility -> stress testing -> pricing memo
+data definitions -> exposure table -> synthetic claims layer -> pure premium -> commercial premium
+-> loss ratio monitoring -> credibility -> stress testing -> pricing memo
 ```
 
 ## Execution Phases
 
 ### Phase 1: Exposure Table + Baseline Pricing
 
-目标：
+Objective:
 
 ```text
-生成 exposure 级建模表
-模拟第一版 synthetic returns + insurance claims layer
-计算 baseline pure premium 和 commercial premium
+generate an exposure-level modeling table
+simulate the first version of the synthetic returns and insurance claims layer
+calculate baseline pure premium and commercial premium
 ```
 
-核心输出：
+Core outputs:
 
 ```text
 data/processed/exposure_table.csv
@@ -32,18 +32,18 @@ data/processed/pricing_baseline.csv
 
 ### Phase 2: GLM Pricing
 
-目标：
+Objective:
 
 ```text
-建立 claim frequency model
-建立 claim severity model
-计算 exposure 级 expected loss
-检查 A/E ratio 和 calibration
+build a claim frequency model
+build a claim severity model
+calculate exposure-level expected loss
+check A/E ratio and calibration
 ```
 
 ### Phase 3: Actuarial Enhancements
 
-目标：
+Objective:
 
 ```text
 seller credibility
@@ -54,7 +54,7 @@ pricing memo
 
 ### Phase 4: Interview Presentation
 
-目标：
+Objective:
 
 ```text
 XGBoost challenger
@@ -65,13 +65,13 @@ final README polish
 
 ## Current Priority
 
-Phase 1、Phase 2 和 Phase 3 第一版已完成。
+The first versions of Phase 1, Phase 2, and Phase 3 are complete.
 
-Phase 4 已开始，当前只完成 challenger model 和 GLM comparison。
+Phase 4 has started. So far, only the challenger model and GLM comparison are complete.
 
-暂时不要直接做 SHAP、Dashboard 或 PDF 报告，除非明确决定继续展示层。
+Do not move directly into SHAP, the dashboard, or a PDF report unless the decision is made to continue into the presentation layer.
 
-当前进度：
+Current progress:
 
 ```text
 data understanding: done
@@ -103,13 +103,13 @@ PPTX interview deck: not started
 
 ## Phase 4 Current Conclusion
 
-当前已安装并使用：
+Currently installed and used:
 
 ```text
 xgboost 3.2.0
 ```
 
-验证结论：
+Validation results:
 
 ```text
 GLM test frequency AUC = 0.560
@@ -118,12 +118,12 @@ GLM test loss ratio = 60.18%
 XGBoost challenger calibrated test loss ratio = 60.87%
 ```
 
-因此当前不应把 challenger 替换为最终定价模型。XGBoost 在 frequency ranking 上略高于 GLM，但 pricing calibration 仍较弱。
+Therefore, the challenger should not currently replace the final pricing model. XGBoost is slightly better than the GLM on frequency ranking, but its pricing calibration remains weaker.
 
-它的价值是：
+Its value is:
 
 ```text
-1. 证明项目做了 champion-challenger comparison。
-2. 说明更复杂模型未必在定价校准上更好。
-3. 为后续 SHAP / feature importance / model governance 提供基础。
+1. It demonstrates that the project includes a champion-challenger comparison.
+2. It shows that a more complex model is not necessarily better for pricing calibration.
+3. It provides a basis for later SHAP / feature importance / model governance work.
 ```
